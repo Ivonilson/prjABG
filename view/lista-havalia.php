@@ -49,7 +49,7 @@
 						$resultado = $dados->dadosListaHavalia();
 
 				?>
-				<div class="card-header">
+				<div class="card-header" style="font-size: 22px; font-family: Arial, Helvetica, sans-serif;">
 					<i class="fa fa-table"></i> Lista de Vistorias <strong>HAVALIA</strong> - <?php $hoje = date('d/m/Y');echo $hoje; echo " (última atualização às ".date('H')." h ".date('i')." m)"; echo "<br>TOTAL: <strong>".$contador[0]['total']."</strong>";?>
 
 					<!-- DISPARADOR DO MODAL DO WHATSAPP-->
@@ -63,7 +63,7 @@
 				<div class="card-body">
 					<table class="table table-bordered table-hove" id="#" width="100%" cellspacing="0">
 						<thead class="thead-dark">
-							<tr>
+							<tr style="font-size: 22px; font-family: Arial, Helvetica, sans-serif;">
 								<th>O.S</th>
 								<th>BANCO</th>
 								<th>PROPONENTE</th>
@@ -72,7 +72,7 @@
 								<th>CONTATO</th>
 								<th>DATA RECEB</th>
 								<th>DATA ENTREGA</th>
-								<th>STATUS</th>
+								<th class="sr-only">STATUS</th>
 								<th>OBS.</th>
 								<!--<th id="esconder">EDITAR</th>-->
 							</tr>
@@ -100,7 +100,7 @@
 									
 							?>
 							
-							<tr>
+							<tr style="font-size: 22px;  font-family: Arial, Helvetica, sans-serif;">
 								<td><?=$value['cod_os']?></td>
 								<td><?=$value['banco']?></td>
 								<td><?=$value['proponente']?></td>
@@ -109,7 +109,7 @@
 								<td><?=$value['CONTATO']?></td>
 								<td><?=date_format(date_create($value['data_receb']), "d/m/Y")?></td>
 								<td><?=date_format(date_create($value['data_entrega']), "d/m/Y")?></td>
-								<td><strong class="statusLista"><?=$value['obs3']?></strong></td>
+								<td class="sr-only"><strong class="statusLista"><?=$value['obs3']?></strong></td>
 								<td><?=$value['obs2']?></td>
 								<td align="center" id="esconder"><a href="/?pagina=editar-os&cod_os=<?=$value['cod_os']?>&form=lista-havalia" title="Editar"><i class="fa fa-pencil" aria-hidden="true"></a></td>
 							</tr>
