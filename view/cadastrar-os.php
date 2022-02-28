@@ -93,7 +93,8 @@
 									<option value="BANCO DO BRASIL">BANCO DO BRASIL</option>
 									<option value="CEF">CEF</option>
 									<option value="BRB">BRB</option>
-									<option value="POUPEX/FHE">POUPEX/FHE</option>
+									<option value="POUPEX">POUPEX</option>
+									<option value="FHE">FHE</option>
 									<option value="BANCO INTER">BANCO INTER</option>
 									<option value="PARTICULAR/OUTRO">PARTICULAR/OUTRO</option>
 								</select>
