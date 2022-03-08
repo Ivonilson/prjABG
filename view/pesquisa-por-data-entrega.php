@@ -9,21 +9,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Pesquisa por data</title>
-	<!--<link rel="stylesheet" type="text/css" href="../bibliotecas/bootstrap/css/bootstrap.min.css">-->
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap2.min.css">
-	<link rel="stylesheet" type="text/css" href="../bibliotecas/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../bibliotecas/datatables/dataTables.bootstrap4.css">
-	<link rel="stylesheet" type="text/css" href="../css/sb-admin.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/abg.css">
-	<link rel="shortcut icon" href="../assets/abgoficial.ico" />
-	<script src="../js/abg.js"></script>
+	<title>Pesquisa por data de entrega</title>
+	<?php require_once 'includes/bootstrap-css.php'; ?>
 </head>
 <body class="bg-dark fixed-nav sticky-footer" id="page-top">
 	<!-- NAVEGAÇÃO -->
-	<?php require 'navegacao.php';?>
+	<?php require_once 'includes/navegacao.php';?>
 	
-	<div class="content-wrapper">
+	<div class="content-wrapper" id="background-tela-consulta">
 		<div class="container-fluid">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item">
@@ -33,33 +26,55 @@
 					Pesquisas
 				</li>
 				<li class="breadcrumb-item">
-					Ordens de serviço por data de entrega
+					<mark class="p-2 rounded">Ordens de serviço por data de entrega</mark>
 				</li>
 			</ol>
+
+			<div class="row mb-3 justify-content-center">
+
+				<div class="col-lg-3 col">
+					<a href="?pagina=demandas-do-dia" class="botoes-atalho-cons" title="Demandas vencendo hoje"><i class="fa fa-search " aria-hidden="true"></i> Vencendo Hoje </a>
+				</div>
+
+				<div class="col-lg-3 col">
+					<a href="?pagina=pesquisa-por-os" class="botoes-atalho-cons" title="Pesq. O.S. por código"><i class="fa fa-search" aria-hidden="true"></i> Pesq. O.S. por código </a>
+				</div>
+
+				<div class="col-lg-3 col">
+					<a href="?pagina=pesquisa-por-data-receb" class="botoes-atalho-cons" title="Pesq. por data de recebimento"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por data de recebimento </a>
+				</div>
+
+			</div>
+
 			<div class="card mb-1">
 				<div class="card-header">
 					<i class="fa fa-table"></i> Pesquisa por Data de Entrega
 					<br>
 					<br>
-					<form method="post">
-						<div class="col-lg-5 col-md-4 col-sm-12 col-xs-12">
+					<form method="post" class="background-form-cons">
+						<div id="div-ipt-data-form-cons">
 							<span>Data Inicial:&nbsp&nbsp</span><input type="date" name="data_inicial">&nbsp&nbsp&nbsp<span>Data final:&nbsp&nbsp</span><input type="date" name="data_final">
 							<br><br>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-							<input type="submit" value="Buscar" class="btn btn-secondary btn-block font-weight-bold">
-						</div>
-
-						<div barra-progresso="barraProgresso" class="progresso pr-3 pl-3 pt-1 pb-1 ml-3 float-right  rounded" title="Percentual de serviços finalizados">
-							<div></div>
+						<div id="div-btn-form-cons">
+							<input type="submit" value="Buscar" id="botoesCons">
 						</div>
 					</form>
 				</div>
 			</div>
-			<div class="row">
+			<div id="row-tbl-consulta">
 				<div class="card-body">
-					<table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
-						<thead class="thead-dark">
+
+				<!-- BARRA DE PROGRESSO -->
+				<div class="row">
+					<div barra-progresso="barraProgresso" class="progresso pr-3 pl-3 pt-1 pb-1 m-3 col rounded" title="Percentual de serviços finalizados">
+						<div></div>
+					</div>
+				</div>
+				
+
+					<table class="tbl-consulta" id="dataTable" width="100%" cellspacing="0">
+						<thead class="thead-light">
 							<tr>
 								<th>O.S</th>
 								<th>Tipo</th>
@@ -78,7 +93,7 @@
 								<th>Histórico</th>
 							</tr>
 						</thead>
-						<tfoot class="thead-dark">
+						<tfoot class="thead-light">
 							<tr>
 								<th>O.S</th>
 								<th>Tipo</th>
@@ -146,7 +161,7 @@
 								$conexao = null;
 								}
 							} else {
-								echo "<span class='text-danger'>NENHUM DADO RETORNADO.</span><br><br>";
+								//echo "<span class='text-danger'>NENHUM DADO RETORNADO.</span><br><br>";
 							} 
 							?>
 						</tbody>
@@ -156,16 +171,11 @@
 				</div>
 			</div>
 		</div>
-		<!-- rodapé -->
-		<?php require 'rodape.php';?>
+		
+		<?php require_once 'includes/rodape.php';?>
 	</div>
-	<script src="../bibliotecas/jquery/jquery.min.js"></script>
-	<script src="../bibliotecas/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="../bibliotecas/jquery-easing/jquery.easing.min.js"></script>
-	<script src="../bibliotecas/datatables/jquery.dataTables.js"></script>
-	<script src="../bibliotecas/datatables/dataTables.bootstrap4.js"></script>
-	<script src="../js/sb-admin.min.js"></script>
-	<script src="../js/sb-admin-datatables.min.js"></script>
+
+	<?php require_once 'includes/bootstrap-js.php'; ?>
 
 	<!-- BARRA DE PROGRESSO DOS SERVIÇOS EXECUTADOS -->
 	<script type="text/javascript">

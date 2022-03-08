@@ -11,7 +11,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Pesquisa por data de recebimento</title>
 	<?php require_once 'includes/bootstrap-css.php'; ?>
-
 </head>
 <body class="bg-dark fixed-nav sticky-footer" id="page-top">
 	<!-- NAVEGAÇÃO -->
@@ -27,7 +26,7 @@
 					Pesquisas
 				</li>
 				<li class="breadcrumb-item">
-				<mark class="p-2 rounded">Ordens de serviço por data de recebimento</mark>
+					<mark class="p-2 rounded">Ordens de serviço por data de recebimento</mark>
 				</li>
 			</ol>
 
@@ -42,7 +41,7 @@
 				</div>
 
 				<div class="col-lg-3 col">
-					<a href="?pagina=pesquisa-por-data-entrega" class="botoes-atalho-cons" title="Pesq. por data de entrega"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por data de recebimento </a>
+					<a href="?pagina=pesquisa-por-data-entrega" class="botoes-atalho-cons" title="Pesq. por data de entrega"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por data de entrega </a>
 				</div>
 
 			</div>
@@ -66,14 +65,13 @@
 			<div id="row-tbl-consulta">
 				<div class="card-body">
 
+				<!-- BARRA DE PROGRESSO -->
 				<div class="row">
-					<!-- BARRA DE PROGRESSO -->
 					<div barra-progresso="barraProgresso" class="progresso pr-3 pl-3 pt-1 pb-1 m-3 col rounded" title="Percentual de serviços finalizados">
 						<div></div>
 					</div>
 				</div>
 				
-
 					<table class="tbl-consulta" id="dataTable" width="100%" cellspacing="0">
 						<thead class="thead-light">
 							<tr>
@@ -171,10 +169,10 @@
 				</div>
 			</div>
 		</div>
-		<!-- rodapé -->
+		
 		<?php require_once 'includes/rodape.php';?>
 	</div>
-	<?php require_once 'includes/bootstrap-js.php'; ?>>
+	<?php require_once 'includes/bootstrap-js.php'; ?>
 
 	<!-- BARRA DE PROGRESSO DOS SERVIÇOS EXECUTADOS -->
 	<script type="text/javascript">
