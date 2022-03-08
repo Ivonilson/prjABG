@@ -31,17 +31,17 @@
 				</li>
 			</ol>
 
-			<div class="row mb-3">
+			<div class="row mb-3 justify-content-center">
 
-				<div class="col">
+				<div class="col-lg-3 col">
 					<a href="?pagina=demandas-do-dia" class="botoes-atalho-cons" title="Demandas vencendo hoje"><i class="fa fa-search " aria-hidden="true"></i> Vencendo Hoje </a>
 				</div>
 
-				<div class="col">
+				<div class="col-lg-3 col">
 					<a href="?pagina=pesquisa-por-os" class="botoes-atalho-cons" title="Pesq. O.S. por código"><i class="fa fa-search" aria-hidden="true"></i> Pesq. O.S. por código </a>
 				</div>
 
-				<div class="col">
+				<div class="col-lg-3 col">
 					<a href="?pagina=pesquisa-por-data-entrega" class="botoes-atalho-cons" title="Pesq. por data de entrega"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por data de recebimento </a>
 				</div>
 
@@ -53,7 +53,7 @@
 					<br>
 					<br>
 					<form method="post" class="background-form-cons">
-						<div class="col-lg-5 col-md-4 col-sm-12 col-xs-12">
+						<div id="div-ipt-data-form-cons">
 							<span>Data Inicial:&nbsp&nbsp</span><input type="date" name="data_inicial">&nbsp&nbsp&nbsp<span>Data final:&nbsp&nbsp</span><input type="date" name="data_final">
 							<br><br>
 						</div>
@@ -66,10 +66,13 @@
 			<div id="row-tbl-consulta">
 				<div class="card-body">
 
-				<!-- BARRA DE PROGRESSO -->
-				<div barra-progresso="barraProgresso" class="progresso pr-3 pl-3 pt-1 pb-1 ml-3 float-right  rounded" title="Percentual de serviços finalizados">
-					<div></div>
+				<div class="row">
+					<!-- BARRA DE PROGRESSO -->
+					<div barra-progresso="barraProgresso" class="progresso pr-3 pl-3 pt-1 pb-1 m-3 col rounded" title="Percentual de serviços finalizados">
+						<div></div>
+					</div>
 				</div>
+				
 
 					<table class="tbl-consulta" id="dataTable" width="100%" cellspacing="0">
 						<thead class="thead-light">
@@ -158,7 +161,7 @@
 								$conexao = null;
 								}
 							} else {
-								echo "<span class='text-danger'>NENHUM DADO RETORNADO.</span><br><br>";
+								//echo "<span class='text-danger'>NENHUM DADO RETORNADO.</span><br><br>";
 							} 
 							?>
 						</tbody>
