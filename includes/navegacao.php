@@ -7,7 +7,7 @@
 		<div id="navbarCurso" class="collapse navbar-collapse" id="linksaccordion">
 			<ul class="navbar-nav navbar-sidenav accordion">
 
-				<li class="nav-item">
+				<li class="nav-item" id="navegacao">
 					<a href="#" class="nav-link nav-link-collapse" data-toggle="collapse" data-target="#collapseRegistro">
 						<i class="fa fa-sticky-note-o"></i>
 						<span class="nav-link-text">Registros</span>
@@ -30,7 +30,7 @@
 					</ul>
 				</li>
 
-				<li class="nav-item">
+				<li class="nav-item" id="navegacao">
 					<a href="#" class="nav-link nav-link-collapse" data-toggle="collapse" data-target="#collapsePesquisas">
 						<i  class="fa fa-search" aria-hidden="true"></i>
 						<span class="nav-link-text">Pesquisas</span>
@@ -60,7 +60,7 @@
 					</ul>
 				</li>
 
-				<li class="nav-item">
+				<li class="nav-item" id="navegacao">
 					<a href="#" class="nav-link nav-link-collapse" data-toggle="collapse" data-target="#collapseListas">
 						<i class="fa fa-tasks"></i>
 						<span class="nav-link-text">Listas</span>
@@ -79,7 +79,7 @@
 					</ul>
 				</li>
 
-				<li class="nav-item">
+				<li class="nav-item" id="navegacao">
 					<a href="#" class="nav-link nav-link-collapse" data-toggle="collapse" data-target="#collapseRepositorio">
 						<i class="fa fa-suitcase" aria-hidden="true"></i>
 						<span class="nav-link-text">Repositório</span>
@@ -94,7 +94,7 @@
 					</ul>
 				</li>
 
-				<li class="nav-item">
+				<li class="nav-item" id="navegacao">
 					<a href="#" class="nav-link nav-link-collapse" data-toggle="collapse" data-target="#collapseFerramentas">
 						<i class="fa fa-suitcase"></i>
 						<span class="nav-link-text">Ferramentas</span>

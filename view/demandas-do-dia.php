@@ -16,17 +16,17 @@
 	<!-- NAVEGAÇÃO -->
 	<?php require_once 'includes/navegacao.php';?>
 	
-	<div class="content-wrapper">
+	<div class="content-wrapper" id="background-tela-consulta">
 		<div class="container-fluid">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item">
-					<a href="?pagina=demandas-do-dia" class="text-decoration-none">Home</a>
+					Home
 				</li>
 				<li class="breadcrumb-item">
 					Pesquisas
 				</li>
 				<li class="breadcrumb-item">
-					Vencendo Hoje
+					<mark class="p-2 rounded">Vencendo Hoje</mark>
 				</li>
 			</ol>
 
@@ -46,12 +46,12 @@
 
 			</div>
 
-			<div class="card mb-1">
+			<div class="card mb-1 border border-light">
 				<div class="card-header">
 					<i class="fa fa-table"></i> Demandas do dia - <?php $hoje = date('d/m/Y'); echo $hoje; echo " - (última atualização às ".date('H')." h ".date('i')." m)"; ?>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row border-light bg-light m-2">
 				<div class="card-body">
 
 				<!-- Barra de progresso -->
@@ -63,7 +63,7 @@
 				
 
 					<table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
-						<thead class="thead-dark">
+						<thead class="thead-light">
 							<tr>
 								<th>O.S</th>
 								<th>Tipo</th>
@@ -82,7 +82,7 @@
 								<th>Histórico</th>
 							</tr>
 						</thead>
-						<tfoot class="thead-dark">
+						<tfoot class="thead-light">
 							<tr>
 								<th>O.S</th>
 								<th>Tipo</th>
