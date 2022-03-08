@@ -30,6 +30,35 @@
 					</ul>
 				</li>
 
+				<li class="nav-item">
+					<a href="#" class="nav-link nav-link-collapse" data-toggle="collapse" data-target="#collapsePesquisas">
+						<i  class="fa fa-search" aria-hidden="true"></i>
+						<span class="nav-link-text">Pesquisas</span>
+					</a>
+					<ul class="sidenav-second-level collapse" id="collapsePesquisas" data-parent="#linksaccordion">
+						<li>
+							<a href="/?pagina=demandas-do-dia">Vencendo Hoje</a>
+						</li>
+						<li>
+							<a href="/?pagina=pesquisa-por-data-receb">Ordens de serviço por data de recebimento</a>
+						</li>
+						<li>
+							<a href="/?pagina=pesquisa-por-data-entrega">Ordens de serviço por data de entrega</a>
+						</li>
+						<li>
+							<a href="/?pagina=pesquisa-por-os">Por O.S </a>
+						</li>
+						<li>
+							<a href="/?pagina=valor-de-avaliacao">Valor de avaliação</a>
+						</li>
+						<!--<li>
+							<a href="#">Demandas em PEPT</a>
+						</li>
+						<li>
+							<a href="">Histórico da Ordem de Serviço</a>
+						</li>-->
+					</ul>
+				</li>
 
 				<li class="nav-item">
 					<a href="#" class="nav-link nav-link-collapse" data-toggle="collapse" data-target="#collapseListas">
@@ -62,36 +91,6 @@
 							<a href="http://www.abgsolucoes.tec.br" target="_blank">Modelos</a>
 						</li>
 
-					</ul>
-				</li>
-
-				<li class="nav-item">
-					<a href="#" class="nav-link nav-link-collapse" data-toggle="collapse" data-target="#collapsePesquisas">
-						<i  class="fa fa-search" aria-hidden="true"></i>
-						<span class="nav-link-text">Pesquisas</span>
-					</a>
-					<ul class="sidenav-second-level collapse" id="collapsePesquisas" data-parent="#linksaccordion">
-						<li>
-							<a href="/?pagina=demandas-do-dia">Vencendo Hoje</a>
-						</li>
-						<li>
-							<a href="/?pagina=pesquisa-por-data-receb">Ordens de serviço por data de recebimento</a>
-						</li>
-						<li>
-							<a href="/?pagina=pesquisa-por-data-entrega">Ordens de serviço por data de entrega</a>
-						</li>
-						<li>
-							<a href="/?pagina=pesquisa-por-os">Por O.S </a>
-						</li>
-						<li>
-							<a href="/?pagina=valor-de-avaliacao">Valor de avaliação</a>
-						</li>
-						<!--<li>
-							<a href="#">Demandas em PEPT</a>
-						</li>
-						<li>
-							<a href="">Histórico da Ordem de Serviço</a>
-						</li>-->
 					</ul>
 				</li>
 

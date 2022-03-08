@@ -9,19 +9,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Demandas do Dia</title>
-	<!--<link rel="stylesheet" type="text/css" href="../bibliotecas/bootstrap/css/bootstrap.min.css">-->
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap2.min.css">
-	<link rel="stylesheet" type="text/css" href="../bibliotecas/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../bibliotecas/datatables/dataTables.bootstrap4.css">
-	<link rel="stylesheet" type="text/css" href="../css/sb-admin.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/sb-admin.min.css">
-	<link rel="shortcut icon" href="../assets/abgoficial.ico" />
-	<link rel="stylesheet" type="text/css" href="../css/abg.css">
-	<script src="../js/abg.js"></script>
+	<link rel="stylesheet" type="text/css" href="../bootstrap-4.1.3/css/bootstrap.min.css">
+	<?php require_once 'includes/bootstrap-css.php'; ?>
 </head>
 <body class="bg-dark fixed-nav sticky-footer" id="page-top">
 	<!-- NAVEGAÇÃO -->
-	<?php include 'navegacao.php';?>
+	<?php require_once 'includes/navegacao.php';?>
 	
 	<div class="content-wrapper">
 		<div class="container-fluid">
@@ -36,18 +29,39 @@
 					Vencendo Hoje
 				</li>
 			</ol>
+
+			<div class="row mb-3">
+
+				<div class="col">
+					<a href="?pagina=pesquisa-por-os" class="botoes-atalho-cons" title="Pesq. O.S. por código"><i class="fa fa-search" aria-hidden="true"></i> Pesq. O.S. por código </a>
+				</div>
+
+				<div class="col">
+					<a href="?pagina=pesquisa-por-data-receb" class="botoes-atalho-cons" title="Pesq. por data de recebimento"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por data de recebimento </a>
+				</div>
+
+				<div class="col">
+					<a href="?pagina=pesquisa-por-data-entrega" class="botoes-atalho-cons" title="Pesq. por data de entrega"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por data de recebimento </a>
+				</div>
+
+			</div>
+
 			<div class="card mb-1">
 				<div class="card-header">
-					<i class="fa fa-table"></i> Demandas do dia - <?php $hoje = date('d/m/Y'); echo $hoje; echo " - (última atualização às ".date('H')." h ".date('i')." m)"; ?><a href="/?pagina=pesquisa-por-os" class=" btn btn-secondary pr-3 pl-3 pt-2 pb-2 ml-3 float-right text-light rounded">Pesquisa por O.S</a><a href="/?pagina=valor-de-avaliacao" class="btn btn-secondary pr-3 pl-3 pt-2 pb-2 ml-3 float-right text-light rounded">Valor de avaliação</a><a href="#" class="btn btn-danger  pr-3 pl-3 pt-2 pb-2 ml-3 float-right text-light rounded" data-toggle="tooltip" data-placement="bottom" title="RESIDENCIAL OURO VERDE (PADRE BERNARDO/GO) - PARQUE ESTRELA DALVA IV (LUZIÂNIA/GO) - RESIDENCIAL PALISSANDER (VALPARAISO DE GOIÁS/GO) - RESIDENCIAL CITY LIFE II (ÁGUAS LINDAS DE GOIÁS/GO) - IMÓVEIS NUNCA ANTES FINANCIADOS PELA CEF LOCALIZADOS EM REGIÕES ATENDIDAS PELA ITEBRA - IMÓVEIS NUNCA ANTES FINANCIADOS PELA CEF LOCALIZADOS EM REGIÕES ATENDIDAS PELA ANGLA."><strong>Empreendimentos Proibidos CEF</strong></a>
-
-					<div barra-progresso="barraProgresso" class="progresso pr-3 pl-3 pt-1 pb-1 ml-3 float-right  rounded" title="Percentual de serviços finalizados">
-						<div></div>
-					</div>
-
+					<i class="fa fa-table"></i> Demandas do dia - <?php $hoje = date('d/m/Y'); echo $hoje; echo " - (última atualização às ".date('H')." h ".date('i')." m)"; ?>
 				</div>
 			</div>
 			<div class="row">
 				<div class="card-body">
+
+				<!-- Barra de progresso -->
+				<div class="row ">
+					<div barra-progresso="barraProgresso" class="col progresso pr-3 pl-3 pt-1 pb-1 m-3 float-right  rounded" title="Percentual de serviços finalizados">
+						<div></div>
+					</div>
+				</div>
+				
+
 					<table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
 						<thead class="thead-dark">
 							<tr>
@@ -140,15 +154,9 @@
 			</div>
 		</div>
 		<!-- rodapé -->
-		<?php require 'rodape.php';?>
+		<?php require_once 'includes/rodape.php';?>
 	</div>
-	<script src="../bibliotecas/jquery/jquery.min.js"></script>
-	<script src="../bibliotecas/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="../bibliotecas/jquery-easing/jquery.easing.min.js"></script>
-	<script src="../bibliotecas/datatables/jquery.dataTables.js"></script>
-	<script src="../bibliotecas/datatables/dataTables.bootstrap4.js"></script>
-	<script src="../js/sb-admin.min.js"></script>
-	<script src="../js/sb-admin-datatables.min.js"></script>
+	<?php require_once 'includes/bootstrap-js.php'; ?>
 
 	<!-- REFRESH AUTOMÁTICO -->
 	<!-- BARRA DE PROGRESSO DOS SERVIÇOS EXECUTADOS -->
