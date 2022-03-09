@@ -10,19 +10,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Pesquisa por O.S.</title>
-	<!--<link rel="stylesheet" type="text/css" href="../bibliotecas/bootstrap/css/bootstrap.min.css">-->
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap2.min.css">
-	<link rel="stylesheet" type="text/css" href="../bibliotecas/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../bibliotecas/datatables/dataTables.bootstrap4.css">
-	<link rel="stylesheet" type="text/css" href="../css/sb-admin.min.css">
-	<link rel="shortcut icon" href="../assets/abgoficial.ico" />
-	<script src="../js/abg.js"></script>
+	<?php require_once 'includes/bootstrap-css.php'; ?>
 </head>
 <body class="bg-dark fixed-nav sticky-footer" id="page-top">
 	<!-- NAVEGAÇÃO -->
-	<?php require 'navegacao.php';?>
+	<?php require_once 'includes/navegacao.php';?>
 	
-	<div class="content-wrapper">
+	<div class="content-wrapper" id="background-tela-consulta">
 		<div class="container-fluid">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item">
@@ -32,33 +26,56 @@
 					Pesquisas
 				</li>
 				<li class="breadcrumb-item">
-					Por O.S
+					<mark class="p-2 rounded">Por O.S</mark>
 				</li>
 			</ol>
+
+			<div class="row mb-3 justify-content-center">
+
+				<div class="col-lg-3 col">
+					<a href="?pagina=demandas-do-dia" class="botoes-atalho-cons" title="Demandas vencendo hoje"><i class="fa fa-search " aria-hidden="true"></i> Vencendo Hoje </a>
+				</div>
+
+				<div class="col-lg-3 col">
+					<a href="?pagina=pesquisa-por-data-receb" class="botoes-atalho-cons" title="Pesq. por data de recebimento"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por data de recebimento </a>
+				</div>
+
+				<div class="col-lg-3 col">
+					<a href="?pagina=pesquisa-por-data-entrega" class="botoes-atalho-cons" title="Pesq. por data de entrega"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por data de entrega </a>
+				</div>
+
+				<div class="col-lg-3 col">
+					<a href="?pagina=valor-de-avaliacao" class="botoes-atalho-cons" title="Valor de avaliação"><i class="fa fa-search " aria-hidden="true"></i> Valor de Avaliação </a>
+				</div>
+
+
+			</div>
+
 			<div class="card mb-1 col">
 				<div class="card-header">
 					<i class="fa fa-table"></i> Pesquisa por Ordem de Serviço
 					<br>
 					<br>
-					<form method="post">
-						<div class="input-group">
-							<div class="input-group-prepend col-lg-3 col-md-3 col-sm-12 col-xs-12">
-								<div class="input-group-text">Número da O.S.</div>
-								<input type="text" name="ipt-numeroOs" required class="form-control"><span>
-							</div>
+					<form method="post" class="background-form-cons">
+						<div id="div-ipt-data-form-cons">
+							<span>Número da O.S.</span>
+							<input type="text" name="ipt-numeroOs" required class="form-control"><span>
+							<br>
 						</div>
+						<div id="div-btn-form-cons"> 
+							<input type="submit" value="Buscar" class="btn btn-lg btn-info btn-block text-white font-weight-bold rounded">
+							
+							<!-- O botão abaixo não está reconhecendo o código no abg.js para estilizar
+							     automaticamente... verificar assim que possível o problema...
+								<input type="submit" value="Buscar" id="botoesCons">
+							-->
 
-						<br>
-
-						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"> 
-							<input type="submit" value="Buscar" class="btn btn-secondary btn-block font-weight-bold">
 						</div>
-
 					</form>
 				</div>
 			</div>
 
-			<div class="row">
+			<div id="row-tbl-consulta">
 				<div class="card-body">
 					<?php
 					
@@ -260,14 +277,9 @@
 			</div>
 		</div>
 		<!-- rodapé -->
-		<?php require 'rodape.php';?>
+		<?php require_once 'includes/rodape.php';?>
 	</div>
-	<script src="../bibliotecas/jquery/jquery.min.js"></script>
-	<script src="../bibliotecas/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="../bibliotecas/jquery-easing/jquery.easing.min.js"></script>
-	<script src="../bibliotecas/datatables/jquery.dataTables.js"></script>
-	<script src="../bibliotecas/datatables/dataTables.bootstrap4.js"></script>
-	<script src="../js/sb-admin.min.js"></script>
-	<script src="../js/sb-admin-datatables.min.js"></script>
+
+	<?php require_once 'includes/bootstrap-js.php'; ?>
 </body>
 </html>

@@ -10,19 +10,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Valor de Avaliação</title>
-	<!--<link rel="stylesheet" type="text/css" href="../bibliotecas/bootstrap/css/bootstrap.min.css">-->
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap2.min.css">
-	<link rel="stylesheet" type="text/css" href="../bibliotecas/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../bibliotecas/datatables/dataTables.bootstrap4.css">
-	<link rel="stylesheet" type="text/css" href="../css/sb-admin.min.css">
-	<link rel="shortcut icon" href="../assets/abgoficial.ico" />
-	<script src="../js/abg.js"></script>
+	<?php require_once 'includes/bootstrap-css.php'; ?>
 </head>
 <body class="bg-dark fixed-nav sticky-footer" id="page-top">
 	<!-- NAVEGAÇÃO -->
-	<?php require 'navegacao.php';?>
+	<?php require_once 'includes/navegacao.php';?>
 	
-	<div class="content-wrapper">
+	<div class="content-wrapper" id="background-tela-consulta">
 		<div class="container-fluid">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item">
@@ -32,17 +26,38 @@
 					Pesquisas
 				</li>
 				<li class="breadcrumb-item">
-					Valor de Avaliação
+					<mark class="p-2 rounded">Valor de Avaliação</mark>
 				</li>
 			</ol>
+
+			<div class="row mb-3 justify-content-center">
+
+				<div class="col-lg-3 col">
+					<a href="?pagina=demandas-do-dia" class="botoes-atalho-cons" title="Demandas vencendo hoje"><i class="fa fa-search " aria-hidden="true"></i> Vencendo Hoje </a>
+				</div>
+
+				<div class="col-lg-3 col">
+					<a href="?pagina=pesquisa-por-os" class="botoes-atalho-cons" title="Pesq. O.S. por código"><i class="fa fa-search" aria-hidden="true"></i> Pesq. O.S. por código </a>
+				</div>
+
+				<div class="col-lg-3 col">
+					<a href="?pagina=pesquisa-por-data-receb" class="botoes-atalho-cons" title="Pesq. por data de recebimento"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por data de recebimento </a>
+				</div>
+
+				<div class="col-lg-3 col">
+					<a href="?pagina=pesquisa-por-data-entrega" class="botoes-atalho-cons" title="Pesq. por data de entrega"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por data de entrega </a>
+				</div>
+
+			</div>			
+
 			<div class="card mb-1">
 				<div class="card-header">
 					<i class="fa fa-table "></i> Valor de Avaliação
 					<br>
 					<br>
-					<form method="post">
+					<form method="post" class="background-form-cons">
 
-						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+						<div id="div-ipt-data-form-cons">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
 									<label class="input-group-text bg-secondary text-white" for="select-cidade">
@@ -68,17 +83,17 @@
 
 						<br>
 
-						<div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
-							<input type="submit" value="Buscar" class="btn btn-secondary btn-block font-weight-bold">
+						<div id="div-btn-form-cons">
+							<input type="submit" value="Buscar" id="botoesCons">
 						</div>
 
 					</form>
 				</div>
 			</div>
-			<div class="row">
+			<div id="row-tbl-consulta">
 				<div class="card-body">
-					<table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
-						<thead class="thead-dark">
+					<table class="tbl-consulta" id="dataTable" width="100%" cellspacing="0">
+						<thead class="thead-light">
 							<tr>
 								<th>O.S</th>
 								<th>Tipo</th>
@@ -100,7 +115,7 @@
 								<th>Histórico</th>
 							</tr>
 						</thead>
-						<tfoot class="thead-dark">
+						<tfoot class="thead-light">
 							<tr>
 								<th>O.S</th>
 								<th>Tipo</th>
@@ -177,14 +192,8 @@
 			</div>
 		</div>
 		<!-- rodapé -->
-		<?php require 'rodape.php';?>
+		<?php require_once 'includes/rodape.php';?>
 	</div>
-	<script src="../bibliotecas/jquery/jquery.min.js"></script>
-	<script src="../bibliotecas/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="../bibliotecas/jquery-easing/jquery.easing.min.js"></script>
-	<script src="../bibliotecas/datatables/jquery.dataTables.js"></script>
-	<script src="../bibliotecas/datatables/dataTables.bootstrap4.js"></script>
-	<script src="../js/sb-admin.min.js"></script>
-	<script src="../js/sb-admin-datatables.min.js"></script>
+	<?php require_once 'includes/bootstrap-js.php'; ?>
 </body>
 </html>
