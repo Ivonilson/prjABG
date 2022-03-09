@@ -13,7 +13,7 @@
 						<span class="nav-link-text">Registros</span>
 					</a>
 
-					<ul style="background-color: #FFFACD" class="sidenav-second-level collapse " id="collapseRegistro" data-parent="#linksaccordion">
+					<ul style="background-color: #ADD8E6" class="sidenav-second-level collapse " id="collapseRegistro" data-parent="#linksaccordion">
 
 						<li>
 							<a href="/?pagina=cadastrar-os" target="opcoes-menu" >Cadastrar O.S.</a>
@@ -37,7 +37,7 @@
 						<i  class="fa fa-search" aria-hidden="true"></i>
 						<span class="nav-link-text">Pesquisas</span>
 					</a>
-					<ul style="background-color: #FFE4B5" class="sidenav-second-level collapse" id="collapsePesquisas" data-parent="#linksaccordion">
+					<ul style="background-color: #ADD8E6" class="sidenav-second-level collapse" id="collapsePesquisas" data-parent="#linksaccordion">
 						<li>
 							<a href="/?pagina=demandas-do-dia">Vencendo Hoje</a>
 						</li>
@@ -68,7 +68,7 @@
 						<span class="nav-link-text">Listas</span>
 					</a>
 
-					<ul style="background-color: #98FB98" class="sidenav-second-level collapse" id="collapseListas" data-parent="#linksaccordion">
+					<ul style="background-color: #ADD8E6" class="sidenav-second-level collapse" id="collapseListas" data-parent="#linksaccordion">
 
 						<li>
 							<a href="/?pagina=lista-mamck">Mamck</a>
@@ -102,7 +102,7 @@
 						<span class="nav-link-text">Ferramentas</span>
 					</a>
 
-					<ul style="background-color: #FFFFF0" class="sidenav-second-level collapse" id="collapseFerramentas" data-parent="#linksaccordion">
+					<ul style="background-color: #ADD8E6" class="sidenav-second-level collapse" id="collapseFerramentas" data-parent="#linksaccordion">
 
 						<li>
 							<a href="/?pagina=nfe" target="opcoes-menu" >NFe</a>
@@ -273,7 +273,7 @@
 
 								<div class="input-group col-auto" >
 									<div class="input-group-prepend">
-										<label class="input-group-text bg-info text-white">Resolver</label>
+										<label class="input-group-text bg-info text-white">Ação</label>
 									</div>
 									<select name="sel-resolver" class="custom-select" id="sel-status-notificacao">
 										<option value="-">Selecione</option>
@@ -284,7 +284,7 @@
 
 								<div class="input-group col-auto mt-1 mb-1 d-none" id="div-adiar">
 									<div class="input-group-prepend">
-										<label class="input-group-text bg-info text-white">Adiar para:</label>
+										<label class="input-group-text bg-info text-white">Adiar para</label>
 									</div>
 									<input type="date" class="form-control" name="ipt-data-adiada">
 								</div>

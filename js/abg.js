@@ -167,23 +167,14 @@ $(document).ready(function(){
 $(document).ready(function(){
 	let status = document.querySelectorAll("#sel-status-notificacao");
 	let divAdiar = document.querySelectorAll("#div-adiar");
-	//let contador = 0;
 
-	status.forEach(item => {
+	status.forEach((item, i) => {
 		item.onchange = function(){
-			if(item.value == 'ADIAR'){
-				//divAdiar[contador].setAttribute("class", "input-group col-auto mt-1 mb-1");
-				alert(item);
-			} 
-
-			if(item.value == 'RESOLVIDO') {
-				//divAdiar[contador].setAttribute("class", "d-none");
-				alert(item);
+			if(item.value != 'ADIAR'){
+				divAdiar[i].setAttribute("class", "d-none");
+			} else if (item.value == 'ADIAR') {
+				divAdiar[i].setAttribute("class", "input-group col-auto mt-1 mb-1");
 			}
-
-			//contador++;
 		}
-		
-		//alert(contador);
 	});
 });
