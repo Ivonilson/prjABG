@@ -9,16 +9,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Cadastro de Notificacões</title>
-	<!--<link rel="stylesheet" type="text/css" href="../bibliotecas/bootstrap/css/bootstrap.min.css">-->
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap2.min.css">
-	<link rel="stylesheet" type="text/css" href="../bibliotecas/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/sb-admin.min.css">
+	<?php require_once 'includes/bootstrap-css.php'; ?>
 </head>
 <body class="bg-dark fixed-nav sticky-footer" id="page-top">
 	<!-- NAVEGAÇÃO -->
-	<?php
-		include('navegacao.php');
-	?>
+	<?php require_once 'includes/navegacao.php';?>
 	
 	<div class="content-wrapper">
 		<div class="container-fluid">
@@ -30,15 +25,15 @@
 					Registros
 				</li>
 				<li class="breadcrumb-item">
-					Cadastrar Notificação
+					<mark class="p-2 rounded">Cadastrar Notificação</mark>
 				</li>
 			</ol>
 	
-			<div class="row bg-light">
+			<div id="background-tela-cadastro">
 				
-				<form class="container" method="post">
+				<form class="container background-form-cadastro" method="post">
 
-					<div class="jumbotron jumbotron-fluid bg-info text-white">
+					<div id="jumbotron_telas_cadastro">
 						<div class="container">
 							<h4>Cadastrar Notificação</h4>
 						</div>
@@ -69,11 +64,7 @@
 							<select name="sel-remetente" class="custom-select" id="lbl-sel-remetente" >
 								<option value="-">Selecione</option>
 								<option value="FENIX CONTABILIDADE">FENIX CONTABILIDADE</option>
-								<option value="JUNIOR EMISSOR NFE">JUNIOR EMISSOR NFE</option>
-								<option value="CASSI">CASSI</option>
 								<option value="CREA">CREA</option>
-								<option value="SANTANDER">SANTANDER</option>
-								<option value="SKY">SKY</option>
 								<option value="OUTROS">OUTROS</option>
 							</select>
 						</div>
@@ -105,47 +96,17 @@
 								<option value="REGULARIDADE CERTIDÃO GDF">REGULARIDADE CERTIDÃO GDF</option>
 								<option value="REGULARIDADE INSS">REGULARIDADE INSS</option>
 								<option value="REGULARIDADE FGTS">REGULARIDADE FGTS</option>
-								<option value="ENVIO MATERIAL CREDENCIAMENTO">ENVIO MATERIAL CREDENCIAMENTO</option>
 								<option value="DARF IMPOSTO ESTADUAL">DARF IMPOSTO ESTADUAL</option>
 								<option value="DARF IMPOSTO FEDERAL">DARF IMPOSTO FEDERAL</option>
 								<option value="BOLETO INSS HAVALIA">BOLETO INSS HAVALIA</option>
 								<option value="BOLETO INSS MAMCK">BOLETO INSS MAMCK</option>
-								<option value="BOLETO INSS MAMCK">BOLETO INSS MAMCK</option>
 								<option value="BOLETO FGTS HAVALIA">BOLETO FGTS HAVALIA</option>
 								<option value="BOLETO FGTS MAMCK">BOLETO FGTS MAMCK</option>
-								<option value="BOLETO CARTÃO DE CRÉDITO">BOLETO CARTÃO DE CRÉDITO</option>
-								<option value="BOLETO CASSI">BOLETO CASSI</option>
 								<option value="BOLETO CREA">BOLETO CREA</option>
-								<option value="BOLETO JUNIOR NFE">BOLETO JUNIOR NFE</option>
 								<option value="OUTROS">OUTROS</option>
 							</select>
 						</div>
-
-						<!--<div class="input-group col-auto mt-1">
-							<div class="input-group-prepend">
-								<label class="input-group-text bg-info text-white" for="lbl-sel-status">
-									Status
-								</label>
-							</div>
-							<select name="sel-status" class="custom-select" id="lbl-sel-status" >
-								<option value="-">Selecione</option>
-								<option value="PENDENTE">PENDENTE</option>
-								<option value="RESOLVIDO">RESOLVIDO</option>
-								<option value="PAGO">PAGO</option>
-								<option value="CANCELADO">CANCELADO</option>
-								<option value="OUTROS">OUTROS</option>
-							</select>
-						</div>-->
 			
-						<div class="input-group col-lg-4 col-md-4 col-xs-12 col-sm-12 mt-1">
-							<div class="input-group-prepend">
-								<div class="input-group-text bg-info text-white">
-									Data Emissão
-								</div>
-							</div>
-							<input type="date" class="form-control" name="ipt-data-emissao">
-						</div>
-
 						<div class="input-group col-lg-4 col-md-4 col-xs-12 col-sm-12 mt-1">
 							<div class="input-group-prepend">
 								<div class="input-group-text bg-info text-white">
@@ -163,7 +124,7 @@
 							<input type="date" class="form-control" name="ipt-data-programada" title="Data programada para pagamento/saneamento">
 						</div>
 
-						<div class="input-group col-auto mt-1">
+						<div class="input-group col-4 mt-1">
 							<div class="input-group-prepend">
 								<label class="input-group-text bg-info text-white" for="lbl-sel-prioridade">
 									Prioridade
@@ -177,24 +138,6 @@
 							</select>
 						</div>
 
-						<!--<div class="input-group col-auto mt-1 col-lg-6 col-md-6 col-xs-12 col-sm-12">
-							<div class="input-group-prepend">
-								<label class="input-group-text bg-info text-white" for="lbl-sel-arquivo-cobranca">
-									Arquivo Cobrança
-								</label>
-							</div>
-							<input type="file" class="form-control" name="ipt-arquivo-cobranca">
-						</div>-->
-
-						<!--<div class="input-group col-auto mt-1 col-lg-6 col-md-6 col-xs-12 col-sm-12">
-							<div class="input-group-prepend">
-								<label class="input-group-text bg-info text-white" for="lbl-sel-comprovante-pagamento">
-									Comprovante Pagto
-								</label>
-							</div>
-							<input type="file" class="form-control" name="ipt-arquivo-comprovante-pagamento">
-						</div>-->
-
 						<div class="input-group col-auto mt-1">
 							<div class="input-group-prepend">
 								<label class="input-group-text bg-info text-white" for="lbl-sel-meio-notificacao">
@@ -203,42 +146,12 @@
 							</div>
 							<select name="sel-meio-notificacao" class="custom-select" id="lbl-sel-meio-notificacao" >
 								<option value="<?=$_SESSION['user'].' NÃO INFORMOU'?>">Selecione</option>
-								<option value="E-MAIL">E-MAIL</option>
 								<option value="VERBAL/TELEFONE">VERBAL/TELEFONE</option>
 								<option value="TEXTO WHATSAPP">TEXTO WHATSAPP</option>
 								<option value="ÁUDIO WHATSAPP">ÁUDIO WHATSAPP</option>
-								<option value="BOLETO/DOCUMENTO IMPRESSO">BOLETO/DOCUMENTO IMPRESSO</option>
 								<option value="OUTROS">OUTROS</option>
 							</select>
 						</div>
-
-						<!--<div class="input-group col-auto mt-1">
-							<div class="input-group-prepend">
-								<label class="input-group-text bg-info text-white" for="lbl-sel-meio-pagamento">
-									Meio de pagamento:
-								</label>
-							</div>
-							<select name="sel-meio-pagamento" class="custom-select" id="lbl-sel-meio-pagamento" >
-								<option value="<?=$_SESSION[user].' NÃO INFORMOU'?>">Selecione</option>
-								<option value="APP/INTERNET BANKING">APP/INTERNET BANKING</option>
-								<option value="LOTÉRICA/AGÊNCIA BANCÁRIA">LOTÉRICA/AGÊNCIA BANCÁRIA</option>
-								<option value="OUTROS/TERCEIROS">OUTROS/TERCEIROS</option>
-							</select>
-						</div>-->
-
-						<!--<div class="input-group col-auto mt-1">
-							<div class="input-group-prepend">
-								<label class="input-group-text bg-info text-white" for="lbl-sel-pago-por">
-									Pago por:
-								</label>
-							</div>
-							<select name="sel-pago-por" class="custom-select" id="lbl-sel-pago-por" >
-								<option value="<?=$_SESSION['user'].' NÃO INFORMOU'?>">Selecione</option>
-								<option value="MILITÃO JR">MILITÃO JR.</option>
-								<option value="MILITÃO ANDRÉ">MILITÃO ANDRÉ</option>
-								<option value="OUTROS/TERCEIROS">OUTROS/TERCEIROS</option>
-							</select>
-						</div>-->
 
 						<div class="input-group col-auto mt-1">
 							<label class="sr-only" for="lbl-observacoes">OBSERVAÇÕES COMPLEMENTARES</label>
@@ -247,20 +160,15 @@
 
 					</div>
 
-					<input type="submit" name="" class="col-12 btn btn-info btn-block text-white mt-2" value="GRAVAR" name="btnCadastrar">
+					<input type="submit" name="" id="botoesGravarCad" value="Gravar Notificação" name="btnCadastrar">
 				</form>
 			</div>
 
-			<?php  
-				include ('rodape.php');
-			?>
+			<?php require_once 'includes/rodape.php';?>
 			
 		</div>
 	</div>
 
-	<script src="../bibliotecas/jquery/jquery.min.js"></script>
-	<script src="../bibliotecas/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="../bibliotecas/jquery-easing/jquery.easing.min.js"></script>
-	<script type="text/javascript" src="../js/sb-admin.min.js"></script>
+	<?php require_once 'includes/bootstrap-js.php'; ?>
 </body>
 </html>

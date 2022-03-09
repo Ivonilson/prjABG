@@ -71,7 +71,7 @@ function configurarBarra(){
      }, 500)
 }
 
-/*Cores padrão das telas de cadastro**/
+/*Cores padrão das telas de cadastro*/
 $(document).ready(function(){
 
 	let botoes_atalho_cad = document.querySelectorAll(".botoes-atalho-cad");
@@ -84,7 +84,8 @@ $(document).ready(function(){
 	jumbotron_tela_cadastro.setAttribute("class", "jumbotron jumbotron-fluid text-white bg-info");
 
 	let background_tela_cadastro = document.querySelector("#background-tela-cadastro");
-	background_tela_cadastro.setAttribute("style", "background-color: #DCDCDC");
+	background_tela_cadastro.setAttribute("style", "background-color: #DCDCDC",);
+	background_tela_cadastro.setAttribute("class", "row m-1 p-2");
 	//background_tela_cadastro.setAttribute("style",  "background-image: url('../assets/logo.png');");
 
 	let background_form_cad = document.querySelector(".background-form-cadastro");
@@ -161,4 +162,28 @@ $(document).ready(function(){
 	/*botões de gravar alterações de edições*/
 	let btn_edicao = document.querySelector("#btnGravarEdicao");
 	btn_edicao.setAttribute("class", "btn btn-info btn-block font-weight-bold rounded");
+});
+
+$(document).ready(function(){
+	let status = document.querySelectorAll("#sel-status-notificacao");
+	let divAdiar = document.querySelectorAll("#div-adiar");
+	//let contador = 0;
+
+	status.forEach(item => {
+		item.onchange = function(){
+			if(item.value == 'ADIAR'){
+				//divAdiar[contador].setAttribute("class", "input-group col-auto mt-1 mb-1");
+				alert(item);
+			} 
+
+			if(item.value == 'RESOLVIDO') {
+				//divAdiar[contador].setAttribute("class", "d-none");
+				alert(item);
+			}
+
+			//contador++;
+		}
+		
+		//alert(contador);
+	});
 });

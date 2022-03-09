@@ -1,11 +1,11 @@
 
-	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background-color: #2F4F4F;">
-		<a href="/?pagina=demandas-do-dia" class="navbar-brand text-light ">Controle de Demandas</a>
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background-color: #2F4F4F">
+		<a href="/?pagina=demandas-do-dia" class="navbar-brand text-light " style="font-family: Comic Sans MS !important;">Controle de Demandas</a>
 		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCurso" aria-control="navbarCurso" aria-expanded="false" aria-label="Navegação Toggle">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div id="navbarCurso" class="collapse navbar-collapse" id="linksaccordion">
-			<ul class="navbar-nav navbar-sidenav accordion">
+			<ul class="navbar-nav navbar-sidenav accordion" style="background-color: #F5FFFA">
 
 				<li class="nav-item" id="navegacao">
 					<a href="#" class="nav-link nav-link-collapse" data-toggle="collapse" data-target="#collapseRegistro">
@@ -13,7 +13,7 @@
 						<span class="nav-link-text">Registros</span>
 					</a>
 
-					<ul class="sidenav-second-level collapse" id="collapseRegistro" data-parent="#linksaccordion">
+					<ul style="background-color: #FFFACD" class="sidenav-second-level collapse " id="collapseRegistro" data-parent="#linksaccordion">
 
 						<li>
 							<a href="/?pagina=cadastrar-os" target="opcoes-menu" >Cadastrar O.S.</a>
@@ -37,7 +37,7 @@
 						<i  class="fa fa-search" aria-hidden="true"></i>
 						<span class="nav-link-text">Pesquisas</span>
 					</a>
-					<ul class="sidenav-second-level collapse" id="collapsePesquisas" data-parent="#linksaccordion">
+					<ul style="background-color: #FFE4B5" class="sidenav-second-level collapse" id="collapsePesquisas" data-parent="#linksaccordion">
 						<li>
 							<a href="/?pagina=demandas-do-dia">Vencendo Hoje</a>
 						</li>
@@ -68,7 +68,7 @@
 						<span class="nav-link-text">Listas</span>
 					</a>
 
-					<ul class="sidenav-second-level collapse" id="collapseListas" data-parent="#linksaccordion">
+					<ul style="background-color: #98FB98" class="sidenav-second-level collapse" id="collapseListas" data-parent="#linksaccordion">
 
 						<li>
 							<a href="/?pagina=lista-mamck">Mamck</a>
@@ -87,7 +87,7 @@
 						<span class="nav-link-text">Repositório</span>
 					</a>
 
-					<ul class="sidenav-second-level collapse" id="collapseRepositorio" data-parent="#linksaccordion">
+					<ul style="background-color: #ADD8E6" class="sidenav-second-level collapse" id="collapseRepositorio" data-parent="#linksaccordion">
 
 						<li>
 							<a href="http://www.abgsolucoes.tec.br" target="_blank">Modelos</a>
@@ -98,11 +98,11 @@
 
 				<li class="nav-item" id="navegacao">
 					<a href="#" class="nav-link nav-link-collapse" data-toggle="collapse" data-target="#collapseFerramentas">
-						<i class="fa fa-suitcase"></i>
+						<i class="fa fa-umbrella"></i>
 						<span class="nav-link-text">Ferramentas</span>
 					</a>
 
-					<ul class="sidenav-second-level collapse" id="collapseFerramentas" data-parent="#linksaccordion">
+					<ul style="background-color: #FFFFF0" class="sidenav-second-level collapse" id="collapseFerramentas" data-parent="#linksaccordion">
 
 						<li>
 							<a href="/?pagina=nfe" target="opcoes-menu" >NFe</a>
@@ -204,19 +204,6 @@
 					}
 				?>
 				
-				<!--<li class="nav-item">
-					<form class="form-inline my-2 my-lg-0 mr-lg-2">
-						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Pesquisar por...">
-							<span class="input-group-btn">
-								<button class="btn btn-primary" type="button">
-									<i class="fa fa-search"></i>
-								</button>
-							</span>
-						</div>
-					</form>
-				</li>-->
-
 				<li class="nav-item col-lg-10">
 					<a href="#" class="nav-link text-light col-3"> 
 						<i class="fa fa-user float-left" title="Usuário">&nbsp&nbsp<?= $_SESSION['user']?></i>
@@ -288,19 +275,20 @@
 									<div class="input-group-prepend">
 										<label class="input-group-text bg-info text-white">Resolver</label>
 									</div>
-									<select name="sel-resolver" class="custom-select">
+									<select name="sel-resolver" class="custom-select" id="sel-status-notificacao">
 										<option value="-">Selecione</option>
 										<option value="RESOLVIDO">RESOLVIDO</option>
 										<option value="ADIAR">ADIAR</option>
 									</select>	
 								</div>
 
-								<div class="input-group col-auto mt-1 mb-1" >
+								<div class="input-group col-auto mt-1 mb-1 d-none" id="div-adiar">
 									<div class="input-group-prepend">
 										<label class="input-group-text bg-info text-white">Adiar para:</label>
 									</div>
 									<input type="date" class="form-control" name="ipt-data-adiada">
 								</div>
+
 								<div class="input-group col-auto mt-1 mb-1">
 									<input type="submit" class="btn btn-info text-white btn-block" name="btnGravar" value="Gravar">
 								</div>

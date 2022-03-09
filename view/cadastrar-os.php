@@ -19,17 +19,17 @@
 		<div class="container-fluid">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item">
-					<a href="?pagina=demandas-do-dia" class="text-decoration-none">Home</a>
+					Home
 				</li>
 				<li class="breadcrumb-item">
 					Registros
 				</li>
 				<li class="breadcrumb-item">
-					Cadastrar O.S.
+					<mark class="p-2 rounded">Cadastrar O.S.</mark>
 				</li>
 			</ol>
 	
-			<div class="row" id="background-tela-cadastro">
+			<div id="background-tela-cadastro">
 				
 				<form class="container background-form-cadastro" method="post">
 

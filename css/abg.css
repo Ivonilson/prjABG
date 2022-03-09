@@ -27,8 +27,19 @@ tfoot { display:table-footer-group }
 }
 
 #navegacao li a:hover {
-	background-color: #DCDCDC;
-	font-weight: bold;
+	background-color: #8B0000;
+	color:  #FFFAFA !important;
+ }
+
+ .navegacao li, ul {
+ 		font-family: Comic Sans MS !important;
+ 		font-size: 16 px;
+ 		font-weight: bold !important;
+ }
+
+ .breadcrumb {
+ 		font-family: Comic Sans MS !important;
+ 		font-size: 16 px;
  }
 
 .progresso > div {

@@ -16,7 +16,7 @@ class CadastrarNotificacao {
 
 			$conn = new Conn();
 
-			$statement = "INSERT INTO tbl_notificacoes (tipo, remetente, destinatario, descricao, data_emissao, data_limite, data_programada_resolver, prioridade, meio_notificacao, observacoes, usuario, data_cadastro) VALUES (:tipo, :remetente, :destinatario, :descricao, :data_emissao, :data_limite, :data_programada_resolver, :prioridade, :meio_notificacao, :observacoes, :usuario, CURRENT_TIMESTAMP())";
+			$statement = "INSERT INTO tbl_notificacoes (tipo, remetente, destinatario, descricao, data_emissao, data_limite, data_programada_resolver, prioridade, meio_notificacao, observacoes, usuario, data_cadastro) VALUES (:tipo, :remetente, :destinatario, :descricao, CURDATE(), :data_limite, :data_programada_resolver, :prioridade, :meio_notificacao, :observacoes, :usuario, CURRENT_TIMESTAMP())";
 
 			$dados_cadastrar = $conn->getConn()->prepare($statement);
 			$usuario = $_SESSION['user'];
@@ -25,7 +25,7 @@ class CadastrarNotificacao {
 			$dados_cadastrar->bindParam(':remetente', $dados['sel-remetente']);
 			$dados_cadastrar->bindParam(':destinatario', $dados['sel-destinatario']);
 			$dados_cadastrar->bindParam(':descricao', $dados['sel-descricao']);
-			$dados_cadastrar->bindParam(':data_emissao', $dados['ipt-data-emissao']);
+			//$dados_cadastrar->bindParam(':data_emissao', $dados['ipt-data-emissao']);
 			$dados_cadastrar->bindParam(':data_limite', $dados['ipt-data-limite']);
 			$dados_cadastrar->bindParam(':data_programada_resolver', $dados['ipt-data-programada']);
 			$dados_cadastrar->bindParam(':prioridade', $dados['sel-prioridade']);
