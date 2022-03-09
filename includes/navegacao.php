@@ -23,9 +23,11 @@
 							<a href="/?pagina=cadastrar-notificacao" target="opcoes-menu" >Cadastrar Notificação</a>
 						</li>
 
+						<!-- Funcionalidade sendo desenvolvida...
 						<li>
-							<a href="/?pagina=cadastrar-evento" target="opcoes-menu" >Cadastrar Evento</a>
+							<a href="/?pagina=cadastrar-evento" target="opcoes-menu">Cadastrar Evento</a>
 						</li>
+						-->
 
 					</ul>
 				</li>

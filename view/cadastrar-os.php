@@ -8,18 +8,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Cadastro de demandas</title>
-	<!--<link rel="stylesheet" type="text/css" href="../bibliotecas/bootstrap/css/bootstrap.min.css">-->
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap2.min.css">
-	<link rel="stylesheet" type="text/css" href="../bibliotecas/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/sb-admin.min.css">
-	<link rel="shortcut icon" href="../assets/abgoficial.ico" />
+	<title>Nova O.S.</title>
+	<?php require_once 'includes/bootstrap-css.php'; ?>
 </head>
 <body class="bg-dark fixed-nav sticky-footer" id="page-top">
 	<!-- NAVEGAÇÃO -->
-	<?php
-		include('navegacao.php');
-	?>
+	<?php require_once 'includes/navegacao.php';?>
 	
 	<div class="content-wrapper">
 		<div class="container-fluid">
@@ -35,12 +29,12 @@
 				</li>
 			</ol>
 	
-			<div class="row bg-secondary">
+			<div class="row" id="background-tela-cadastro">
 				
-				<form class="container" method="post">
+				<form class="container background-form-cadastro" method="post">
 
-					<div class="jumbotron jumbotron-fluid bg-dark text-white">
-						<div class="container">
+					<div id="jumbotron_telas_cadastro">
+						<div class="container ">
 							<h4>Cadastrar O.S</h4>
 						</div>
 					</div>
@@ -415,21 +409,16 @@
 							<textarea type="text" class="form-control mb-2" id="inlineFormInputObservacoesIG" cols="100" rows="3" placeholder="Observações I/G" name="ta-observacoesig"></textarea>
 						</div>
 
-						<input type="submit" name="" class="col-12 btn btn-dark btn-block text-white" value="GRAVAR" name="btnCadastrar">
+						<input type="submit" name="" id="botoesGravarCad" value="Gravar O.S." name="btnCadastrar">
 					</div>
 				</form>
 			</div>
 
-			<?php  
-				include ('rodape.php');
-			?>
+			<?php require_once 'includes/rodape.php';?>
 			
 		</div>
 	</div>
 
-	<script src="../bibliotecas/jquery/jquery.min.js"></script>
-	<script src="../bibliotecas/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="../bibliotecas/jquery-easing/jquery.easing.min.js"></script>
-	<script type="text/javascript" src="../js/sb-admin.min.js"></script>
+	<?php require_once 'includes/bootstrap-js.php'; ?>
 </body>
 </html>
