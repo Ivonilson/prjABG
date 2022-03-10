@@ -28,6 +28,32 @@
 					<mark class="p-2 rounded">Editar</mark>
 				</li>
 			</ol>
+
+					<!--Feedback da Edição -->
+					<?php
+
+						if($mensagem_erro == "Ordem de Serviço atualizada com Sucesso!")
+						{
+					?>
+
+					<div class="alert alert-success font-weight-bold alertaCadOsOk col-12 text-center" role="alert">
+ 						<img src="../assets/ok.png"><h5><strong><?=$mensagem_erro?></strong></h5>
+					</div>
+
+					<?php 
+
+						echo "<script>setTimeout(()=> window.location.href = '/?pagina=".$_GET['form']."', 5000)</script>";
+
+						} elseif($mensagem_erro == "ERRO. Verifique as informações e tente novamente ou contate o Suporte.") {
+					?>
+
+					<div class="alert alert-warning font-weight-bold text-danger alertaCadOsNoOk col-12 text-center" role="alert">
+ 						<img src="../assets/error.png"><h5><strong><?=$mensagem_erro?></strong></h5>
+					</div>
+
+					<?php 
+						} 
+					?>
 	
 			<div id="row-form-edicao">
 				

@@ -16,8 +16,7 @@ $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : "login";
 
 		case 'cadastrar-os':
 			require "controller/crtCadastrarOs.php";
-			$crtl = new crtCadastrarOs();
-			$crtl->cadastrarOs();
+			include_once "view/cadastrar-os.php";
 			break;
 
 		case 'cadastrar-notificacao':
@@ -40,8 +39,7 @@ $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : "login";
 
 		case 'editar-os':
 			require "controller/crtEditarOs.php";
-			$crtl = new crtEditarOs();
-			$crtl->editarOs();
+			include "view/editar-os.php";
 			break;
 
 		case 'pesquisa-por-data-receb':

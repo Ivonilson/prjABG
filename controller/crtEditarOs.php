@@ -6,17 +6,21 @@ require "model/Cidade.php";
 
 		public function editarOs()
 		{	
-			include "view/editar-os.php";
 
 			if(filter_input(INPUT_POST, 'ipt-os') != 'INDEFINIDO' && filter_input(INPUT_POST, 'ipt-os') != '') {
+				
 				$usuario = new EditarOs();
-				$usuario->edOs();
-
-			} else {
-				echo "NENHUM DADO ENVIADO.";
-			}	
+				
+				if($usuario->edOs()){
+					return "Ordem de Serviço atualizada com Sucesso!";
+				} else {
+					return "ERRO. Verifique as informações e tente novamente ou contate o Suporte.";
+				}	
+			}
 		}
 	}
 
+	$crtl = new crtEditarOs();
+	$mensagem_erro = $crtl->editarOs();
 
 ?>

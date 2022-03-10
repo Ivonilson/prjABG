@@ -82,14 +82,16 @@ class CadastrarOS {
 			$dados_cadastrar->execute();
 
 			} catch (PDOException $erro) {
-				echo "ERRO: ".$erro->getMessage();
+				//echo "ERRO: ".$erro->getMessage();
 			}
 
 			if($dados_cadastrar->rowCount()) {
-				echo "<script>alert('Registro Incluído com Sucesso!!!')</script>";
+				//echo "<script>alert('Registro Incluído com Sucesso!!!')</script>";
+				return true;
 			} else {
-				echo "<script>alert('Erro ao Incluir Registro!!!')</script>";
-				print_r($dados_cadastrar->errorInfo());
+				//echo "<script>alert('Erro ao Incluir Registro!!!')</script>";
+				//print_r($dados_cadastrar->errorInfo());
+				return false;
 			}
 
 		}

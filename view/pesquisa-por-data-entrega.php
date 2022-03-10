@@ -32,25 +32,25 @@
 
 			<div class="row mb-3 justify-content-center">
 
-				<div class="col-lg-3 col">
+				<div class="div-botoes-consulta">
 					<a href="?pagina=demandas-do-dia" class="botoes-atalho-cons" title="Demandas vencendo hoje"><i class="fa fa-search " aria-hidden="true"></i> Vencendo Hoje </a>
 				</div>
 
-				<div class="col-lg-3 col">
+				<div class="div-botoes-consulta">
 					<a href="?pagina=pesquisa-por-os" class="botoes-atalho-cons" title="Pesq. O.S. por código"><i class="fa fa-search" aria-hidden="true"></i> Pesq. O.S. por código </a>
 				</div>
 
-				<div class="col-lg-3 col">
+				<div class="div-botoes-consulta">
 					<a href="?pagina=pesquisa-por-data-receb" class="botoes-atalho-cons" title="Pesq. por data de recebimento"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por data de recebimento </a>
 				</div>
 
-				<div class="col-lg-3 col">
+				<div class="div-botoes-consulta">
 					<a href="?pagina=valor-de-avaliacao" class="botoes-atalho-cons" title="Valor de avaliação"><i class="fa fa-search " aria-hidden="true"></i> Valor de Avaliação </a>
 				</div>
 
 			</div>
-
-			<div class="card mb-1 col">
+			
+			<div class="card mb-1">
 				<div class="card-header">
 					<i class="fa fa-table"></i> Pesquisa por Data de Entrega
 					<br>

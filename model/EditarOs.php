@@ -25,6 +25,10 @@ class EditarOs {
 				unset($dados['btnCadastrar']);
 			}
 
+			$ficha_pesquisa = isset($dados['sel-ficha-pesquisa']) ? $dados['sel-ficha-pesquisa'] : "-";
+			$numero_operacao = isset($dados['ipt-numero-op-inter']) ? trim($dados['ipt-numero-op-inter']) : "-";
+
+
 			try {
 
 			$conn = new Conn();
@@ -39,7 +43,7 @@ class EditarOs {
 			.'Data e Horário: <mark>'.date('d/m/Y H:i:s').'</mark><br>'
 			."Tipo: ".$dados['sel-tipo'].'<br>'
 			.'Banco: '.$dados['sel-banco'].'<br>'
-			.'Número Operação: '.$dados['ipt-numero-op-inter'].'<br>'
+			.'Número Operação: '.$numero_operacao.'<br>'
 			.'Empresa: '.$dados['sel-empresa'].'<br>'
 			.'Proponente: '.$dados['ipt-proponente'].'<br>'
 			.'Contato: '.$dados['ipt-contato'].'<br>'
@@ -61,7 +65,7 @@ class EditarOs {
 			.'Situação: '.$dados['sel-situacao'].'<br>'
 			.'Status: '."<mark>".$dados['sel-status']."</mark>".'<br>'
 			.'Status para a Lista: '.$dados['sel-statusLista'].'<br>'
-			.'Ficha de Pesquisa: '.$dados['sel-ficha-pesquisa'].'<br>'
+			.'Ficha de Pesquisa: '.$ficha_pesquisa.'<br>'
 			.'Observações da Lista: '.$dados['ta-observacoes'].'<br>'
 			.'Observações I/G: '."<mark>".$dados['ta-observacoesig']."</mark>".'<br>'
 			.'<hr>';
@@ -95,27 +99,26 @@ class EditarOs {
 			$dados_editar->bindParam(':obs3', $dados['sel-statusLista']); //status para a lista (frase para iniciar observações)
 			$dados_editar->bindParam(':obs2', $dados['ta-observacoes']); //observações complementares
 			$dados_editar->bindParam(':notas_importantes', $dados['ta-observacoesig']);
-			$dados_editar->bindParam(':ficha_pesquisa', $dados['sel-ficha-pesquisa']);
-			$dados_editar->bindParam(':numero_op_inter', trim($dados['ipt-numero-op-inter']));
+			$dados_editar->bindParam(':ficha_pesquisa', $ficha_pesquisa);
+			$dados_editar->bindParam(':numero_op_inter', $numero_operacao);
 			$dados_editar->bindParam(':alteracoes', $dados_alteracoes);
 
 			$dados_editar->execute();
 
 			} catch (PDOException $erro) {
-				echo "ERRO: ".$erro->getMessage();
+				//echo "ERRO: ".$erro->getMessage();
 			}	
 
 			if($dados_editar->rowCount()) {
-				echo "<script>alert('Registro ATUALIZADO com SUCESSO.')</script>";
-
-				
-					echo "<script>window.location.href = '/?pagina=".$form."'</script>";
+				//echo "<script>alert('Registro ATUALIZADO com SUCESSO.')</script>";
+					//echo "<script>window.location.href = '/?pagina=".$form."'</script>";
 					//echo "<script>window.location.href = '../view/demandas-do-dia.php'</script>";
+				return true;
 				
-
 			} else {
-				echo "<script>alert('ERRO ao ATUALIZAR Registro.')</script>";
-				print_r($dados_editar->errorInfo());
+				//echo "<script>alert('ERRO ao ATUALIZAR Registro.')</script>";
+				//print_r($dados_editar->errorInfo());
+				return false;
 			}
 
 		}

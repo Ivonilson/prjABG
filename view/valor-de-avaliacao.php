@@ -32,19 +32,19 @@
 
 			<div class="row mb-3 justify-content-center">
 
-				<div class="col-lg-3 col">
+				<div class="div-botoes-consulta">
 					<a href="?pagina=demandas-do-dia" class="botoes-atalho-cons" title="Demandas vencendo hoje"><i class="fa fa-search " aria-hidden="true"></i> Vencendo Hoje </a>
 				</div>
 
-				<div class="col-lg-3 col">
+				<div class="div-botoes-consulta">
 					<a href="?pagina=pesquisa-por-os" class="botoes-atalho-cons" title="Pesq. O.S. por código"><i class="fa fa-search" aria-hidden="true"></i> Pesq. O.S. por código </a>
 				</div>
 
-				<div class="col-lg-3 col">
+				<div class="div-botoes-consulta">
 					<a href="?pagina=pesquisa-por-data-receb" class="botoes-atalho-cons" title="Pesq. por data de recebimento"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por data de recebimento </a>
 				</div>
 
-				<div class="col-lg-3 col">
+				<div class="div-botoes-consulta">
 					<a href="?pagina=pesquisa-por-data-entrega" class="botoes-atalho-cons" title="Pesq. por data de entrega"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por data de entrega </a>
 				</div>
 
@@ -60,7 +60,7 @@
 						<div id="div-ipt-data-form-cons">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label id="lbl-consulta" for="select-cidade">
+									<label class="input-group-text bg-info text-white" for="select-cidade">
 										CIDADE
 									</label>
 								</div>

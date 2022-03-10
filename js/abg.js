@@ -139,9 +139,6 @@ $(document).ready(function(){
 	/*Setando as tabelas de consulta*/
 	let tbl_consulta = document.querySelector(".tbl-consulta");
 	tbl_consulta.setAttribute("class", "table table-bordered table-hover border-light");
-
-	let lbl_consulta = document.querySelector("#lbl-consulta");
-	lbl_consulta.setAttribute("class", "input-group-text bg-info text-white");
 	
 	let botoes_cons = document.querySelector("#botoesCons");
 	botoes_cons.setAttribute("class", "btn btn-lg btn-info btn-block text-white font-weight-bold rounded");
@@ -192,4 +189,13 @@ $(document).ready(function(){
 			}
 		}
 	});
+});
+
+/*Mensagens de confirmação de cadastros e edições*/
+$(document).ready(function(){
+   $(".alertaCadOsOk").fadeIn(300).delay(2000).fadeOut(400);
+});
+
+$(document).ready(function(){
+   $(".alertaCadOsNoOk").fadeIn(300).delay(8000).fadeOut(400);
 });
