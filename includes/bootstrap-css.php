@@ -4,3 +4,4 @@
 	<link rel="stylesheet" type="text/css" href="../css/sb-admin.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/sb-admin.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/abg.css">
+	<script src="../js/abg.js"></script>

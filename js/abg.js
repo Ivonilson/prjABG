@@ -1,27 +1,28 @@
 function verificaStatus(){
 
-	   let valor = document.querySelector(".status").innerHTML;
+	 let td_tabela = document.querySelector(".status").innerHTML;
 
-	   switch(valor) {
-	   	case "LAUDO PRONTO":
-	   		document.querySelector(".status").className = "bg-success text-white";
-	   		break;
-	   	case "CANCELADA":
-	   		document.querySelector(".status").className = "bg-secondary text-white";
-	   		break;
-	   	case "AGUARDANDO VISTORIA":
-	   		document.querySelector(".status").className = "bg-danger text-white";
-	   		break;
-	   	case "VISTORIA REALIZADA":
-	   		document.querySelector(".status").className = "bg-warning text-white";
-	   		break;
-	   	case "EM ANÁLISE":
-	   		document.querySelector(".status").className = "bg-info text-white";
-	   		break;
-	   	default:
-	   		document.querySelector(".status").className = "bg-secondary text-white";
-	   }
+	 switch(td_tabela) {
 
+	   case "LAUDO PRONTO":
+	   	document.querySelector(".status").className = "bg-success text-white";
+	   	break;
+	   case "CANCELADA":
+	   	document.querySelector(".status").className = "bg-secondary text-white";
+	   	break;
+	   case "AGUARDANDO VISTORIA":
+	   	document.querySelector(".status").className = "bg-danger text-white";
+	   	break;
+	   case "VISTORIA REALIZADA":
+	   	document.querySelector(".status").className = "bg-warning text-white";
+	   	break;
+	   case "EM ANÁLISE":
+	   	document.querySelector(".status").className = "bg-info text-white";
+	   	break;
+	   default:
+	   	document.querySelector(".status").className = "bg-secondary text-white";
+	   	break;
+	}
 }
 
 function verificaStatusLista(){
@@ -80,7 +81,8 @@ $(document).ready(function(){
 	});
 	
 	let jumbotron_tela_cadastro = document.querySelector("#jumbotron_telas_cadastro");
-	jumbotron_tela_cadastro.setAttribute("class", "jumbotron jumbotron-fluid text-white bg-success");
+	jumbotron_tela_cadastro.setAttribute("class", "jumbotron jumbotron-fluid text-white bg-success font-weight-bold");
+	jumbotron_tela_cadastro.setAttribute("style", "background-color: #ADD8E6 !important");
 
 	let background_tela_cadastro = document.querySelector("#background-tela-cadastro");
 	background_tela_cadastro.setAttribute("style", "background-color: #DCDCDC",);
@@ -93,12 +95,24 @@ $(document).ready(function(){
 	let labels_cadastro = document.querySelectorAll(".lbl-cadastro");
 	labels_cadastro.forEach(item => {
 		item.setAttribute("class", "input-group-text bg-success text-white");
+		item.setAttribute("style", "background-color: #ADD8E6 !important");
 	});
 	
 	let botoes_gravar_cad = document.querySelector("#botoesGravarCad");
-	botoes_gravar_cad.setAttribute("class", "btn btn-lg btn-success btn-block text-white font-weight-bold rounded")
+	botoes_gravar_cad.setAttribute("class", "btn btn-lg btn-success btn-block text-white font-weight-bold rounded");
 
 });
+
+	function myHoverMouseOver()
+	{		let botoesGravarCad = document.querySelector("#botoesGravarCad");
+			botoesGravarCad.setAttribute("style", "background-color: red !important");
+	}
+
+	function myHoverMouseOut()
+	{		let botoesGravarCad = document.querySelector("#botoesGravarCad");
+			botoesGravarCad.setAttribute("style", "background-color: yellow !important");
+	}
+
 
 /*Cores padrão das telas de consulta**/
 $(document).ready(function(){
@@ -130,7 +144,7 @@ $(document).ready(function(){
 
 	/*Ajuste das divs dos inputs de data das consultas*/
 	let div_ipt_data_cons = document.querySelector("#div-ipt-data-form-cons");
-	div_ipt_data_cons.setAttribute("class", "col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-3");
+	div_ipt_data_cons.setAttribute("class", "col-lg-5 col-md-5 col-sm-12 col-xs-12 mt-3");
 
 	/*Ajuste das divs dos botoes de busca das consultas*/
 	let div_btn_form_cons = document.querySelector("#div-btn-form-cons");

@@ -323,7 +323,7 @@
 										DATA RECEB.
 									</div>
 								</div>
-								<input type="text" class="form-control" name="ipt-dataReceb" value="<?=$registro->data_receb?>">
+								<input type="date" class="form-control" name="ipt-dataReceb" value="<?=$registro->data_receb?>">
 							</div>
 						</div>
 
@@ -334,7 +334,7 @@
 										DATA ENTREGA
 									</div>
 								</div>
-								<input type="text" class="form-control" name="ipt-dataEntrega" value="<?=$registro->data_entrega?>">
+								<input type="date" class="form-control" name="ipt-dataEntrega" value="<?=$registro->data_entrega?>">
 							</div>
 						</div>
 
