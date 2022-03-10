@@ -160,7 +160,7 @@
 
 					</div>
 
-					<input type="submit" name="" id="botoesGravarCad" value="Gravar Notificação" name="btnCadastrar">
+					<input type="submit" name="" id="botoesGravarCad" value="Gravar Notificação" name="btnCadastrar" onmouseover="myHoverMouseOver()" onmouseout="myHoverMouseOut()">
 				</form>
 			</div>
 

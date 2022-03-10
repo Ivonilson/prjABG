@@ -5,7 +5,7 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div id="navbarCurso" class="collapse navbar-collapse" id="linksaccordion">
-			<ul class="navbar-nav navbar-sidenav accordion" style="background-color: #F5FFFA">
+			<ul class="navbar-nav navbar-sidenav accordion" style="background-color: #F2F2F2">
 
 				<li class="nav-item" id="navegacao">
 					<a href="#" class="nav-link nav-link-collapse" data-toggle="collapse" data-target="#collapseRegistro">

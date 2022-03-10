@@ -81,11 +81,11 @@ $(document).ready(function(){
 	});
 	
 	let jumbotron_tela_cadastro = document.querySelector("#jumbotron_telas_cadastro");
-	jumbotron_tela_cadastro.setAttribute("class", "jumbotron jumbotron-fluid text-white bg-success font-weight-bold");
-	jumbotron_tela_cadastro.setAttribute("style", "background-color: #ADD8E6 !important");
+	jumbotron_tela_cadastro.setAttribute("class", "jumbotron jumbotron-fluid text-light bg-success font-weight-bold");
+	jumbotron_tela_cadastro.setAttribute("style", "background-color: #0489B1 !important");
 
 	let background_tela_cadastro = document.querySelector("#background-tela-cadastro");
-	background_tela_cadastro.setAttribute("style", "background-color: #DCDCDC",);
+	background_tela_cadastro.setAttribute("style", "background-color: #F2F2F2",);
 	background_tela_cadastro.setAttribute("class", "row m-1 p-2");
 	//background_tela_cadastro.setAttribute("style",  "background-image: url('../assets/logo.png');");
 
@@ -95,22 +95,23 @@ $(document).ready(function(){
 	let labels_cadastro = document.querySelectorAll(".lbl-cadastro");
 	labels_cadastro.forEach(item => {
 		item.setAttribute("class", "input-group-text bg-success text-white");
-		item.setAttribute("style", "background-color: #ADD8E6 !important");
+		item.setAttribute("style", "background-color: #0489B1 !important");
 	});
 	
 	let botoes_gravar_cad = document.querySelector("#botoesGravarCad");
-	botoes_gravar_cad.setAttribute("class", "btn btn-lg btn-success btn-block text-white font-weight-bold rounded");
+	botoes_gravar_cad.setAttribute("class", "btn btn-lg btn-block text-white font-weight-bold rounded");
+	botoesGravarCad.setAttribute("style", "background-color: #0489B1");
 
 });
 
 	function myHoverMouseOver()
 	{		let botoesGravarCad = document.querySelector("#botoesGravarCad");
-			botoesGravarCad.setAttribute("style", "background-color: red !important");
+			botoesGravarCad.setAttribute("style", "background-color: #01A9DB !important");
 	}
 
 	function myHoverMouseOut()
 	{		let botoesGravarCad = document.querySelector("#botoesGravarCad");
-			botoesGravarCad.setAttribute("style", "background-color: yellow !important");
+			botoesGravarCad.setAttribute("style", "background-color: #0489B1 !important");
 	}
 
 

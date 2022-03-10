@@ -65,7 +65,7 @@
 									</label>
 								</div>
 
-								<select class="custom-select" name="sel-cidade" id="select-cidade">
+								<select class="custom-select col-lg-8 col-md-5 col" name="sel-cidade" id="select-cidade">
 									<option value="-">Selecione</option>
 										<?php 
 											$cidade = new ValorAvaliacao();
