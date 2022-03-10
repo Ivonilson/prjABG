@@ -43,7 +43,7 @@
 
 						<div class="input-group col-auto">
 							<div class="input-group-prepend">
-								<label class="input-group-text bg-info text-white" for="lbl-sel-tipo">
+								<label class="lbl-cadastro" for="lbl-sel-tipo">
 									Tipo
 								</label>
 							</div>
@@ -57,7 +57,7 @@
 
 						<div class="input-group col-auto mt-1">
 							<div class="input-group-prepend">
-								<label class="input-group-text bg-info text-white" for="lbl-sel-remetente">
+								<label class="lbl-cadastro" for="lbl-sel-remetente">
 									Remetente
 								</label>
 							</div>
@@ -71,7 +71,7 @@
 
 						<div class="input-group col-auto mt-1">
 							<div class="input-group-prepend">
-								<label class="input-group-text bg-info text-white" for="lbl-sel-destinatario">
+								<label class="lbl-cadastro" for="lbl-sel-destinatario">
 									Destinatário
 								</label>
 							</div>
@@ -87,7 +87,7 @@
 
 						<div class="input-group col-auto mt-1">
 							<div class="input-group-prepend">
-								<label class="input-group-text bg-info text-white" for="lbl-sel-descricao">
+								<label class="lbl-cadastro" for="lbl-sel-descricao">
 									Descrição
 								</label>
 							</div>
@@ -109,7 +109,7 @@
 			
 						<div class="input-group col-lg-4 col-md-4 col-xs-12 col-sm-12 mt-1">
 							<div class="input-group-prepend">
-								<div class="input-group-text bg-info text-white">
+								<div class="lbl-cadastro">
 									Data Limite
 								</div>
 							</div>
@@ -118,7 +118,7 @@
 
 						<div class="input-group col-lg-4 col-md-4 col-xs-12 col-sm-12 mt-1">
 							<div class="input-group-prepend">
-								<div class="input-group-text bg-info text-white">
+								<div class="lbl-cadastro">
 									Alertar em: 								</div>
 							</div>
 							<input type="date" class="form-control" name="ipt-data-programada" title="Data programada para pagamento/saneamento">
@@ -126,7 +126,7 @@
 
 						<div class="input-group col-4 mt-1">
 							<div class="input-group-prepend">
-								<label class="input-group-text bg-info text-white" for="lbl-sel-prioridade">
+								<label class="lbl-cadastro" for="lbl-sel-prioridade">
 									Prioridade
 								</label>
 							</div>
@@ -140,7 +140,7 @@
 
 						<div class="input-group col-auto mt-1">
 							<div class="input-group-prepend">
-								<label class="input-group-text bg-info text-white" for="lbl-sel-meio-notificacao">
+								<label class="lbl-cadastro" for="lbl-sel-meio-notificacao">
 									Aviso/Cobrança recebido através de:
 								</label>
 							</div>

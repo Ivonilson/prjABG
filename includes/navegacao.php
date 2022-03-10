@@ -13,7 +13,7 @@
 						<span class="nav-link-text">Registros</span>
 					</a>
 
-					<ul style="background-color: #ADD8E6" class="sidenav-second-level collapse " id="collapseRegistro" data-parent="#linksaccordion">
+					<ul style="background-color: #E6E6FA" class="sidenav-second-level collapse " id="collapseRegistro" data-parent="#linksaccordion">
 
 						<li>
 							<a href="/?pagina=cadastrar-os" target="opcoes-menu" >Cadastrar O.S.</a>
@@ -37,7 +37,7 @@
 						<i  class="fa fa-search" aria-hidden="true"></i>
 						<span class="nav-link-text">Pesquisas</span>
 					</a>
-					<ul style="background-color: #ADD8E6" class="sidenav-second-level collapse" id="collapsePesquisas" data-parent="#linksaccordion">
+					<ul style="background-color:#E6E6FA" class="sidenav-second-level collapse" id="collapsePesquisas" data-parent="#linksaccordion">
 						<li>
 							<a href="/?pagina=demandas-do-dia">Vencendo Hoje</a>
 						</li>
@@ -68,7 +68,7 @@
 						<span class="nav-link-text">Listas</span>
 					</a>
 
-					<ul style="background-color: #ADD8E6" class="sidenav-second-level collapse" id="collapseListas" data-parent="#linksaccordion">
+					<ul style="background-color: #E6E6FA" class="sidenav-second-level collapse" id="collapseListas" data-parent="#linksaccordion">
 
 						<li>
 							<a href="/?pagina=lista-mamck">Mamck</a>
@@ -87,7 +87,7 @@
 						<span class="nav-link-text">Repositório</span>
 					</a>
 
-					<ul style="background-color: #ADD8E6" class="sidenav-second-level collapse" id="collapseRepositorio" data-parent="#linksaccordion">
+					<ul style="background-color: #E6E6FA" class="sidenav-second-level collapse" id="collapseRepositorio" data-parent="#linksaccordion">
 
 						<li>
 							<a href="http://www.abgsolucoes.tec.br" target="_blank">Modelos</a>
@@ -102,7 +102,7 @@
 						<span class="nav-link-text">Ferramentas</span>
 					</a>
 
-					<ul style="background-color: #ADD8E6" class="sidenav-second-level collapse" id="collapseFerramentas" data-parent="#linksaccordion">
+					<ul style="background-color:#E6E6FA" class="sidenav-second-level collapse" id="collapseFerramentas" data-parent="#linksaccordion">
 
 						<li>
 							<a href="/?pagina=nfe" target="opcoes-menu" >NFe</a>

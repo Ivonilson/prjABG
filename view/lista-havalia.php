@@ -9,30 +9,23 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Lista Havalia</title>
-	<!--<link rel="stylesheet" type="text/css" href="../bibliotecas/bootstrap/css/bootstrap.min.css">-->
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap2.min.css">
-	<link rel="stylesheet" type="text/css" href="../bibliotecas/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../bibliotecas/datatables/dataTables.bootstrap4.css">
-	<link rel="stylesheet" type="text/css" href="../css/sb-admin.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/abg.css">
-	<link rel="shortcut icon" href="../assets/abgoficial.ico" />
-	<script src="../js/abg.js"></script>
+	<?php require_once 'includes/bootstrap-css.php'; ?>
 </head>
 <body class="bg-dark fixed-nav sticky-footer" id="page-top">
 	<!-- NAVEGAÇÃO -->
-	<?php require 'navegacao.php';?>
+	<?php require_once 'includes/navegacao.php';?>
 	
 	<div class="content-wrapper">
 		<div class="container-fluid">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item">
-					<a href="?pagina=demandas-do-dia" class="text-decoration-none">Home</a>
+					Home
 				</li>
 				<li class="breadcrumb-item">
 					Listas
 				</li>
 				<li class="breadcrumb-item">
-					Havalia
+					<mark class="p-2 rounded">Havalia</mark>
 				</li>
 			</ol>
 			<div id="imprimir">
@@ -50,7 +43,7 @@
 
 				?>
 				<div class="card-header" style="font-size: 22px; font-family: Arial, Helvetica, sans-serif;">
-					<i class="fa fa-table"></i> Lista de Vistorias <strong>HAVALIA</strong> - <?php $hoje = date('d/m/Y');echo $hoje; echo " (última atualização às ".date('H')." h ".date('i')." m)"; echo "<br>TOTAL: <strong>".$contador[0]['total']."</strong>";?>
+					<i class="fa fa-table"></i> Vistorias pendentes <strong>HAVALIA</strong> - <?php $hoje = date('d/m/Y');echo $hoje; echo " (última atualização às ".date('H')." h ".date('i')." m)"; echo "<br>TOTAL: <strong>".$contador[0]['total']."</strong>";?>
 
 					<!-- DISPARADOR DO MODAL DO WHATSAPP-->
 					<button type="button" class="btn btn-success float-right p-2 border-rouded" data-toggle="modal" data-target="#modalListaHavalia">
@@ -166,14 +159,8 @@
 
 		</div>
 		<!-- rodapé -->
-		<?php require 'rodape.php';?>
+		<?php require_once 'includes/rodape.php';?>
 	</div>
-	<script src="../bibliotecas/jquery/jquery.min.js"></script>
-	<script src="../bibliotecas/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="../bibliotecas/jquery-easing/jquery.easing.min.js"></script>
-	<script src="../bibliotecas/datatables/jquery.dataTables.js"></script>
-	<script src="../bibliotecas/datatables/dataTables.bootstrap4.js"></script>
-	<script src="../js/sb-admin.min.js"></script>
-	<script src="../js/sb-admin-dataTables.min.js"></script>
+	<?php require_once 'includes/bootstrap-js.php'; ?>
 </body>
 </html>

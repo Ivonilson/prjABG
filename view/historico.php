@@ -8,36 +8,30 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Histórico O.S.</title>
-	<!--<link rel="stylesheet" type="text/css" href="../bibliotecas/bootstrap/css/bootstrap.min.css">-->
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap2.min.css">
-	<link rel="stylesheet" type="text/css" href="../bibliotecas/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/sb-admin.min.css">
-	<link rel="shortcut icon" href="../assets/abgoficial.ico" />
+	<title>Histórico O.S</title>
+	<?php require_once 'includes/bootstrap-css.php'; ?>
 </head>
 <body class="bg-dark fixed-nav sticky-footer" id="page-top">
 	<!-- NAVEGAÇÃO -->
-	<?php
-		include('navegacao.php');
-	?>
+	<?php require_once 'includes/navegacao.php';?>
 	
 	<div class="content-wrapper">
 		<div class="container-fluid">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item">
-					<a href="?pagina=demandas-do-dia" class="text-decoration-none">Home</a>
+					Home
 				</li>
 				<li class="breadcrumb-item">
-					Histórico O.S.
+					<mark class="p-2 rounded">Histórico O.S.</mark>
 				</li>
 			</ol>
 			<div class="col bg-secondary">
 				
 				<div class="container">
 
-					<div class="jumbotron jumbotron-fluid bg-dark text-white">
+					<div class="jumbotron jumbotron-fluid text-white text-center" style="background-color: #2F4F4F !important">
 						<div class="container">
-							<h4>Histórico O.S.</h4>
+							<h4>Histórico O.S. n° <?=$_GET['cod_os']?></h4>
 							<!--<a href="/?pagina=<?=filter_input(INPUT_GET, 'form')?>"><button class="btn btn-info float-right text-light p-2 border-rounded font-weight-bold">VOLTAR</button></a>-->
 						</div>
 					</div>
@@ -58,8 +52,10 @@
 					?>
 
 					<div class="col bg-light p-3">
-
-					<h5 class="col text-primary text-center">HISTÓRICO DE CADASTRO / ALTERAÇÕES</h5> <br> <span class="text-info font-weight-bold">O.S.: <?=$registroAlteracao['cod_os']?> - <?=$registroAlteracao['banco']?> - <?=$registroAlteracao['empresa']?>
+					<hr>
+					<h4 class="col text-info text-center">Informações de Cadastro</h4> 
+					<hr>
+					<br> <span class="text-dark font-weight-bold">O.S.: <?=$registroAlteracao['cod_os']?> - <?=$registroAlteracao['banco']?> - <?=$registroAlteracao['empresa']?>
 					<br><br>
 
 							<?php
@@ -87,7 +83,7 @@
 							?>
 							<br>
 							<hr>
-							<h6 class="text-danger text-center font-weight-bold">REGISTRO DAS ALTERAÇÕES</h6>
+							<h4 class="col text-danger text-center">Registro das Alterações</h4>
 							<hr>
 							<br>
 							<?="<div class='bg-light p-2'><span class='text-dark'>".$registroAlteracao['alteracoes']."</span></div>"?>
@@ -99,16 +95,11 @@
 			</div>
 		</div>
 
-		<?php  
-			include ('rodape.php');
-		?>
+		<?php require_once 'includes/rodape.php';?>
 			
 	</div>
 	</div>
 
-	<script src="../bibliotecas/jquery/jquery.min.js"></script>
-	<script src="../bibliotecas/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="../bibliotecas/jquery-easing/jquery.easing.min.js"></script>
-	<script type="text/javascript" src="../js/sb-admin.min.js"></script>
+	<?php require_once 'includes/bootstrap-js.php'; ?>
 </body>
 </html>

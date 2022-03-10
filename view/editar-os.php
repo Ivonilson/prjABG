@@ -9,37 +9,31 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Editar O.S</title>
-	<!--<link rel="stylesheet" type="text/css" href="../bibliotecas/bootstrap/css/bootstrap.min.css">-->
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap2.min.css">
-	<link rel="stylesheet" type="text/css" href="../bibliotecas/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/sb-admin.min.css">
-	<link rel="shortcut icon" href="../assets/abgoficial.ico" />
+	<?php require_once 'includes/bootstrap-css.php'; ?>
 </head>
 <body class="bg-dark fixed-nav sticky-footer" id="page-top">
 	<!-- NAVEGAÇÃO -->
-	<?php
-		include('navegacao.php');
-	?>
+	<?php require_once 'includes/navegacao.php';?>
 	
-	<div class="content-wrapper">
+	<div class="content-wrapper" id="background-tela-edicao">
 		<div class="container-fluid">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item">
-					<a href="?pagina=demandas-do-dia" class="text-decoration-none">Home</a>
+					Home
 				</li>
 				<li class="breadcrumb-item">
 					Registros O.S
 				</li>
 				<li class="breadcrumb-item">
-					Editar
+					<mark class="p-2 rounded">Editar</mark>
 				</li>
 			</ol>
 	
-			<div class="row bg-secondary">
+			<div id="row-form-edicao">
 				
-				<form class="container" method="post">
+				<form class="container background-form-edicao" method="post">
 
-					<div class="jumbotron jumbotron-fluid bg-dark text-white">
+					<div id="jumbotron_telas_edicao">
 						<div class="container">
 							<h4>O.S em edição</h4>
 							<?php $cod_os = filter_input(INPUT_GET, 'cod_os');?>
@@ -71,7 +65,7 @@
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-ficha-pesquisa">
+									<label id="lbl-edicao-os" for="select-ficha-pesquisa">
 										FICHA DE PESQUISA
 									</label>
 								</div>
@@ -95,7 +89,7 @@
 						?>
 
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-							<label for="inlineFormInputContato" class="text-light bg-dark p-2">NÚMERO DA OPERAÇÃO INTER</label>
+							<label for="inlineFormInputContato" class="text-light bg-danger p-2">NÚMERO DA OPERAÇÃO INTER</label>
 							<input type="text" class="form-control mb-2" id="inlineFormInputContato" placeholder="Digite o n° da operação para esta demanda INTER - É preferível copiar e colar o número direto do e-mail." name="ipt-numero-op-inter" title="NÚMERO OPERAÇÃO INTER" value="<?=$registro->numero_op_inter?>" required>
 						</div>
 
@@ -114,7 +108,7 @@
 						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-tipo">
+									<label id="lbl-edicao-os" for="select-tipo">
 										TIPO
 									</label>
 								</div>
@@ -144,7 +138,7 @@
 						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-banco">
+									<label id="lbl-edicao-os" for="select-banco">
 										BANCO
 									</label>
 								</div>
@@ -164,7 +158,7 @@
 						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-empresa">
+									<label id="lbl-edicao-os" for="select-empresa">
 										EMPRESA
 									</label>
 								</div>
@@ -194,7 +188,7 @@
 						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-cidade">
+									<label id="lbl-edicao-os" for="select-cidade">
 										CIDADE
 									</label>
 								</div>
@@ -216,7 +210,7 @@
 						<div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-uf">
+									<label id="lbl-edicao-os" for="select-uf">
 										UF
 									</label>
 								</div>
@@ -245,7 +239,7 @@
 						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-tipologia">
+									<label id="lbl-edicao-os" for="select-tipologia">
 										TIPOLOGIA
 									</label>
 								</div>
@@ -299,7 +293,7 @@
 						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<div class="input-group-text bg-secondary text-white">
+									<div id="lbl-edicao-os">
 										DATA RECEB.
 									</div>
 								</div>
@@ -310,7 +304,7 @@
 						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<div class="input-group-text bg-secondary text-white">
+									<div id="lbl-edicao-os">
 										DATA ENTREGA
 									</div>
 								</div>
@@ -345,7 +339,7 @@
 						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-padrao">
+									<label id="lbl-edicao-os" for="select-padrao">
 										PADRÃO ACAB.
 									</label>
 								</div>
@@ -364,7 +358,7 @@
 						<div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-novo">
+									<label id="lbl-edicao-os" for="select-novo">
 										NOVO
 									</label>
 								</div>
@@ -379,7 +373,7 @@
 						<div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-laje">
+									<label id="lbl-edicao-os" for="select-laje">
 										LAJE
 									</label>
 								</div>
@@ -398,7 +392,7 @@
 						<div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-situacao">
+									<label id="lbl-edicao-os" for="select-situacao">
 										SITUAÇÃO
 									</label>
 								</div>
@@ -413,7 +407,7 @@
 						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-status">
+									<label id="lbl-edicao-os" for="select-status">
 										STATUS
 									</label>
 								</div>
@@ -441,7 +435,7 @@
 						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-status-lista">
+									<label id="lbl-edicao-os" for="select-status-lista">
 										STATUS OBS. DA LISTA
 									</label>
 								</div>
@@ -477,7 +471,7 @@
 
 					</div>
 
-						<input type="submit" name="" class="col-12 btn btn-dark btn-block text-white" value="GRAVAR">
+						<input type="submit" name="" id="btnGravarEdicao" value="GRAVAR ALTERAÇÕES">
 				</form>
 			</div>
 
@@ -499,16 +493,11 @@
 
 			?>
 
-			<?php  
-				include ('rodape.php');
-			?>
+			<?php require_once 'includes/rodape.php';?>
 			
 		</div>
 	</div>
 
-	<script src="../bibliotecas/jquery/jquery.min.js"></script>
-	<script src="../bibliotecas/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="../bibliotecas/jquery-easing/jquery.easing.min.js"></script>
-	<script type="text/javascript" src="../js/sb-admin.min.js"></script>
+	<?php require_once 'includes/bootstrap-js.php'; ?>
 </body>
 </html>

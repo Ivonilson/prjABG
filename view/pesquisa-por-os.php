@@ -58,9 +58,12 @@
 					<br>
 					<form method="post" class="background-form-cons">
 						<div id="div-ipt-data-form-cons">
-							<span>Número da O.S.</span>
-							<input type="text" name="ipt-numeroOs" required class="form-control"><span>
-							<br>
+							<div class="input-group mb-2">
+								<div class="input-group-prepend">
+									<span class="input-group-text bg-info text-white" id="lbl-cons">Número da O.S.</span>
+								</div>
+								<input type="text" name="ipt-numeroOs" required class="form-control" aria-describedby="lbl-cons">
+							</div>
 						</div>
 						<div id="div-btn-form-cons"> 
 							<input type="submit" value="Buscar" class="btn btn-lg btn-info btn-block text-white font-weight-bold rounded">
@@ -87,7 +90,7 @@
 						if($resultado) {
 
 					?>
-						<div class='bg-success text-light p-2'><strong>RESULTADO DA PESQUISA</strong></div><br>
+						<div class='bg-info text-light p-2'><strong>RESULTADO DA PESQUISA</strong></div><br>
 
 						<div class="row">
 

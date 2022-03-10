@@ -75,13 +75,12 @@ function configurarBarra(){
 $(document).ready(function(){
 
 	let botoes_atalho_cad = document.querySelectorAll(".botoes-atalho-cad");
-	
 	botoes_atalho_cad.forEach(item =>{
 		item.setAttribute("class", "btn btn-info btn-block font-weight-bold rounded");
 	});
 	
 	let jumbotron_tela_cadastro = document.querySelector("#jumbotron_telas_cadastro");
-	jumbotron_tela_cadastro.setAttribute("class", "jumbotron jumbotron-fluid text-white bg-info");
+	jumbotron_tela_cadastro.setAttribute("class", "jumbotron jumbotron-fluid text-white bg-success");
 
 	let background_tela_cadastro = document.querySelector("#background-tela-cadastro");
 	background_tela_cadastro.setAttribute("style", "background-color: #DCDCDC",);
@@ -91,8 +90,13 @@ $(document).ready(function(){
 	let background_form_cad = document.querySelector(".background-form-cadastro");
 	background_form_cad.setAttribute("style", "background-color: #FFFFF0; border-style: outset; padding-bottom: 3px");
 
+	let labels_cadastro = document.querySelectorAll(".lbl-cadastro");
+	labels_cadastro.forEach(item => {
+		item.setAttribute("class", "input-group-text bg-success text-white");
+	});
+	
 	let botoes_gravar_cad = document.querySelector("#botoesGravarCad");
-	botoes_gravar_cad.setAttribute("class", "btn btn-lg btn-info btn-block text-white font-weight-bold rounded")
+	botoes_gravar_cad.setAttribute("class", "btn btn-lg btn-success btn-block text-white font-weight-bold rounded")
 
 });
 
@@ -100,10 +104,13 @@ $(document).ready(function(){
 $(document).ready(function(){
 
 	let botoes_atalho_cons = document.querySelectorAll(".botoes-atalho-cons");
-	
-
 	botoes_atalho_cons.forEach(item =>{
-		item.setAttribute("class", "btn btn-success btn-block font-weight-bold rounded");
+		item.setAttribute("class", "btn btn-info btn-block font-weight-bold rounded");
+	});
+
+	let div_botoes_consulta = document.querySelectorAll(".div-botoes-consulta");
+	div_botoes_consulta.forEach(item => {
+		item.setAttribute("class", "col-lg-3 col-md-3 col-sm-12 col-xs-12");
 	});
 	
 	/*por enquanto a função abaixo está sem uso, pois a telas de consulta não tem jumbotrom
@@ -123,15 +130,18 @@ $(document).ready(function(){
 
 	/*Ajuste das divs dos inputs de data das consultas*/
 	let div_ipt_data_cons = document.querySelector("#div-ipt-data-form-cons");
-	div_ipt_data_cons.setAttribute("class", "col-lg-5 col-md-4 col-sm-12 col-xs-12 mt-3");
+	div_ipt_data_cons.setAttribute("class", "col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-3");
 
 	/*Ajuste das divs dos botoes de busca das consultas*/
 	let div_btn_form_cons = document.querySelector("#div-btn-form-cons");
-	div_btn_form_cons.setAttribute("class", "col-lg-5 col-md-5 col-sm-12 col-xs-12 mb-3");
+	div_btn_form_cons.setAttribute("class", "col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3");
 
 	/*Setando as tabelas de consulta*/
 	let tbl_consulta = document.querySelector(".tbl-consulta");
 	tbl_consulta.setAttribute("class", "table table-bordered table-hover border-light");
+
+	let lbl_consulta = document.querySelector("#lbl-consulta");
+	lbl_consulta.setAttribute("class", "input-group-text bg-info text-white");
 	
 	let botoes_cons = document.querySelector("#botoesCons");
 	botoes_cons.setAttribute("class", "btn btn-lg btn-info btn-block text-white font-weight-bold rounded");
@@ -150,18 +160,23 @@ $(document).ready(function(){
 
 	/*background jumbotron telas de edição*/
 	let background_jumbotron_telas_ed = document.querySelector("#jumbotron_telas_edicao");
-	background_jumbotron_telas_ed.setAttribute("class", "jumbotron jumbotron-fluid text-white");
-	background_jumbotron_telas_ed.setAttribute("style", "background-color: #2F4F4F");
+	background_jumbotron_telas_ed.setAttribute("class", "jumbotron jumbotron-fluid bg-danger text-white");
+	//background_jumbotron_telas_ed.setAttribute("style", "background-color: #2F4F4F");
 
 	/*background das rows dos forms de edição*/
 	let background_row_form_edicao = document.querySelector("#row-form-edicao");
 	background_row_form_edicao.setAttribute("class", "row");
 	background_row_form_edicao.setAttribute("style", "background-color: #E6E6FA");
 
-
+	let lbl_edicao_os = document.querySelectorAll("#lbl-edicao-os");
+	lbl_edicao_os.forEach(item =>{
+		item.setAttribute("class", "input-group-text bg-danger text-white");
+	});
+	
 	/*botões de gravar alterações de edições*/
 	let btn_edicao = document.querySelector("#btnGravarEdicao");
-	btn_edicao.setAttribute("class", "btn btn-info btn-block font-weight-bold rounded");
+	btn_edicao.setAttribute("class", "btn btn-danger btn-block text-light font-weight-bold rounded");
+	//btn_edicao.setAttribute("style", "background-color: #2F4F4F");
 });
 
 $(document).ready(function(){

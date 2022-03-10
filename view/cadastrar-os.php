@@ -49,7 +49,7 @@
 						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-tipo">
+									<label class="lbl-cadastro" for="select-tipo">
 										TIPO
 									</label>
 								</div>
@@ -78,7 +78,7 @@
 						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-banco">
+									<label class="lbl-cadastro" for="select-banco">
 										BANCO
 									</label>
 								</div>
@@ -98,7 +98,7 @@
 						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-empresa">
+									<label class="lbl-cadastro" for="select-empresa">
 										EMPRESA
 									</label>
 								</div>
@@ -128,7 +128,7 @@
 						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-cidade">
+									<label class="lbl-cadastro" for="select-cidade">
 										CIDADE
 									</label>
 								</div>
@@ -157,7 +157,7 @@
 						<div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-uf">
+									<label class="lbl-cadastro" for="select-uf">
 										UF
 									</label>
 								</div>
@@ -186,7 +186,7 @@
 						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-tipologia">
+									<label class="lbl-cadastro" for="select-tipologia">
 										TIPOLOGIA
 									</label>
 								</div>
@@ -240,7 +240,7 @@
 						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<div class="input-group-text bg-secondary text-white">
+									<div class="lbl-cadastro">
 										DATA RECEB.
 									</div>
 								</div>
@@ -251,7 +251,7 @@
 						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<div class="input-group-text bg-secondary text-white">
+									<div class="lbl-cadastro">
 										DATA ENTREGA
 									</div>
 								</div>
@@ -286,7 +286,7 @@
 						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-padrao">
+									<label class="lbl-cadastro" for="select-padrao">
 										PADRÃO ACAB.
 									</label>
 								</div>
@@ -305,7 +305,7 @@
 						<div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-novo">
+									<label class="lbl-cadastro" for="select-novo">
 										NOVO
 									</label>
 								</div>
@@ -320,7 +320,7 @@
 						<div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-laje">
+									<label class="lbl-cadastro" for="select-laje">
 										LAJE
 									</label>
 								</div>
@@ -339,7 +339,7 @@
 						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-situacao">
+									<label class="lbl-cadastro" for="select-situacao">
 										SITUAÇÃO
 									</label>
 								</div>
@@ -354,7 +354,7 @@
 						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-status">
+									<label class="lbl-cadastro" for="select-status">
 										STATUS
 									</label>
 								</div>
@@ -376,7 +376,7 @@
 						<div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-secondary text-white" for="select-status-lista">
+									<label class="lbl-cadastro" for="select-status-lista">
 										STATUS OBS. DA LISTA
 									</label>
 								</div>

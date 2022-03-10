@@ -9,30 +9,23 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Lista Havalia</title>
-	<!--<link rel="stylesheet" type="text/css" href="../bibliotecas/bootstrap/css/bootstrap.min.css">-->
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap2.min.css">
-	<link rel="stylesheet" type="text/css" href="../bibliotecas/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../bibliotecas/datatables/dataTables.bootstrap4.css">
-	<link rel="stylesheet" type="text/css" href="../css/sb-admin.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/abg.css">
-	<link rel="shortcut icon" href="../assets/abgoficial.ico" />
-	<script src="../js/abg.js"></script>
+	<?php require_once 'includes/bootstrap-css.php'; ?>
 </head>
 <body class="bg-dark fixed-nav sticky-footer" id="page-top">
 	<!-- NAVEGAÇÃO -->
-	<?php require 'navegacao.php';?>
+	<?php require_once 'includes/navegacao.php';?>
 	
 	<div class="content-wrapper">
 		<div class="container-fluid">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item">
-					<a href="?pagina=demandas-do-dia" class="text-decoration-none">Home</a>
+					Home
 				</li>
 				<li class="breadcrumb-item">
 					Ferramentas
 				</li>
 				<li class="breadcrumb-item">
-					NFe
+					<mark class="p-2 rounded">NFe</mark>
 				</li>
 			</ol>
 			<div id="imprimir">
@@ -89,11 +82,11 @@
 			//var_dump($conteudo1);
 			?>
 
-	<div class="row bg-secondary">
+	<div id="background-tela-cadastro">
 				
-		<form class="container" method="post">
+		<form class="container background-form-cadastro" method="post">
 
-				<div class="jumbotron jumbotron-fluid bg-dark text-white">
+				<div id="jumbotron_telas_cadastro">
 					<div class="container">
 						<h4>NFE</h4>
 					</div>
@@ -104,7 +97,7 @@
 			<div class="col-12">
 				<div class="input-group mb-2">
 					<div class="input-group-prepend">
-						<label class="input-group-text bg-secondary text-white" for="select-banco">
+						<label class="lbl-cadastro" for="select-banco">
 							BANCO
 						</label>
 					</div>
@@ -124,7 +117,7 @@
 			<div class="col-12">
 				<div class="input-group mb-2">
 					<div class="input-group-prepend">
-						<label class="input-group-text bg-secondary text-white" for="select-empresa">
+						<label class="lbl-cadastro" for="select-empresa">
 							EMPRESA
 						</label>
 					</div>
@@ -142,7 +135,7 @@
 				<input type="text" class="form-control mb-2" id="inlineFormInputValorAvaliacao" placeholder="Valor (R$)" name="valorNota">
 			</div>
 
-			<input type="submit" name="" class="col-12 btn btn-dark btn-block text-white" value="CALCULAR" name="btnCadastrar">
+			<input type="submit" name="" id="botoesGravarCad" value="CALCULAR" name="btnCadastrar">
 		</div>
 
 		</form>
@@ -165,14 +158,8 @@
 	</div>
 </div>
 	<!-- rodapé -->
-	<?php require 'rodape.php';?>
+	<?php require_once 'includes/rodape.php';?>
 </div>
-	<script src="../bibliotecas/jquery/jquery.min.js"></script>
-	<script src="../bibliotecas/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="../bibliotecas/jquery-easing/jquery.easing.min.js"></script>
-	<script src="../bibliotecas/datatables/jquery.dataTables.js"></script>
-	<script src="../bibliotecas/datatables/dataTables.bootstrap4.js"></script>
-	<script src="../js/sb-admin.min.js"></script>
-	<script src="../js/sb-admin-dataTables.min.js"></script>
+	<?php require_once 'includes/bootstrap-js.php'; ?>
 </body>
 </html>
