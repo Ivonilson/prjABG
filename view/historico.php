@@ -19,7 +19,7 @@
 		<div class="container-fluid">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item">
-					Home
+					Início
 				</li>
 				<li class="breadcrumb-item">
 					<mark class="p-2 rounded">Histórico O.S.</mark>

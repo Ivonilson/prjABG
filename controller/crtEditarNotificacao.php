@@ -17,4 +17,7 @@
 				}
 		}
 	}
+
+	$editarNotificacao = new crtEditarNotificacao();
+	$editarNotificacao->EditarNotificacao();
 ?>

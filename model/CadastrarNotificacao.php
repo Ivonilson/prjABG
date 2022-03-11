@@ -16,7 +16,7 @@ class CadastrarNotificacao {
 
 			$conn = new Conn();
 
-			$statement = "INSERT INTO tbl_notificacoes (tipo, remetente, destinatario, descricao, data_emissao, data_limite, data_programada_resolver, prioridade, meio_notificacao, observacoes, usuario, data_cadastro) VALUES (:tipo, :remetente, :destinatario, :descricao, CURDATE(), :data_limite, :data_programada_resolver, :prioridade, :meio_notificacao, :observacoes, :usuario, CURRENT_TIMESTAMP())";
+			$statement = "INSERT INTO tbl_notificacoes (tip, remetente, destinatario, descricao, data_emissao, data_limite, data_programada_resolver, prioridade, meio_notificacao, observacoes, usuario, data_cadastro) VALUES (:tipo, :remetente, :destinatario, :descricao, CURDATE(), :data_limite, :data_programada_resolver, :prioridade, :meio_notificacao, :observacoes, :usuario, CURRENT_TIMESTAMP())";
 
 			$dados_cadastrar = $conn->getConn()->prepare($statement);
 			$usuario = $_SESSION['user'];
