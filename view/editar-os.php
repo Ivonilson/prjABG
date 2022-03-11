@@ -497,7 +497,7 @@
 
 					</div>
 
-						<input type="submit" name="" id="btnGravarEdicao" value="GRAVAR ALTERAÇÕES">
+						<input type="submit" name="" id="btnGravarEdicao" value="GRAVAR ALTERAÇÕES" onmouseover="hoverOverBtnGravarEd()" onmouseout="hoverOutBtnGravarEd()">
 				</form>
 			</div>
 

@@ -60,7 +60,7 @@
 						<div id="div-ipt-data-form-cons">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label class="input-group-text bg-info text-white" for="select-cidade">
+									<label class="input-group-text bg-secondary text-light" for="select-cidade">
 										CIDADE
 									</label>
 								</div>

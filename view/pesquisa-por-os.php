@@ -40,7 +40,7 @@
 					<a href="?pagina=pesquisa-por-data-receb" class="botoes-atalho-cons" title="Pesq. por data de recebimento"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por data de recebimento </a>
 				</div>
 
-				<div class="cdiv-botoes-consulta">
+				<div class="div-botoes-consulta">
 					<a href="?pagina=pesquisa-por-data-entrega" class="botoes-atalho-cons" title="Pesq. por data de entrega"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por data de entrega </a>
 				</div>
 
@@ -60,13 +60,13 @@
 						<div id="div-ipt-data-form-cons">
 							<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<span class="input-group-text bg-info text-white" id="lbl-cons">Número da O.S.</span>
+									<span class="input-group-text bg-secondary text-light" id="lbl-cons">Número da O.S.</span>
 								</div>
-								<input type="text" name="ipt-numeroOs" required class="form-control" aria-describedby="lbl-cons">
+								<input type="text" name="ipt-numeroOs" required class="form-control  col-md-7 col-lg-7 col" aria-describedby="lbl-cons">
 							</div>
 						</div>
 						<div id="div-btn-form-cons"> 
-							<input type="submit" value="Buscar" class="btn btn-lg btn-info btn-block text-white font-weight-bold rounded">
+							<input type="submit" value="Buscar" class="btn btn-lg btn-secondary btn-block text-white font-weight-bold rounded">
 							
 							<!-- O botão abaixo não está reconhecendo o código no abg.js para estilizar
 							     automaticamente... verificar assim que possível o problema...

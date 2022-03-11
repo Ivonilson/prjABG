@@ -432,7 +432,7 @@
 							<textarea type="text" class="form-control mb-2" id="inlineFormInputObservacoesIG" cols="100" rows="3" placeholder="Observações I/G" name="ta-observacoesig"></textarea>
 						</div>
 
-						<input type="submit" name="" id="botoesGravarCad" value="Gravar O.S." name="btnCadastrar" onmouseover="myHoverMouseOver()" onmouseout="myHoverMouseOut()">
+						<input type="submit" name="" id="botoesGravarCad" value="Gravar O.S." name="btnCadastrar" onmouseover="hoverOverBtnGravarCad()" onmouseout="hoverOutBtnGravarCad()">
 
 					</div>
 				</form>

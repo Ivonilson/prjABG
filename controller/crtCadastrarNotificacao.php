@@ -2,19 +2,22 @@
 
 	class crtCadastrarNotificacao {
 
-		public function cadastrarNotificacao()
-		{	
+		public function cadastrarNotificacao(){	
 			$usuario = new Conn();
-				include "view/cadastrar-notificacao.php";
 
 				if(filter_input(INPUT_POST, 'sel-tipo') != '-' && filter_input(INPUT_POST, 'sel-tipo') != '') {
 					$usuario = new CadastrarNotificacao();
-					$usuario->cadNotificacao();
-					
-				} else {
-					echo "NENHUM DADO ENVIADO.";
+					if($usuario->cadNotificacao()){
+						return "Notificação cadastrada com Sucesso!";
+					} else {
+						return "ERRO. Verifique as informações de entrada e tente novamente ou contate o Suporte.";
 				}
+			}
+
 		}
 
 	}
+
+	$crtl = new crtCadastrarNotificacao;
+	$mensagem_erro = $crtl->cadastrarNotificacao();
 ?>

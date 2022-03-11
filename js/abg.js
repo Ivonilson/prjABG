@@ -82,10 +82,10 @@ $(document).ready(function(){
 	
 	let jumbotron_tela_cadastro = document.querySelector("#jumbotron_telas_cadastro");
 	jumbotron_tela_cadastro.setAttribute("class", "jumbotron jumbotron-fluid text-light bg-success font-weight-bold");
-	jumbotron_tela_cadastro.setAttribute("style", "background-color: #0489B1 !important");
+	jumbotron_tela_cadastro.setAttribute("style", "background-color: #173B0B !important");
 
 	let background_tela_cadastro = document.querySelector("#background-tela-cadastro");
-	background_tela_cadastro.setAttribute("style", "background-color: #F2F2F2",);
+	background_tela_cadastro.setAttribute("style", "background-color: #E6E6E6",);
 	background_tela_cadastro.setAttribute("class", "row m-1 p-2");
 	//background_tela_cadastro.setAttribute("style",  "background-image: url('../assets/logo.png');");
 
@@ -94,33 +94,33 @@ $(document).ready(function(){
 
 	let labels_cadastro = document.querySelectorAll(".lbl-cadastro");
 	labels_cadastro.forEach(item => {
-		item.setAttribute("class", "input-group-text bg-success text-white");
-		item.setAttribute("style", "background-color: #0489B1 !important");
+		item.setAttribute("class", "input-group-text bg-success text-light");
+		item.setAttribute("style", "background-color: #173B0B !important");
 	});
 	
 	let botoes_gravar_cad = document.querySelector("#botoesGravarCad");
-	botoes_gravar_cad.setAttribute("class", "btn btn-lg btn-block text-white font-weight-bold rounded");
-	botoesGravarCad.setAttribute("style", "background-color: #0489B1");
+	botoes_gravar_cad.setAttribute("class", "btn btn-lg btn-block text-light font-weight-bold rounded");
+	botoesGravarCad.setAttribute("style", "background-color: #173B0B");
 
 });
-
-	function myHoverMouseOver()
+	//Efeito de hover no Botão de Gravar Cadastro quando o mouse está sobre o elemento
+	function hoverOverBtnGravarCad()
 	{		let botoesGravarCad = document.querySelector("#botoesGravarCad");
-			botoesGravarCad.setAttribute("style", "background-color: #01A9DB !important");
+			botoesGravarCad.setAttribute("style", "background-color: #0B610B !important");
 	}
 
-	function myHoverMouseOut()
+	//Efeito de hover no Botão de Gravar Cadastro quando o mouse sai do elemento
+	function hoverOutBtnGravarCad()
 	{		let botoesGravarCad = document.querySelector("#botoesGravarCad");
-			botoesGravarCad.setAttribute("style", "background-color: #0489B1 !important");
+			botoesGravarCad.setAttribute("style", "background-color:  #173B0B !important");
 	}
-
 
 /*Cores padrão das telas de consulta**/
 $(document).ready(function(){
 
 	let botoes_atalho_cons = document.querySelectorAll(".botoes-atalho-cons");
 	botoes_atalho_cons.forEach(item =>{
-		item.setAttribute("class", "btn btn-info btn-block font-weight-bold rounded");
+		item.setAttribute("class", "btn btn-block btn-secondary font-weight-bold rounded text-light");
 	});
 
 	let div_botoes_consulta = document.querySelectorAll(".div-botoes-consulta");
@@ -133,7 +133,7 @@ $(document).ready(function(){
 	jumbotron_tela_consulta.setAttribute("class", "jumbotron jumbotron-fluid text-white bg-info");*/
 
 	let background_tela_consulta = document.querySelector("#background-tela-consulta");
-	background_tela_consulta.setAttribute("style", "background-color: #DCDCDC");
+	background_tela_consulta.setAttribute("style", "background-color:#D3D3D3");
 	//background_tela_cadastro.setAttribute("style",  "background-image: url('../assets/logo.png');");
 
 	let background_form_cons = document.querySelector(".background-form-cons");
@@ -156,40 +156,53 @@ $(document).ready(function(){
 	tbl_consulta.setAttribute("class", "table table-bordered table-hover border-light");
 	
 	let botoes_cons = document.querySelector("#botoesCons");
-	botoes_cons.setAttribute("class", "btn btn-lg btn-info btn-block text-white font-weight-bold rounded");
+	botoes_cons.setAttribute("class", "btn btn-lg btn-secondary btn-block text-light font-weight-bold rounded");
 	//botoes_cons.setAttribute("style", "background-color: #483D8B");
 });
-
 
 /*Cores padrão das telas de edição*/
 $(document).ready(function(){
 
 	let background_tela_edicao = document.querySelector("#background-tela-edicao");
-	background_tela_edicao.setAttribute("style", "background-color: #DCDCDC");
-
+	background_tela_edicao.setAttribute("style", "background-color: #F8F8FF");
+	
 	let background_form_edicao = document.querySelector(".background-form-edicao");
-	background_form_edicao.setAttribute("style", "background-color: #FFFFF0; border-style: outset; padding-bottom: 3px");
+	background_form_edicao.setAttribute("style", "background-color:#DCDCDC; border-style: outset; padding-bottom: 3px");
 
 	/*background jumbotron telas de edição*/
 	let background_jumbotron_telas_ed = document.querySelector("#jumbotron_telas_edicao");
-	background_jumbotron_telas_ed.setAttribute("class", "jumbotron jumbotron-fluid bg-danger text-white");
-	//background_jumbotron_telas_ed.setAttribute("style", "background-color: #2F4F4F");
+	background_jumbotron_telas_ed.setAttribute("class", "jumbotron jumbotron-fluid bg-danger text-light");
+	background_jumbotron_telas_ed.setAttribute("style", "background-color:#0B3B39 !important");
 
 	/*background das rows dos forms de edição*/
 	let background_row_form_edicao = document.querySelector("#row-form-edicao");
 	background_row_form_edicao.setAttribute("class", "row");
-	background_row_form_edicao.setAttribute("style", "background-color: #E6E6FA");
+	background_row_form_edicao.setAttribute("style", "background-color: #E6E6E6");
+	background_row_form_edicao.setAttribute("class", "row m-1 p-2");
 
 	let lbl_edicao_os = document.querySelectorAll("#lbl-edicao-os");
 	lbl_edicao_os.forEach(item =>{
-		item.setAttribute("class", "input-group-text bg-danger text-white");
+		item.setAttribute("class", "input-group-text text-light");
+		item.setAttribute("style", "background-color: #0B3B39 !important");
 	});
 	
 	/*botões de gravar alterações de edições*/
 	let btn_edicao = document.querySelector("#btnGravarEdicao");
-	btn_edicao.setAttribute("class", "btn btn-danger btn-block text-light font-weight-bold rounded");
-	//btn_edicao.setAttribute("style", "background-color: #2F4F4F");
+	btn_edicao.setAttribute("class", "btn btn-block text-light font-weight-bold rounded");
+	btn_edicao.setAttribute("style", "background-color:#0B3B39 !important");
 });
+
+//Efeito de hover no Botão de Gravar Edição quando o mouse está sobre o elemento
+function hoverOverBtnGravarEd()
+{		let botoesGravarEd = document.querySelector("#btnGravarEdicao");
+		botoesGravarEd.setAttribute("style", "background-color: #0B614B !important");
+}
+
+//Efeito de hover no Botão de Gravar Edição quando o mouse sai do elemento
+function hoverOutBtnGravarEd()
+{		let botoesGravarEd = document.querySelector("#btnGravarEdicao");
+		botoesGravarEd.setAttribute("style", "background-color: #0B3B39 !important");
+}
 
 $(document).ready(function(){
 	let status = document.querySelectorAll("#sel-status-notificacao");

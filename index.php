@@ -21,8 +21,7 @@ $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : "login";
 
 		case 'cadastrar-notificacao':
 			require "controller/crtCadastrarNotificacao.php";
-			$crtl = new crtCadastrarNotificacao();
-			$crtl->cadastrarNotificacao();
+			include_once "view/cadastrar-notificacao.php";
 			break;
 
 		case 'cadastrar-evento':
@@ -33,8 +32,6 @@ $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : "login";
 
 		case 'editar-notificacao':
 			require "controller/crtEditarNotificacao.php";
-			$crtl = new crtEditarNotificacao();
-			$crtl->editarNotificacao();
 			break;
 
 		case 'editar-os':

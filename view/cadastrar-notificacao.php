@@ -28,6 +28,29 @@
 					<mark class="p-2 rounded">Cadastrar Notificação</mark>
 				</li>
 			</ol>
+
+					<!--Feedback do Cadastro -->
+					<?php
+
+						if($mensagem_erro == "Notificação cadastrada com Sucesso!")
+						{
+					?>
+
+					<div class="alert alert-success font-weight-bold alertaCadOsOk col-12 text-center" role="alert">
+ 						<img src="../assets/ok.png"><h5><strong><?=$mensagem_erro?></strong></h5>
+					</div>
+
+					<?php 
+						} elseif($mensagem_erro == "ERRO. Verifique as informações de entrada e tente novamente ou contate o Suporte.") {
+					?>
+
+					<div class="alert alert-danger font-weight-bold text-dark alertaCadOsNoOk col-12 text-center" role="alert">
+ 						<img src="../assets/error.png"><h5><strong><?=$mensagem_erro?></strong></h5>
+					</div>
+
+					<?php 
+						} 
+					?>
 	
 			<div id="background-tela-cadastro">
 				
@@ -160,7 +183,7 @@
 
 					</div>
 
-					<input type="submit" name="" id="botoesGravarCad" value="Gravar Notificação" name="btnCadastrar" onmouseover="myHoverMouseOver()" onmouseout="myHoverMouseOut()">
+					<input type="submit" name="" id="botoesGravarCad" value="Gravar Notificação" name="btnCadastrar" onmouseover="hoverOverBtnGravarCad()" onmouseout="hoverOutBtnGravarCad()">
 				</form>
 			</div>
 
