@@ -153,7 +153,7 @@ $(document).ready(function(){
 
 	/*Setando as tabelas de consulta*/
 	let tbl_consulta = document.querySelector(".tbl-consulta");
-	tbl_consulta.setAttribute("class", "table table-bordered table-hover border-light");
+	tbl_consulta.setAttribute("class", "table table-bordered table-sm table-hover border-light");
 	
 	let botoes_cons = document.querySelector("#botoesCons");
 	botoes_cons.setAttribute("class", "btn btn-lg btn-secondary btn-block text-light font-weight-bold rounded");
