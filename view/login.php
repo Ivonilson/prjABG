@@ -1,51 +1,31 @@
 <!DOCTYPE html>
-<htm lang="pt-br">
+<html lang="pt-BR">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+	<link href="css/signin.css" rel="stylesheet">
+	<link rel="icon" href="assets/abgoficial.ico">
 	<title>Login</title>
-	<link rel="stylesheet" type="text/css" href="../bibliotecas/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../bibliotecas/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/sb-admin.min.css">
-	<link rel="shortcut icon" href="assets/abgoficial.ico" />
 </head>
-<body class="bg-dark">
+<body class="text-center">
 
-	<div class="container">
-		<div class="card card-login mx-auto mt-5">
-			<div class="card-header text-center bg-info	 text-light">Abg</div>
-			<div class="card-body">
-				<form method="post" action="../index.php/?pagina=demandas-do-dia">
-					<div class="form-group">
-						<i class="fa fa-user-circle" aria-hidden="true"></i>
-						<!--<label for="usuario">Usuário</label>-->
-						<input type="text" class="form-control" name="usuario" id="email" placeholder="Usuário">
-					</div>
-					<div class="form-group">
-						<!--<label for="senha">Senha</label>-->
-						<i class="fa fa-key" aria-hidden="true"></i>
-						<input type="password" class="form-control" name="senha" id="senha" placeholder="Senha">
-					</div>
-					<!--<div class="form-group">
-						<div class="form-check">
-							<label class="form-check-label">
-								<input type="checkbox" class="form-check-input">
-								Lembrar minha senha.
-							</label>
-						</div>-->
-					</div>
-					<input type="submit" class="btn btn-info btn-block" value="Entrar">
-					<!--<div class="text-center">
-						<a href="#" class="d-block small mt-3">Criar uma Conta</a>
-						<a href="#" class="d-block small">Esqueceu a senha?</a>
-					</div>-->
-				</form>
-			</div>
-		</div>
-	</div>
+	<form class="form-signin bg-light border rounded" method="post" action="../index.php/?pagina=demandas-do-dia">
+      <img class="mb-4" src="assets/abgoficial.png" alt="Abg Soluções" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal text">Área Restrita</h1>
 
-	<script src="../bibliotecas/jquery/jquery.min.js"></script>
-	<script src="../bibliotecas/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="../bibliotecas/jquery-easing/jquery.easing.min.js"></script>
+     <div class="form-group">
+        <label for="exampleInputEmail1" class="sr-only">Usuário</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="usuario" aria-describedby="Usuário" placeholder="Usuário">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPassword1" class="sr-only">Senha</label>
+        <input type="password" class="form-control" id="exampleInputPassword1"  name="senha" placeholder="Senha">
+      </div>
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Acessar</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
+  </form>
 </body>
 </html>
