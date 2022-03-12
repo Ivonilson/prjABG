@@ -94,7 +94,7 @@ $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : "login";
 			break;
 
 		case 'login':
-			require "view/login.php";
+			require_once "view/login.php";
 			break;
 	}
 
