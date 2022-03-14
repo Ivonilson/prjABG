@@ -1,5 +1,6 @@
 <?php
 session_start();
+require "model/Conn.php";
 include "controller/crtValidarUsuario.php";
 require "model/CadastrarNotificacao.php";
 require "model/EditarNotificacao.php";
@@ -87,14 +88,8 @@ $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : "login";
 			$crtl->Nfe();
 			break;
 
-		case 'logout':
-			require "controller/crtLogout.php";
-			$crtl = new crtLogout();
-			$crtl->Logout();
-			break;
-
 		case 'login':
-			require_once "view/login.php";
+			include "view/login.php";
 			break;
 	}
 

@@ -210,7 +210,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="/?pagina=logout" class="nav-link text-light col-2">
+					<a href="/?pagina=login" class="nav-link text-light col-2">
 						<i class="fa fa-sign-out float-right" title="Sair do Sistema">Logout</i>
 					</a>
 				</li>

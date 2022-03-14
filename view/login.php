@@ -12,7 +12,7 @@
 
   <div class="div-login">
 
-	<form class="form-signin bg-light border rounded" method="post" action="../index.php/?pagina=demandas-do-dia">
+	<form class="form-signin bg-light border rounded" method="post" action="/?pagina=demandas-do-dia">
       <img class="mb-4" src="assets/abgoficial.png" alt="Abg Soluções" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal text">Área Restrita</h1>
 
@@ -27,6 +27,11 @@
       </div>
 
       <button class="btn btn-lg btn-primary btn-block" type="submit">Acessar</button>
+
+        <div class="alert alert-danger" role="alert">
+          <?= $mensagem_erro ?>
+        </div>
+
       <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
   </form>
 
