@@ -51,7 +51,7 @@
 
 			<div class="card mb-1 border border-light">
 				<div class="card-header">
-					<i class="fa fa-table"></i>Demandas do dia - <?php $hoje = date('d/m/Y'); echo $hoje; echo " - (última atualização às ".date('H')." h ".date('i')." m)"; ?>
+					<i class="fa fa-table"></i> Demandas do dia - <?php $hoje = date('d/m/Y'); echo $hoje; echo " - (última atualização às ".date('H')." h ".date('i')." m)"; ?>
 					<a href="/?pagina=cadastrar-os" class="btn btn-danger text-light  float-right font-weight-bold rounded" title="Incluir Nova O.S."><i class="fa fa-plus"></i> O.S.</a>
 				</div>
 			</div>

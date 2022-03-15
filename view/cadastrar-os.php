@@ -58,7 +58,7 @@
 
 					<div id="jumbotron_telas_cadastro">
 						<div class="container ">
-							<h4>Cadastrar O.S</h4>
+							<h4>Cadastrar O.S.</h4>
 						</div>
 					</div>
 

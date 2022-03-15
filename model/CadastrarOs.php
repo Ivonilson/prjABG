@@ -11,6 +11,10 @@ class CadastrarOS {
 				unset($dados['btnCadastrar']);
 			}
 
+			$valor_servico = str_replace(".", "", $dados['ipt-valorServ']);
+			$valor_servico = str_replace("," , "." , $dados['ipt-valorServ']);
+
+
 			try {
 
 			$conn = new Conn();
@@ -64,7 +68,7 @@ class CadastrarOS {
 			$dados_cadastrar->bindParam(':cep', $dados['ipt-cep']);
 			$dados_cadastrar->bindParam(':data_receb', $dados['ipt-dataReceb']);
 			$dados_cadastrar->bindParam(':data_entrega', $dados['ipt-dataEntrega']);
-			$dados_cadastrar->bindParam(':valor_servico', $dados['ipt-valorServ']);
+			$dados_cadastrar->bindParam(':valor_servico', $valor_servico);
 			$dados_cadastrar->bindParam(':valor_deslocamento', $dados['ipt-valorDesloc']);
 			$dados_cadastrar->bindParam(':area_construida', $dados['ipt-areaEdif']);
 			$dados_cadastrar->bindParam(':area_terreno', $dados['ipt-areaTerreno']);
