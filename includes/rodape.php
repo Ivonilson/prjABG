@@ -1,5 +1,5 @@
 <!-- rodapé --->
-<footer  class="sticky-footer">
+<footer  class="sticky-footer fixed-bottom">
 	<div class="container">
 		<div class="text-center">
 			<small>&copy;AbgSoluções -  <?=date("Y")?> - abgsolucoes.tec.br </small>
