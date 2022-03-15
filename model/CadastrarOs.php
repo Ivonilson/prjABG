@@ -11,7 +11,7 @@ class CadastrarOS {
 				unset($dados['btnCadastrar']);
 			}
 
-			$valor_servico = str_replace(".", "", $dados['ipt-valorServ']);
+			//$valor_servico = str_replace(".", "", $dados['ipt-valorServ']);
 			$valor_servico = str_replace("," , "." , $dados['ipt-valorServ']);
 
 
