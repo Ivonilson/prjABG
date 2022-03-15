@@ -16,22 +16,21 @@ class crtValidarUsuario {
 				$_SESSION['user'] = $resultado[0]->user;
 
 			} else {
-				$_SESSION['user'] = NULL;
-				echo "<script>alert('aqui')</script>";
-				
+				$_SESSION['user'] = '-';
 			}
 
 			} catch (PDOException $erro) {
 				//echo "ERRO: ".$erro->getMessage();
 
 			}
+
 		}
 
+		if($_SESSION['user'] == '-'){
+			return "Usuário ou Senha inválidos!";
+		}
 	}
 }
-
 	$valida = new crtValidarUsuario();
 	$mensagem_erro = $valida->valUsuario();
-
-
 ?>

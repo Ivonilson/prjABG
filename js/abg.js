@@ -227,3 +227,7 @@ $(document).ready(function(){
 $(document).ready(function(){
    $(".alertaCadOsNoOk").fadeIn(300).delay(8000).fadeOut(400);
 });
+
+$(document).ready(function(){
+   $(".msgErroLogin").fadeIn(100).delay(2000).fadeOut(200);
+});
