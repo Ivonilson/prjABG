@@ -478,7 +478,7 @@
 
 						<div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
 							<label class="sr-only" for="inlineFormInputValorAvaliacao">VALOR DE AVALIAÇÃO</label>
-							<input type="text" class="form-control mb-2" id="inlineFormInputValorAvaliacao" placeholder="Valor de Avaliação" name="ipt-valorAvaliacao" value="<?=$registro->valor_avaliacao?>" title="VALOR DE AVALIAÇÃO">
+							<input type="text" class="form-control mb-2" id="inlineFormInputValorAvaliacao" placeholder="Valor de Avaliação" name="ipt-valorAvaliacao" value="<?=number_format($registro->valor_avaliacao, 2 , "," , ".")?>" title="VALOR DE AVALIAÇÃO">
 						</div>
 
 					</div>

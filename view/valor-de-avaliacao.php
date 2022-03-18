@@ -165,10 +165,10 @@
 								<td><?=$value['observacoes'].' '.$value['condominio']?></td>
 								<td><?=$value['bairro']?></td>
 								<td><?=$value['uf']?></td>
-								<td><strong><?=$value['valor_avaliacao']?></strong></td>
+								<td><strong><?=number_format($value['valor_avaliacao'], 2, "," , ".")?></strong></td>
 								<td><?=$value['tipologia']?></td>
-								<td><?=$value['area_construida']?></td>
-								<td><?=$value['area_terreno']?></td>
+								<td><?=number_format($value['area_construida'], 2, "," , ".")?></td>
+								<td><?=number_format($value['area_terreno'], 2 , "," , ".")?></td>
 								<td><?=$value['LAJE']?></td>
 								<td><?=$value['novo']?></td>
 								<td><?=date_format(date_create($value['data_receb']), "d/m/Y")?></td>

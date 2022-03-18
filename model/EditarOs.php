@@ -40,6 +40,8 @@ class EditarOs {
 			$area_terreno = str_replace("." , "" , $dados['ipt-areaTerreno']);
 			$area_terreno = str_replace("," , "." , $area_terreno);
 
+			$valor_avaliacao = str_replace("." , "" , $dados['ipt-valorAvaliacao']);
+			$valor_avaliacao = str_replace("," , "." , $valor_avaliacao);
 
 			try {
 
@@ -100,7 +102,7 @@ class EditarOs {
 			$dados_editar->bindParam(':data_entrega', $dados['ipt-dataEntrega']);
 			$dados_editar->bindParam(':valor_servico', $valor_servico);
 			$dados_editar->bindParam(':valor_deslocamento', $valor_deslocamento);
-			$dados_editar->bindParam(':valor_avaliacao', $dados['ipt-valorAvaliacao']);
+			$dados_editar->bindParam(':valor_avaliacao', $valor_avaliacao);
 			$dados_editar->bindParam(':area_construida', $area_edificada);
 			$dados_editar->bindParam(':area_terreno', $area_terreno);
 			$dados_editar->bindParam(':padrao_acabamento', $dados['sel-padraoAcab']);
