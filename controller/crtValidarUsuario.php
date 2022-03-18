@@ -26,7 +26,7 @@ class crtValidarUsuario {
 
 		}
 
-		if($_SESSION['user'] == '-'){
+		if(isset($_SESSION['user']) && $_SESSION['user'] == '-'){
 			return "Usuário ou Senha inválidos!";
 		}
 	}

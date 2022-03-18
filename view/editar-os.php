@@ -340,12 +340,12 @@
 
 						<div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
 							<label class="sr-only" for="inlineFormInputValorServico">VALOR SERVIÇO</label>
-							<input type="text" class="form-control mb-2" id="inlineFormInputValorServico" placeholder="Valor do Serviço" name="ipt-valorServ" value="<?=$registro->valor_servico?>" title="VALOR DO SERVIÇO" requerid>
+							<input type="text" class="form-control mb-2" id="inlineFormInputValorServico" placeholder="Valor do Serviço" name="ipt-valorServ" value="<?=number_format($registro->valor_servico, 2, ',' , '.')?>" title="VALOR DO SERVIÇO" requerid>
 						</div>
 
 						<div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
 							<label class="sr-only" for="inlineFormInputValorDeslocamento">VALOR DESLOCAMENTO</label>
-							<input type="text" class="form-control mb-2" id="inlineFormInputValorDeslocamento" placeholder="Valor Deslocamento" name="ipt-valorDesloc" value="<?=$registro->valor_deslocamento?>" title="VALOR DESLOCAMENTO" requerid>
+							<input type="text" class="form-control mb-2" id="inlineFormInputValorDeslocamento" placeholder="Valor Deslocamento" name="ipt-valorDesloc" value="<?=number_format($registro->valor_deslocamento, 2, ',' , '.')?>" title="VALOR DESLOCAMENTO" requerid>
 						</div>
 
 					</div>
@@ -354,12 +354,12 @@
 
 						<div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
 							<label class="sr-only" for="inlineFormInputAreaEdificada">ÁREA EDIFICADA</label>
-							<input type="text" class="form-control mb-2" id="inlineFormInputAreaEdificada" placeholder="Área Edificada" name="ipt-areaEdif" value="<?=$registro->area_construida?>" title="ÁREA CONSTRUÍDA" required>
+							<input type="text" class="form-control mb-2" id="inlineFormInputAreaEdificada" placeholder="Área Edificada" name="ipt-areaEdif" value="<?=number_format($registro->area_construida, 2, ',' , '.')?>" title="ÁREA CONSTRUÍDA" required>
 						</div>
 
 						<div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
 							<label class="sr-only" for="inlineFormInputAreaTerreno">ÁREA DO TERRENO</label>
-							<input type="text" class="form-control mb-2" id="inlineFormInputAreaTerreno" placeholder="Área do Terreno" name="ipt-areaTerreno" value="<?=$registro->area_terreno?>" title="ÁREA DO TERRENO" required>
+							<input type="text" class="form-control mb-2" id="inlineFormInputAreaTerreno" placeholder="Área do Terreno" name="ipt-areaTerreno" value="<?=number_format($registro->area_terreno, 2 , ',' , '.')?>" title="ÁREA DO TERRENO" required>
 						</div>
 
 						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">

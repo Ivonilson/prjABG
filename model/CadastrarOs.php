@@ -10,10 +10,18 @@ class CadastrarOS {
 			if (!empty($dados['btnCadastrar'])) {
 				unset($dados['btnCadastrar']);
 			}
+			
+			$valor_servico = str_replace("." , "" , $dados['ipt-valorServ']);
+			$valor_servico = str_replace("," , "." , $valor_servico);
 
-			//$valor_servico = str_replace(".", "", $dados['ipt-valorServ']);
-			$valor_servico = str_replace("," , "." , $dados['ipt-valorServ']);
+			$valor_deslocamento = str_replace("." , "" , $dados['ipt-valorDesloc']);
+			$valor_deslocamento = str_replace("," , "." , $valor_deslocamento);
 
+			$area_edificada = str_replace("." , "" , $dados['ipt-areaEdif']);
+			$area_edificada = str_replace("," , "." , $area_edificada);
+
+			$area_terreno = str_replace("." , "" , $dados['ipt-areaTerreno']);
+			$area_terreno = str_replace("," , "." , $area_terreno);
 
 			try {
 
@@ -69,9 +77,9 @@ class CadastrarOS {
 			$dados_cadastrar->bindParam(':data_receb', $dados['ipt-dataReceb']);
 			$dados_cadastrar->bindParam(':data_entrega', $dados['ipt-dataEntrega']);
 			$dados_cadastrar->bindParam(':valor_servico', $valor_servico);
-			$dados_cadastrar->bindParam(':valor_deslocamento', $dados['ipt-valorDesloc']);
-			$dados_cadastrar->bindParam(':area_construida', $dados['ipt-areaEdif']);
-			$dados_cadastrar->bindParam(':area_terreno', $dados['ipt-areaTerreno']);
+			$dados_cadastrar->bindParam(':valor_deslocamento', $valor_deslocamento);
+			$dados_cadastrar->bindParam(':area_construida', $area_edificada);
+			$dados_cadastrar->bindParam(':area_terreno', $area_terreno);
 			$dados_cadastrar->bindParam(':padrao_acabamento', $dados['sel-padraoAcab']);
 			$dados_cadastrar->bindParam(':novo', $dados['sel-novo']);
 			$dados_cadastrar->bindParam(':LAJE', $dados['sel-laje']);

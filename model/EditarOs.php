@@ -28,6 +28,18 @@ class EditarOs {
 			$ficha_pesquisa = isset($dados['sel-ficha-pesquisa']) ? $dados['sel-ficha-pesquisa'] : "-";
 			$numero_operacao = isset($dados['ipt-numero-op-inter']) ? trim($dados['ipt-numero-op-inter']) : "-";
 
+			$valor_servico = str_replace(".", "", $dados['ipt-valorServ']);
+			$valor_servico = str_replace("," , "." , $valor_servico);
+
+			$valor_deslocamento = str_replace(".", "", $dados['ipt-valorDesloc']);
+			$valor_deslocamento = str_replace("," , "." , $valor_deslocamento);
+
+			$area_edificada = str_replace("." , "" , $dados['ipt-areaEdif']);
+			$area_edificada = str_replace("," , "." , $area_edificada);
+
+			$area_terreno = str_replace("." , "" , $dados['ipt-areaTerreno']);
+			$area_terreno = str_replace("," , "." , $area_terreno);
+
 
 			try {
 
@@ -86,11 +98,11 @@ class EditarOs {
 			$dados_editar->bindParam(':cep', $dados['ipt-cep']);
 			$dados_editar->bindParam(':data_receb', $dados['ipt-dataReceb']);
 			$dados_editar->bindParam(':data_entrega', $dados['ipt-dataEntrega']);
-			$dados_editar->bindParam(':valor_servico', $dados['ipt-valorServ']);
-			$dados_editar->bindParam(':valor_deslocamento', $dados['ipt-valorDesloc']);
+			$dados_editar->bindParam(':valor_servico', $valor_servico);
+			$dados_editar->bindParam(':valor_deslocamento', $valor_deslocamento);
 			$dados_editar->bindParam(':valor_avaliacao', $dados['ipt-valorAvaliacao']);
-			$dados_editar->bindParam(':area_construida', $dados['ipt-areaEdif']);
-			$dados_editar->bindParam(':area_terreno', $dados['ipt-areaTerreno']);
+			$dados_editar->bindParam(':area_construida', $area_edificada);
+			$dados_editar->bindParam(':area_terreno', $area_terreno);
 			$dados_editar->bindParam(':padrao_acabamento', $dados['sel-padraoAcab']);
 			$dados_editar->bindParam(':novo', $dados['sel-novo']);
 			$dados_editar->bindParam(':LAJE', $dados['sel-laje']);
