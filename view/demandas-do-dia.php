@@ -60,7 +60,7 @@
 
 				<!-- Barra de progresso -->
 				<div class="row ">
-					<div barra-progresso="barraProgresso" class="col progresso pr-3 pl-3 pt-1 pb-1 m-3 float-right  rounded" title="Percentual de serviços finalizados">
+					<div barra-progresso="barraProgresso" class="col progresso pr-3 pl-3 pt-1 pb-1 mr-4 ml-4 mb-3 mt-3  rounded" title="Percentual de serviços finalizados">
 						<div></div>
 					</div>
 				</div>
