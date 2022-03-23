@@ -56,7 +56,7 @@
 				</div>
 			</div>
 			<div class="row border-light bg-light m-2">
-				<div class="card-body">
+				<div class="col-lg-12">
 
 				<!-- Barra de progresso -->
 				<div class="row ">
@@ -65,8 +65,7 @@
 					</div>
 				</div>
 				
-
-					<table class="table table-bordered table-hover table-sm" id="dataTable" width="100%" cellspacing="0">
+					<table class="table table-bordered table-hover d-nowrap" id="dataTable" width="100%" cellspacing="0">
 						<thead class="thead-light">
 							<tr>
 								<th>O.S</th>
@@ -136,7 +135,7 @@
 								<td><?=date_format(date_create($value['data_receb']), "d/m/Y")?></td>
 								<td><?=date_format(date_create($value['data_entrega']), "d/m/Y")?></td>
 								<td class="status"><?=$value['status']?></td>
-								<td class="text-justify"><?=$value['notas_importantes']?></td>
+								<td class="text-justify" id="td_notas_importantes"> <?= $value['notas_importantes']?> </td>
 								<td align="center"><a href="/?pagina=editar-os&cod_os=<?=$value['cod_os']?>&form=demandas-do-dia" title="Editar"><i class="fa fa-pencil" aria-hidden="true"></a></td>
 								<td align="center"><a href="/?pagina=historico&cod_os=<?=$value['cod_os']?>&form=demandas-do-dia" title="Histórico" target="_blank"><i class="fa fa-history" aria-hidden="true"></a></td>
 							</tr>
