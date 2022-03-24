@@ -76,7 +76,7 @@
 					</div>
 				</div>
 				
-					<table class="table table-bordered table-sm table-hover border-light" id="dataTable" width="100%" cellspacing="0">
+					<table class="table table-bordered table-sm table-hover border" id="dataTable" width="100%" cellspacing="0">
 						<thead class="thead-light">
 							<tr>
 								<th>O.S</th>
