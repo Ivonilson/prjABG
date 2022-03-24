@@ -6,31 +6,31 @@ class crtValidarUsuario {
 
 		$validacao = new Conn();
 
-		if(filter_input(INPUT_POST, 'usuario') != NULL) {
-
-			try {
+		try {
 
 			$resultado = $validacao->validarUsuario();
 
 			if($resultado){
 				$_SESSION['user'] = $resultado[0]->user;
+				echo "<script>window.location.href = '/?pagina=demandas-do-dia'</script>";
 
 			} else {
-				$_SESSION['user'] = '-';
+				return "Usuário ou Senha inválidos!";
 			}
 
-			} catch (PDOException $erro) {
-				//echo "ERRO: ".$erro->getMessage();
+		} catch (PDOException $erro) {
+			//echo "ERRO: ".$erro->getMessage();
 
-			}
-
-		}
-
-		if(isset($_SESSION['user']) && $_SESSION['user'] == '-'){
-			return "Usuário ou Senha inválidos!";
 		}
 	}
 }
-	$valida = new crtValidarUsuario();
-	$mensagem_erro = $valida->valUsuario();
+	
+$valida = new crtValidarUsuario();
+
+if(filter_input(INPUT_POST, 'usuario') != NULL){
+		$mensagem_erro = $valida->valUsuario();
+} else {
+	$mensagem_erro = "";
+}
+
 ?>
