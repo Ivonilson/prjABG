@@ -37,11 +37,11 @@
 				</div>
 
 				<div class="div-botoes-consulta">
-					<a href="?pagina=pesquisa-por-os" class="botoes-atalho-cons" title="Pesq. O.S. por código"><i class="fa fa-search" aria-hidden="true"></i> Pesq. O.S. por código </a>
+					<a href="?pagina=pesquisa-por-os" class="botoes-atalho-cons" title="Pesq. O.S. por código"><i class="fa fa-search" aria-hidden="true"></i> O.S. por código </a>
 				</div>
 
 				<div class="div-botoes-consulta">
-					<a href="?pagina=pesquisa-por-data-receb" class="botoes-atalho-cons" title="Pesq. por data de recebimento"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por data de recebimento </a>
+					<a href="?pagina=pesquisa-por-data-receb" class="botoes-atalho-cons" title="Pesq. por data de recebimento"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por receb. </a>
 				</div>
 
 				<div class="div-botoes-consulta">
@@ -68,7 +68,7 @@
 			</div>
 			
 			<div id="row-tbl-consulta">
-				<div class="card-body">
+				<div class="col">
 
 				<!-- BARRA DE PROGRESSO -->
 				<div class="row">
@@ -78,7 +78,7 @@
 				</div>
 				
 
-					<table class="tbl-consulta" id="dataTable" width="100%" cellspacing="0">
+					<table class="table table-bordered table-sm table-hover border-light" id="dataTable" width="100%" cellspacing="0">
 						<thead class="thead-light">
 							<tr>
 								<th>O.S</th>

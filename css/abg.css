@@ -52,7 +52,3 @@ tfoot { display:table-footer-group }
 	padding-right:10px;
 	padding-bottom: 5px;
 }
-
-#td_notas_importantes {
-	word-wrap:break-word !important;
-}

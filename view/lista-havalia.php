@@ -53,8 +53,8 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="card-body">
-					<table class="table table-bordered table-hove" id="#" width="100%" cellspacing="0">
+				<div class="col">
+					<table class="table table-bordered table-hover table-sm" id="dataTable" width="100%" cellspacing="0">
 						<thead class="thead-dark">
 							<tr style="font-size: 22px; font-family: Arial, Helvetica, sans-serif;">
 								<th>O.S</th>
@@ -65,9 +65,9 @@
 								<th>CONTATO</th>
 								<th>DATA RECEB</th>
 								<th>DATA ENTREGA</th>
-								<th class="sr-only">STATUS</th>
+								<!--<th class="sr-only">STATUS</th>-->
 								<th>OBS.</th>
-								<!--<th id="esconder">EDITAR</th>-->
+								<th id="esconder"></th>
 							</tr>
 						</thead>
 						<!--<tfoot class="thead-dark">
@@ -102,7 +102,7 @@
 								<td><?=$value['CONTATO']?></td>
 								<td><?=date_format(date_create($value['data_receb']), "d/m/Y")?></td>
 								<td><?=date_format(date_create($value['data_entrega']), "d/m/Y")?></td>
-								<td class="sr-only"><strong class="statusLista"><?=$value['obs3']?></strong></td>
+								<!--<td class="sr-only"><strong class="statusLista"><?=$value['obs3']?></strong></td>-->
 								<td><?=$value['obs2']?></td>
 								<td align="center" id="esconder"><a href="/?pagina=editar-os&cod_os=<?=$value['cod_os']?>&form=lista-havalia" title="Editar"><i class="fa fa-pencil" aria-hidden="true"></a></td>
 							</tr>
@@ -138,7 +138,7 @@
 									
 							?>
 
-							<span>*NOVA DEMANDA HAVALIA* - *O.S <?=$value['cod_os']?>* - *<?=$value['banco']?>* - <?=$value['proponente']?> - *<?=$value['cidade']?>/<?=$value['uf']?>* - <?=$value['observacoes']." ".$value['condominio']?> - *<?=$value['bairro']?>* - 📞<?=$value['CONTATO']?> - <?=$value['obs3']?> - *<?=$value['obs2']?>* - DOCUMENTAÇÃO👇</span>
+							<span>📄 _*HAVALIA*_ - *O.S <?=$value['cod_os']?>* - *<?=$value['banco']?>* - <?=$value['proponente']?> - *<?=$value['cidade']?>/<?=$value['uf']?>* - <?=$value['observacoes']." ".$value['condominio']?> - *<?=$value['bairro']?>* - 📞<?=$value['CONTATO']?> - <?=$value['obs3']?> - *<?=$value['obs2']?>* - DOCUMENTAÇÃO👇</span>
 							<br>
 							<hr>
 

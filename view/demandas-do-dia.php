@@ -32,15 +32,15 @@
 			<div class="row mb-3 justify-content-center">
 
 				<div class="div-botoes-consulta">
-					<a href="?pagina=pesquisa-por-os" class="botoes-atalho-cons" title="Pesq. O.S. por código"><i class="fa fa-search" aria-hidden="true"></i> Pesq. O.S. por código </a>
+					<a href="?pagina=pesquisa-por-os" class="botoes-atalho-cons" title="Pesq. O.S. por código"><i class="fa fa-search" aria-hidden="true"></i> O.S. por código </a>
 				</div>
 
 				<div class="div-botoes-consulta">
-					<a href="?pagina=pesquisa-por-data-receb" class="botoes-atalho-cons" title="Pesq. por data de recebimento"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por data de recebimento </a>
+					<a href="?pagina=pesquisa-por-data-receb" class="botoes-atalho-cons" title="Pesq. por data de recebimento"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por receb. </a>
 				</div>
 
 				<div class="div-botoes-consulta">
-					<a href="?pagina=pesquisa-por-data-entrega" class="botoes-atalho-cons" title="Pesq. por data de entrega"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por data de entrega </a>
+					<a href="?pagina=pesquisa-por-data-entrega" class="botoes-atalho-cons" title="Pesq. por data de entrega"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por entrega </a>
 				</div>
 
 				<div class="div-botoes-consulta">
@@ -59,13 +59,13 @@
 				<div class="col-lg-12">
 
 				<!-- Barra de progresso -->
-				<div class="row ">
+				<div class="row">
 					<div barra-progresso="barraProgresso" class="col progresso pr-3 pl-3 pt-1 pb-1 mr-4 ml-4 mb-3 mt-3  rounded" title="Percentual de serviços finalizados">
 						<div></div>
 					</div>
 				</div>
 				
-					<table class="table table-bordered table-hover d-nowrap" id="dataTable" width="100%" cellspacing="0">
+					<table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
 						<thead class="thead-light">
 							<tr>
 								<th>O.S</th>

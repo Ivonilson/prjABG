@@ -1,9 +1,13 @@
 ﻿
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background-color: #2F4F4F">
 		<a href="/?pagina=demandas-do-dia" class="navbar-brand text-light " style="font-family: Comic Sans MS !important;">Controle de Demandas</a>
-		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCurso" aria-control="navbarCurso" aria-expanded="false" aria-label="Navegação Toggle">
+
+		<div class="bg-light rounded-circle">
+			<button class="navbar-toggler navbar-toggler-right btn-light rounded-circle" type="button" data-toggle="collapse" data-target="#navbarCurso" aria-control="navbarCurso" aria-expanded="false" aria-label="Navegação Toggle">
 			<span class="navbar-toggler-icon"></span>
-		</button>
+			</button>
+		</div>
+
 		<div id="navbarCurso" class="collapse navbar-collapse" id="linksaccordion">
 			<ul class="navbar-nav navbar-sidenav accordion bg-light">
 
