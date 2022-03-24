@@ -151,6 +151,7 @@
 							
 						</tbody>
 					</table>
+					<br>
 					<span id="qtdDemandas" class="status sr-only"><?=$quant?></span>
 					<span id="qtdlaudoPronto" class="status sr-only"><?=$quantLaudoPronto?></span>
 				</div>

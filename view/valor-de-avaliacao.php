@@ -92,6 +92,7 @@
 			</div>
 			<div id="row-tbl-consulta">
 				<div class="col">
+					<br>
 					<table class="table table-bordered table-sm table-hover border" id="dataTable" width="100%" cellspacing="0">
 						<thead class="thead-light">
 							<tr>
@@ -188,6 +189,7 @@
 							?>
 						</tbody>
 					</table>
+					<br>
 				</div>
 			</div>
 		</div>
