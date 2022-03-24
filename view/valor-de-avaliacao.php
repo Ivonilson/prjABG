@@ -100,9 +100,9 @@
 								<th>Tipo</th>
 								<th>Banco</th>
 								<th>Empresa</th>
-								<th>Cidade</th>
 								<th>Endereço</th>
 								<th>Bairro</th>
+								<th>Cidade</th>
 								<th>UF</th>
 								<th>Valor de Avaliação</th>
 								<th>Tipologia</th>
@@ -122,9 +122,9 @@
 								<th>Tipo</th>
 								<th>Banco</th>
 								<th>Empresa</th>
-								<th>Cidade</th>
 								<th>Endereço</th>
 								<th>Bairro</th>
+								<th>Cidade</th>
 								<th>UF</th>
 								<th>Valor de Avaliação</th>
 								<th>Tipologia</th>
@@ -162,9 +162,9 @@
 								<td><?=$value['tipo']?></td>
 								<td><?=$value['banco']?></td>
 								<td><?=$value['empresa']?></td>
-								<td><?=$value['cidade']?></td>
 								<td><?=$value['observacoes'].' '.$value['condominio']?></td>
 								<td><?=$value['bairro']?></td>
+								<td><?=$value['cidade']?></td>
 								<td><?=$value['uf']?></td>
 								<td><strong><?=number_format($value['valor_avaliacao'], 2, "," , ".")?></strong></td>
 								<td><?=$value['tipologia']?></td>

@@ -84,9 +84,9 @@
 								<th>Banco</th>
 								<th>Empresa</th>
 								<th>Proponente</th>
-								<th>Cidade</th>
 								<th>Endereço</th>
 								<th>Bairro</th>
+								<th>Cidade</th>
 								<th>UF</th>
 								<th>Data Receb.</th>
 								<th>Data Limite</th>
@@ -103,9 +103,9 @@
 								<th>Banco</th>
 								<th>Empresa</th>
 								<th>Proponente</th>
-								<th>Cidade</th>
 								<th>Endereço</th>
 								<th>Bairro</th>
+								<th>Cidade</th>
 								<th>UF</th>
 								<th>Data Receb.</th>
 								<th>Data Limite</th>
@@ -147,9 +147,9 @@
 								<td><?=$value['banco']?></td>
 								<td><?=$value['empresa']?></td>
 								<td><?=$value['proponente']?></td>
-								<td><?=$value['cidade']?></td>
 								<td><?=$value['observacoes'].' '.$value['condominio']?></td>
 								<td><?=$value['bairro']?></td>
+								<td><?=$value['cidade']?></td>
 								<td><?=$value['uf']?></td>
 								<td><?=date_format(date_create($value['data_receb']), "d/m/Y")?></td>
 								<td><?=date_format(date_create($value['data_entrega']), "d/m/Y")?></td>
