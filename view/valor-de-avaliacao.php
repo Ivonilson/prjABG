@@ -37,15 +37,15 @@
 				</div>
 
 				<div class="div-botoes-consulta">
-					<a href="?pagina=pesquisa-por-os" class="botoes-atalho-cons" title="Pesq. O.S. por código"><i class="fa fa-search" aria-hidden="true"></i> Pesq. O.S. por código </a>
+					<a href="?pagina=pesquisa-por-os" class="botoes-atalho-cons" title="Pesq. O.S. por código"><i class="fa fa-search" aria-hidden="true"></i> O.S. por código </a>
 				</div>
 
 				<div class="div-botoes-consulta">
-					<a href="?pagina=pesquisa-por-data-receb" class="botoes-atalho-cons" title="Pesq. por data de recebimento"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por data de recebimento </a>
+					<a href="?pagina=pesquisa-por-data-receb" class="botoes-atalho-cons" title="Pesq. por data de recebimento"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por receb. </a>
 				</div>
 
 				<div class="div-botoes-consulta">
-					<a href="?pagina=pesquisa-por-data-entrega" class="botoes-atalho-cons" title="Pesq. por data de entrega"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por data de entrega </a>
+					<a href="?pagina=pesquisa-por-data-entrega" class="botoes-atalho-cons" title="Pesq. por data de entrega"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por entrega </a>
 				</div>
 
 			</div>			
@@ -91,17 +91,18 @@
 				</div>
 			</div>
 			<div id="row-tbl-consulta">
-				<div class="card-body">
-					<table class="tbl-consulta" id="dataTable" width="100%" cellspacing="0">
+				<div class="col">
+					<br>
+					<table class="table table-bordered table-sm table-hover border" id="dataTable" width="100%" cellspacing="0">
 						<thead class="thead-light">
 							<tr>
 								<th>O.S</th>
 								<th>Tipo</th>
 								<th>Banco</th>
 								<th>Empresa</th>
-								<th>Cidade</th>
 								<th>Endereço</th>
 								<th>Bairro</th>
+								<th>Cidade</th>
 								<th>UF</th>
 								<th>Valor de Avaliação</th>
 								<th>Tipologia</th>
@@ -121,9 +122,9 @@
 								<th>Tipo</th>
 								<th>Banco</th>
 								<th>Empresa</th>
-								<th>Cidade</th>
 								<th>Endereço</th>
 								<th>Bairro</th>
+								<th>Cidade</th>
 								<th>UF</th>
 								<th>Valor de Avaliação</th>
 								<th>Tipologia</th>
@@ -161,9 +162,9 @@
 								<td><?=$value['tipo']?></td>
 								<td><?=$value['banco']?></td>
 								<td><?=$value['empresa']?></td>
-								<td><?=$value['cidade']?></td>
 								<td><?=$value['observacoes'].' '.$value['condominio']?></td>
 								<td><?=$value['bairro']?></td>
+								<td><?=$value['cidade']?></td>
 								<td><?=$value['uf']?></td>
 								<td><strong><?=number_format($value['valor_avaliacao'], 2, "," , ".")?></strong></td>
 								<td><?=$value['tipologia']?></td>
@@ -188,6 +189,7 @@
 							?>
 						</tbody>
 					</table>
+					<br>
 				</div>
 			</div>
 		</div>

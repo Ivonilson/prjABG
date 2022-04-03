@@ -1,5 +1,5 @@
 <?php
-	if ($_SESSION['user'] == '-') {
+	if ($_SESSION['user'] == null) {
 		header('Location: index.php');
 	}
 ?>
@@ -32,15 +32,15 @@
 			<div class="row mb-3 justify-content-center">
 
 				<div class="div-botoes-consulta">
-					<a href="?pagina=pesquisa-por-os" class="botoes-atalho-cons" title="Pesq. O.S. por código"><i class="fa fa-search" aria-hidden="true"></i> Pesq. O.S. por código </a>
+					<a href="?pagina=pesquisa-por-os" class="botoes-atalho-cons" title="Pesq. O.S. por código"><i class="fa fa-search" aria-hidden="true"></i> O.S. por código </a>
 				</div>
 
 				<div class="div-botoes-consulta">
-					<a href="?pagina=pesquisa-por-data-receb" class="botoes-atalho-cons" title="Pesq. por data de recebimento"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por data de recebimento </a>
+					<a href="?pagina=pesquisa-por-data-receb" class="botoes-atalho-cons" title="Pesq. por data de recebimento"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por receb. </a>
 				</div>
 
 				<div class="div-botoes-consulta">
-					<a href="?pagina=pesquisa-por-data-entrega" class="botoes-atalho-cons" title="Pesq. por data de entrega"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por data de entrega </a>
+					<a href="?pagina=pesquisa-por-data-entrega" class="botoes-atalho-cons" title="Pesq. por data de entrega"><i class="fa fa-search " aria-hidden="true"></i> O.S(s) por entrega </a>
 				</div>
 
 				<div class="div-botoes-consulta">
@@ -56,17 +56,16 @@
 				</div>
 			</div>
 			<div class="row border-light bg-light m-2">
-				<div class="card-body">
+				<div class="col-lg-12">
 
 				<!-- Barra de progresso -->
-				<div class="row ">
+				<div class="row">
 					<div barra-progresso="barraProgresso" class="col progresso pr-3 pl-3 pt-1 pb-1 mr-4 ml-4 mb-3 mt-3  rounded" title="Percentual de serviços finalizados">
 						<div></div>
 					</div>
 				</div>
 				
-
-					<table class="table table-bordered table-hover table-sm" id="dataTable" width="100%" cellspacing="0">
+					<table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
 						<thead class="thead-light">
 							<tr>
 								<th>O.S</th>
@@ -136,7 +135,7 @@
 								<td><?=date_format(date_create($value['data_receb']), "d/m/Y")?></td>
 								<td><?=date_format(date_create($value['data_entrega']), "d/m/Y")?></td>
 								<td class="status"><?=$value['status']?></td>
-								<td class="text-justify"><?=$value['notas_importantes']?></td>
+								<td class="text-justify" id="td_notas_importantes"> <?= $value['notas_importantes']?> </td>
 								<td align="center"><a href="/?pagina=editar-os&cod_os=<?=$value['cod_os']?>&form=demandas-do-dia" title="Editar"><i class="fa fa-pencil" aria-hidden="true"></a></td>
 								<td align="center"><a href="/?pagina=historico&cod_os=<?=$value['cod_os']?>&form=demandas-do-dia" title="Histórico" target="_blank"><i class="fa fa-history" aria-hidden="true"></a></td>
 							</tr>
@@ -152,6 +151,7 @@
 							
 						</tbody>
 					</table>
+					<br>
 					<span id="qtdDemandas" class="status sr-only"><?=$quant?></span>
 					<span id="qtdlaudoPronto" class="status sr-only"><?=$quantLaudoPronto?></span>
 				</div>

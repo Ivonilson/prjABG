@@ -125,7 +125,7 @@ $(document).ready(function(){
 
 	let div_botoes_consulta = document.querySelectorAll(".div-botoes-consulta");
 	div_botoes_consulta.forEach(item => {
-		item.setAttribute("class", "col-lg-3 col-md-3 col-sm-12 col-xs-12");
+		item.setAttribute("class", "col-lg-3 col mb-1");
 	});
 	
 	/*por enquanto a função abaixo está sem uso, pois a telas de consulta não tem jumbotrom
@@ -137,7 +137,7 @@ $(document).ready(function(){
 	//background_tela_cadastro.setAttribute("style",  "background-image: url('../assets/logo.png');");
 
 	let background_form_cons = document.querySelector(".background-form-cons");
-	background_form_cons.setAttribute("style", "background-color: #FFFFF0; border-style: outset; padding-bottom: 3px");
+	background_form_cons.setAttribute("style", "background-color: #FAFAFA; border-style: outset; padding-bottom: 3px");
 
 	/*Setando as rows das tabelas propriedades das tabelas de consulta*/
 	let row_tbl_consulta = document.querySelector("#row-tbl-consulta");
@@ -150,10 +150,6 @@ $(document).ready(function(){
 	/*Ajuste das divs dos botoes de busca das consultas*/
 	let div_btn_form_cons = document.querySelector("#div-btn-form-cons");
 	div_btn_form_cons.setAttribute("class", "col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3");
-
-	/*Setando as tabelas de consulta*/
-	let tbl_consulta = document.querySelector(".tbl-consulta");
-	tbl_consulta.setAttribute("class", "table table-bordered table-sm table-hover border-light");
 	
 	let botoes_cons = document.querySelector("#botoesCons");
 	botoes_cons.setAttribute("class", "btn btn-lg btn-secondary btn-block text-light font-weight-bold rounded");
