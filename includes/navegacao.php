@@ -24,6 +24,10 @@
 						</li>
 
 						<li>
+							<a href="/?pagina=cadastrar-cidade" target="opcoes-menu" >Cadastrar Cidade</a>
+						</li>
+
+						<li>
 							<a href="/?pagina=cadastrar-notificacao" target="opcoes-menu" >Cadastrar Notificação</a>
 						</li>
 

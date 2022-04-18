@@ -27,6 +27,9 @@
 				<li class="breadcrumb-item">
 					<mark class="p-2 rounded">Cadastrar O.S.</mark>
 				</li>
+				<div class="col">
+					<a href="/?pagina=cadastrar-cidade" class="btn btn-danger text-light float-right font-weight-bold rounded" title="Incluir Nova Cidade."><i class="fa fa-plus"></i> Cidade</a>
+				</div>
 			</ol>
 
 					<!--Feedback do Cadastro -->

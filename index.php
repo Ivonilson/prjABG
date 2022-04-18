@@ -20,6 +20,11 @@ $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : "login";
 			include_once "view/cadastrar-os.php";
 			break;
 
+		case 'cadastrar-cidade':
+			require "controller/crtCadastrarCidade.php";
+			include_once "view/cadastrar-cidade.php";
+			break;
+
 		case 'cadastrar-notificacao':
 			require "controller/crtCadastrarNotificacao.php";
 			include_once "view/cadastrar-notificacao.php";
