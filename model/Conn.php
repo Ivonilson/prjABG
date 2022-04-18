@@ -29,7 +29,7 @@ class Conn {
 	public function validarUsuario()
 	{	
 		$u = filter_input(INPUT_POST, 'usuario');
-		$p =  filter_input(INPUT_POST, 'senha');
+		$p =   filter_input(INPUT_POST, 'senha');
 		
 		try {
 

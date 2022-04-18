@@ -15,6 +15,10 @@ $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : "login";
 			$crtl->demandasDoDia();
 			break;
 
+		case 'testes':
+			include_once "view/testes.php";
+			break;
+
 		case 'cadastrar-os':
 			require "controller/crtCadastrarOs.php";
 			include_once "view/cadastrar-os.php";
