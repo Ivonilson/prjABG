@@ -20,15 +20,15 @@
 					<ul style="background-color: #E6E6FA" class="sidenav-second-level collapse " id="collapseRegistro" data-parent="#linksaccordion">
 
 						<li>
-							<a href="/?pagina=cadastrar-os" target="opcoes-menu" >Cadastrar O.S.</a>
+							<a href="/?pagina=cadastrar-os" >Cadastrar O.S.</a>
 						</li>
 
 						<li>
-							<a href="/?pagina=cadastrar-cidade" target="opcoes-menu" >Cadastrar Cidade</a>
+							<a href="/?pagina=cadastrar-cidade" >Cadastrar Cidade</a>
 						</li>
 
 						<li>
-							<a href="/?pagina=cadastrar-notificacao" target="opcoes-menu" >Cadastrar Notificação</a>
+							<a href="/?pagina=cadastrar-notificacao">Cadastrar Notificação</a>
 						</li>
 
 						<!-- Funcionalidade sendo desenvolvida...
@@ -98,7 +98,7 @@
 					<ul style="background-color: #E6E6FA" class="sidenav-second-level collapse" id="collapseRepositorio" data-parent="#linksaccordion">
 
 						<li>
-							<a href="http://www.abgsolucoes.tec.br" target="_blank">Modelos</a>
+							<a href="/?pagina=modelos">Modelos</a>
 						</li>
 
 					</ul>
@@ -113,7 +113,7 @@
 					<ul style="background-color:#E6E6FA" class="sidenav-second-level collapse" id="collapseFerramentas" data-parent="#linksaccordion">
 
 						<li>
-							<a href="/?pagina=nfe" target="opcoes-menu" >NFe</a>
+							<a href="/?pagina=nfe">NFe</a>
 						</li>
 
 					</ul>

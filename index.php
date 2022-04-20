@@ -97,6 +97,30 @@ $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : "login";
 			$crtl->Nfe();
 			break;
 
+		case 'editar-modelo':
+			require "controller/crtEditarModelo.php";
+			$crtl = new crtEditarModelo();
+			$crtl->editarModelo();
+			break;
+
+		case 'historico-modelo':
+			require "controller/crtHistoricoModelo.php";
+			$crtl = new crtHistoricoModelo();
+			$crtl->historicoModelo();
+			break;
+
+		case 'modelos':
+			require "controller/crtModelos.php";
+			$crtl = new crtModelos();
+			$crtl->Modelos();
+			break;
+
+		case 'incluir-modelo':
+			require "controller/crtModelo.php";
+			$crtl = new crtModelo();
+			$crtl->incluirModelo();
+			break;
+
 		case 'login':
 			include "view/login.php";
 			break;
