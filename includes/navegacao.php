@@ -98,7 +98,8 @@
 					<ul style="background-color: #E6E6FA" class="sidenav-second-level collapse" id="collapseRepositorio" data-parent="#linksaccordion">
 
 						<li>
-							<a href="/?pagina=modelos">Modelos</a>
+							<!--<a href="/?pagina=modelos">Modelos</a>-->
+							<a href="#">Modelos (Habilitado apenas on-line)</a>
 						</li>
 
 					</ul>
@@ -218,7 +219,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="/?pagina=logout" class="nav-link text-light col-2">
+					<a href="/?pagina=login" class="nav-link text-light col-2">
 						<i class="fa fa-sign-out float-right" title="Sair do Sistema">Logout</i>
 					</a>
 				</li>

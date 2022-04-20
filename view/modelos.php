@@ -19,7 +19,7 @@
 		<div class="container-fluid">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item">
-					<a href="?pagina=modelos" class="text-decoration-none">Home</a>
+					<a href="?pagina=modelos" class="text-decoration-none">Início</a>
 				</li>
 				<li class="breadcrumb-item">
 					Repositório
@@ -27,6 +27,10 @@
 				<li class="breadcrumb-item">
 					<mark class="p-2 rounded">Visualizar Modelos</mark>
 				</li>
+
+				<div class="col">
+					<a href="/?pagina=incluir-modelo" class="btn btn-danger text-light  float-right font-weight-bold rounded" title="Incluir Novo Modelo"><i class="fa fa-plus"></i> Modelo</a>
+				</div>
 			</ol>
 
 			<div class="card mb-1 col">
@@ -65,9 +69,6 @@
 							<input type="submit" value="Buscar" class="btn btn-secondary btn-block font-weight-bold">
 						</div>
 					</form>
-
-					<a href="/?pagina=incluir-modelo" class="btn btn-danger text-light  float-right font-weight-bold rounded" title="Incluir Novo Modelo"><i class="fa fa-plus"></i> Modelo</a>
-
 				</div>
 			</div>
 

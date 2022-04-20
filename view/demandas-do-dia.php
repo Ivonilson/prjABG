@@ -27,6 +27,12 @@
 				<li class="breadcrumb-item">
 					<mark class="p-2 rounded">Vencendo Hoje</mark>
 				</li>
+
+				<div class="col">
+					<a href="/?pagina=cadastrar-cidade" class="btn btn-danger text-light ml-2 float-right font-weight-bold rounded" title="Incluir Nova Cidade."><i class="fa fa-plus"></i> Cidade</a>
+					<a href="/?pagina=cadastrar-os" class="btn btn-danger text-light  float-right font-weight-bold rounded" title="Incluir Nova O.S."><i class="fa fa-plus"></i> O.S.</a>
+				</div>
+
 			</ol>
 
 			<div class="row mb-3 justify-content-center">
@@ -52,8 +58,6 @@
 			<div class="card mb-1">
 				<div class="card-header">
 					<i class="fa fa-table"></i> Demandas do dia - <?php $hoje = date('d/m/Y'); echo $hoje; echo " - (última atualização às ".date('H')." h ".date('i')." m)"; ?>
-					<a href="/?pagina=cadastrar-cidade" class="btn btn-danger text-light ml-2 float-right font-weight-bold rounded" title="Incluir Nova Cidade."><i class="fa fa-plus"></i> Cidade</a>
-					<a href="/?pagina=cadastrar-os" class="btn btn-danger text-light  float-right font-weight-bold rounded" title="Incluir Nova O.S."><i class="fa fa-plus"></i> O.S.</a>
 				</div>
 			</div>
 			<div class="row border-light bg-light m-2">

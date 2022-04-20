@@ -11,6 +11,7 @@
 	<h1>
 		<?php 
 			$senha = crypt('', '');
+			echo $senha;
 		?>
 	</h1>
 	
