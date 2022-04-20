@@ -6,4 +6,5 @@
 	<link rel="stylesheet" type="text/css" href="../css/sb-admin.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/abg.css">
 	<link rel="stylesheet" type="text/css" href="../css/signin.css">
+	<link rel="shortcut icon" href="../assets/abgoficial.ico" />
 	<script src="../js/abg.js"></script>
