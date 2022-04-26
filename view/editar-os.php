@@ -42,7 +42,7 @@
 
 					<?php 
 
-						echo "<script>setTimeout(()=> window.location.href = '/?pagina=".$_GET['form']."', 5000)</script>";
+						echo "<script>setTimeout(()=> window.location.href = '/?pagina=".$_GET['form']."', 3000)</script>";
 
 						} elseif($mensagem_erro == "ERRO. Verifique as informações e tente novamente ou contate o Suporte.") {
 					?>
