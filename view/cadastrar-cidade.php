@@ -27,7 +27,7 @@
 				<li class="breadcrumb-item">
 					<mark class="p-2 rounded">Cadastrar Cidade</mark>
 				</li>
-				<div class="col">
+				<div class="col  mt-2">
 					<a href="/?pagina=cadastrar-os" class="btn btn-danger text-light  float-right font-weight-bold rounded" title="Incluir Nova O.S."><i class="fa fa-plus"></i> O.S.</a>
 				</div>
 			</ol>

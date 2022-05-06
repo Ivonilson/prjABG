@@ -104,7 +104,7 @@
 								<td><?=date_format(date_create($value['data_entrega']), "d/m/Y")?></td>
 								<!--<td class="sr-only"><strong class="statusLista"><?=$value['obs3']?></strong></td>-->
 								<td><?=$value['obs2']?></td>
-								<td align="center" id="esconder"><a href="/?pagina=editar-os&cod_os=<?=$value['cod_os']?>&form=lista-havalia" title="Editar"><i class="fa fa-pencil" aria-hidden="true"></a></td>
+								<td align="center" id="esconder"><a href="/?pagina=editar-os&cod_os=<?=$value['cod_os']?>&form=lista-havalia" title="Editar"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
 							</tr>
 							<script>verificaStatusLista()</script>
 							<?php 

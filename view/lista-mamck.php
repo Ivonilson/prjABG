@@ -118,8 +118,7 @@
 					</table>
 				</div>
 			</div>
-		</div>
-	</div>
+			</div>
 
 			<!--- MODAL DE DADOS PARA WHATSAPP -->
 			<div class="modal fade" id="modalListaMamck" tabindex="-1" role="dialog" aria-labelledby="ModalLista" aria-hidden="true">

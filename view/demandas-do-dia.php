@@ -28,7 +28,7 @@
 					<mark class="p-2 rounded">Vencendo Hoje</mark>
 				</li>
 
-				<div class="col">
+				<div class="col mt-2">
 					<a href="/?pagina=cadastrar-cidade" class="btn btn-danger text-light ml-2 float-right font-weight-bold rounded" title="Incluir Nova Cidade."><i class="fa fa-plus"></i> Cidade</a>
 					<a href="/?pagina=cadastrar-os" class="btn btn-danger text-light  float-right font-weight-bold rounded" title="Incluir Nova O.S."><i class="fa fa-plus"></i> O.S.</a>
 				</div>

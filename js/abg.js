@@ -228,7 +228,7 @@ $(document).ready(function(){
    $(".msgErroLogin").fadeIn(100).delay(2000).fadeOut(200);
 });
 
-
+/*Plugin blockUI - falta implementar da forma correta*/
 $(document).submit(function() { 
 	$.blockUI({ overlayCSS: { backgroundColor: '#2F4F4F'}, timeout: 5000});
  	//$.unblockUI, 3000;	

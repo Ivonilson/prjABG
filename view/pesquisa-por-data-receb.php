@@ -57,9 +57,9 @@
 					<br>
 					<form method="post" class="background-form-cons">
 						<div id="div-ipt-data-form-cons">
-							<span>Data Inicial:&nbsp&nbsp</span><input type="date" name="data_inicial">&nbsp&nbsp&nbsp<span>Data final:&nbsp&nbsp</span><input type="date" name="data_final">
-							<br><br>
+							<span class="mt-2 float-left">Data Inicial:&nbsp&nbsp</span><input class="mt-2 float-left mb-2" type="date" name="data_inicial">&nbsp&nbsp&nbsp<span class="mt-2 float-left">&nbsp&nbspData final:&nbsp&nbsp</span><input class="mt-2 float-left mb-2" type="date" name="data_final">
 						</div>
+						<br><br>
 						<div id="div-btn-form-cons">
 							<input type="submit" value="Buscar" id="botoesCons">
 						</div>
