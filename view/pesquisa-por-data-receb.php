@@ -121,6 +121,7 @@
 								$dados = new PesquisaPorDataReceb();
 								$quant = 0;
 								$quantLaudoPronto = 0;
+								$contador = 0;
 								
 								$data_inicial = filter_input(INPUT_POST, 'data_inicial');
 								$data_final = filter_input(INPUT_POST, 'data_final');
@@ -133,16 +134,21 @@
 								}
 
 								if($resultado != NULL){
+
+								$contador = count($resultado);
 	
 								foreach ($resultado as  $value) {
+
 								$quant++;
+								$contador--;
+
 								if($value['status'] != "AGUARDANDO VISTORIA" && $value['status'] != "VISTORIA REALIZADA" && $value['status'] != "EM DIGITAÇÃO (I)" && $value['status'] != "EM DIGITAÇÃO (G)" && $value['status'] != "MILITÃO VAI DIGITAR" && $value['status'] != "AGUARDANDO MILITÃO" && $value['status'] != "REVISÃO DE VALOR" && $value['status'] != "FALTA INCLUIR LAUDO" && $value['status'] != "TRIAGEM" && $value['status'] != "EM ANÁLISE" && $value['status'] != "TRIAGEM" && $value['status'] != "AGUARDANDO CANCELAMENTO" && $value['status'] != "-") {
 									$quantLaudoPronto++;
 								}
 									
 							?>
 							<tr>
-								<td><?=$value['cod_os']?><?php if($value['ficha_pesquisa'] == 'PENDENTE' && $value['banco'] == 'CEF') { echo '<mark> ficha pendente</mark>';}?></td>
+								<td id="tdTabela"><?=$value['cod_os']?><?php if($value['ficha_pesquisa'] == 'PENDENTE' && $value['banco'] == 'CEF') { echo '<mark> ficha pendente</mark>';}?></td>
 								<td><?=$value['tipo']?></td>
 								<td><?=$value['banco']?></td>
 								<td><?=$value['empresa']?></td>
@@ -158,7 +164,9 @@
 								<td align="center"><a href="/?pagina=editar-os&cod_os=<?=$value['cod_os']?>&form=pesquisa-por-data-receb" title="Editar" target="_blank"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
 								<td align="center"><a href="/?pagina=historico&cod_os=<?=$value['cod_os']?>&form=pesquisa-por-data-receb" title="Histórico" target="_blank"><i class="fa fa-history" aria-hidden="true"></a></td>
 							</tr>
+
 							<script>verificaStatus()</script>
+
 							<?php 
 								$conexao = null;
 								}
