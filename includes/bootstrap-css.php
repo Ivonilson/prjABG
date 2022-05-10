@@ -1,3 +1,4 @@
+	<meta name="robots" content="noindex, nofollow" />
 	<link rel="stylesheet" type="text/css" href="../bootstrap-4.1.3/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../bibliotecas/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../bibliotecas/datatables/dataTables.bootstrap4.css">
