@@ -1,3 +1,9 @@
+<?php
+	if ($_SESSION['user'] == null || !isset($_SESSION['user'])) {
+		//header('Location: index.php');
+		echo "<script>window.location.href ='/'</script>";
+	}
+?>
 
 <!DOCTYPE html>
 <html>

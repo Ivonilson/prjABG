@@ -2,6 +2,7 @@
 session_start();
 require "model/Conn.php";
 include "controller/crtValidarUsuario.php";
+include "controller/crtLogout.php";
 require "model/CadastrarNotificacao.php";
 require "model/EditarNotificacao.php";
 
@@ -123,6 +124,11 @@ $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : "login";
 
 		case 'login':
 			include "view/login.php";
+			break;
+
+		case 'logout':
+			$logout = new crtLogout();
+			$logout->logout();
 			break;
 
 	}

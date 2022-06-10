@@ -1,6 +1,7 @@
 <?php
-	if ($_SESSION['user'] == null) {
-		header('Location: index.php');
+	if ($_SESSION['user'] == null || !isset($_SESSION['user'])) {
+		//header('Location: index.php');
+		echo "<script>window.location.href ='/'</script>";
 	}
 ?>
 <!DOCTYPE html>
@@ -58,6 +59,7 @@
 			<div class="card mb-1">
 				<div class="card-header">
 					<i class="fa fa-table"></i> Demandas do dia - <?php $hoje = date('d/m/Y'); echo $hoje; echo " - (última atualização às ".date('H')." h ".date('i')." m)"; ?>
+				<?php //var_dump($_SESSION['user'])?>
 				</div>
 			</div>
 			<div class="row border-light bg-light m-2">
