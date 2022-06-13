@@ -10,6 +10,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="robots" content="noindex, nofollow">
 	<title>Pesquisa por data de entrega</title>
 	<?php require_once 'includes/bootstrap-css.php'; ?>
 </head>
@@ -83,14 +84,14 @@
 						<thead class="thead-light">
 							<tr>
 								<th>O.S</th>
-								<th>Tipo</th>
-								<th>Banco</th>
 								<th>Empresa</th>
-								<th>Proponente</th>
-								<th>Endereço</th>
-								<th>Bairro</th>
 								<th>Cidade</th>
 								<th>UF</th>
+								<th>Endereço</th>
+								<th>Bairro</th>
+								<th>Tipo</th>
+								<th>Banco</th>
+								<th>Proponente</th>
 								<th>Data Receb.</th>
 								<th>Data Limite</th>
 								<th>Status</th>
@@ -102,14 +103,14 @@
 						<tfoot class="thead-light">
 							<tr>
 								<th>O.S</th>
-								<th>Tipo</th>
-								<th>Banco</th>
 								<th>Empresa</th>
-								<th>Proponente</th>
-								<th>Endereço</th>
-								<th>Bairro</th>
 								<th>Cidade</th>
 								<th>UF</th>
+								<th>Endereço</th>
+								<th>Bairro</th>
+								<th>Tipo</th>
+								<th>Banco</th>
+								<th>Proponente</th>
 								<th>Data Receb.</th>
 								<th>Data Limite</th>
 								<th>Status</th>
@@ -146,19 +147,18 @@
 							?>
 							<tr>
 								<td><?=$value['cod_os']?><?php if($value['ficha_pesquisa'] == 'PENDENTE' && $value['banco'] == 'CEF') { echo '<mark> ficha pendente</mark>';}?></td>
+								<td><?=$value['empresa']?></td>
+								<td><?=$value['cidade']?></td>
+								<td><?=$value['uf']?></td>
+								<td><?=$value['observacoes'].' '.$value['condominio']?></td>
+								<td><?=$value['bairro']?></td>
 								<td><?=$value['tipo']?></td>
 								<td><?=$value['banco']?></td>
-								<td><?=$value['empresa']?></td>
 								<td><?=$value['proponente']?></td>
-								<td><?=$value['observacoes'].' '.$value['condominio']?></td>
-								<td><?=$value['cidade']?></td>
-								<td><?=$value['bairro']?></td>
-								<td><?=$value['uf']?></td>
 								<td><?=date_format(date_create($value['data_receb']), "d/m/Y")?></td>
 								<td><?=date_format(date_create($value['data_entrega']), "d/m/Y")?></td>
 								<td class="status"><?=$value['status']?></td>
 								<td><?=$value['notas_importantes']?></td>
-
 								<td align="center"><a href="/?pagina=editar-os&cod_os=<?=$value['cod_os']?>&form=pesquisa-por-data-entrega" title="Editar" target="_blank"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
 								<td align="center"><a href="/?pagina=historico&cod_os=<?=$value['cod_os']?>&form=pesquisa-por-data-entrega" title="Histórico" target="_blank"><i class="fa fa-history" aria-hidden="true"></a></td>
 							</tr>

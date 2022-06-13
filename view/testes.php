@@ -1,8 +1,8 @@
 <?php
-	if ($_SESSION['user'] == null || !isset($_SESSION['user'])) {
+	/*if ($_SESSION['user'] == null || !isset($_SESSION['user'])) {
 		//header('Location: index.php');
 		echo "<script>window.location.href ='/'</script>";
-	}
+	}*/
 ?>
 
 <!DOCTYPE html>
@@ -10,6 +10,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow">
 	<title></title>
 </head>
 <body>

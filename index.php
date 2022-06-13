@@ -17,7 +17,7 @@ $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : "login";
 			break;
 
 		case 'testes':
-			include_once "view/testes.php";
+			include "view/testes.php";
 			break;
 
 		case 'cadastrar-os':

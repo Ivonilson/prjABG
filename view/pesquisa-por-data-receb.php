@@ -10,6 +10,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="robots" content="noindex, nofollow">
 	<title>Pesquisa por data de recebimento</title>
 	<?php require_once 'includes/bootstrap-css.php'; ?>
 </head>
@@ -81,14 +82,14 @@
 						<thead class="thead-light">
 							<tr>
 								<th>O.S</th>
-								<th>Tipo</th>
-								<th>Banco</th>
 								<th>Empresa</th>
-								<th>Proponente</th>
-								<th>Endereço</th>
-								<th>Bairro</th>
 								<th>Cidade</th>
 								<th>UF</th>
+								<th>Endereço</th>
+								<th>Bairro</th>
+								<th>Tipo</th>
+								<th>Banco</th>
+								<th>Proponente</th>
 								<th>Data Receb.</th>
 								<th>Data Limite</th>
 								<th>Status</th>
@@ -100,14 +101,14 @@
 						<tfoot class="thead-light">
 							<tr>
 								<th>O.S</th>
-								<th>Tipo</th>
-								<th>Banco</th>
 								<th>Empresa</th>
-								<th>Proponente</th>
-								<th>Endereço</th>
-								<th>Bairro</th>
 								<th>Cidade</th>
 								<th>UF</th>
+								<th>Endereço</th>
+								<th>Bairro</th>
+								<th>Tipo</th>
+								<th>Banco</th>
+								<th>Proponente</th>
 								<th>Data Receb.</th>
 								<th>Data Limite</th>
 								<th>Status</th>
@@ -150,14 +151,14 @@
 							?>
 							<tr>
 								<td id="tdTabela"><?=$value['cod_os']?><?php if($value['ficha_pesquisa'] == 'PENDENTE' && $value['banco'] == 'CEF') { echo '<mark> ficha pendente</mark>';}?></td>
-								<td><?=$value['tipo']?></td>
-								<td><?=$value['banco']?></td>
 								<td><?=$value['empresa']?></td>
-								<td><?=$value['proponente']?></td>
-								<td><?=$value['observacoes'].' '.$value['condominio']?></td>
-								<td><?=$value['bairro']?></td>
 								<td><?=$value['cidade']?></td>
 								<td><?=$value['uf']?></td>
+								<td><?=$value['observacoes'].' '.$value['condominio']?></td>
+								<td><?=$value['bairro']?></td>
+								<td><?=$value['tipo']?></td>
+								<td><?=$value['banco']?></td>
+								<td><?=$value['proponente']?></td>
 								<td><?=date_format(date_create($value['data_receb']), "d/m/Y")?></td>
 								<td><?=date_format(date_create($value['data_entrega']), "d/m/Y")?></td>
 								<td class="status"><?=$value['status']?></td>

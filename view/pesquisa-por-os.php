@@ -10,6 +10,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="robots" content="noindex, nofollow">
 	<title>Pesquisa por O.S.</title>
 	<?php require_once 'includes/bootstrap-css.php'; ?>
 </head>

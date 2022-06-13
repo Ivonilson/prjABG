@@ -10,6 +10,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="robots" content="noindex, nofollow">
 	<title>Valor de Avaliação</title>
 	<?php require_once 'includes/bootstrap-css.php'; ?>
 </head>
@@ -98,14 +99,13 @@
 						<thead class="thead-light">
 							<tr>
 								<th>O.S</th>
-								<th>Tipo</th>
-								<th>Banco</th>
 								<th>Empresa</th>
-								<th>Endereço</th>
-								<th>Bairro</th>
 								<th>Cidade</th>
 								<th>UF</th>
-								<th>Valor de Avaliação</th>
+								<th>Endereço</th>
+								<th>Bairro</th>
+								<th>Tipo</th>
+								<th>Banco</th>
 								<th>Tipologia</th>
 								<th>Área constr.</th>
 								<th>Área Terreno</th>
@@ -114,20 +114,20 @@
 								<th>Data de receb.</th>
 								<th>Status</th>
 								<th>Notas</th>
+								<th>Valor de Avaliação</th>
 								<th>Histórico</th>
 							</tr>
 						</thead>
 						<tfoot class="thead-light">
 							<tr>
 								<th>O.S</th>
-								<th>Tipo</th>
-								<th>Banco</th>
 								<th>Empresa</th>
-								<th>Endereço</th>
-								<th>Bairro</th>
 								<th>Cidade</th>
 								<th>UF</th>
-								<th>Valor de Avaliação</th>
+								<th>Endereço</th>
+								<th>Bairro</th>
+								<th>Tipo</th>
+								<th>Banco</th>
 								<th>Tipologia</th>
 								<th>Área constr.</th>
 								<th>Área Terreno</th>
@@ -136,6 +136,7 @@
 								<th>Data de receb.</th>
 								<th>Status</th>
 								<th>Notas</th>
+								<th>Valor de Avaliação</th>
 								<th>Histórico</th>
 							</tr>
 						</tfoot>
@@ -160,14 +161,13 @@
 							?>
 							<tr>
 								<td><?=$value['cod_os']?></td>
-								<td><?=$value['tipo']?></td>
-								<td><?=$value['banco']?></td>
 								<td><?=$value['empresa']?></td>
-								<td><?=$value['observacoes'].' '.$value['condominio']?></td>
-								<td><?=$value['bairro']?></td>
 								<td><?=$value['cidade']?></td>
 								<td><?=$value['uf']?></td>
-								<td><strong><?=number_format($value['valor_avaliacao'], 2, "," , ".")?></strong></td>
+								<td><?=$value['observacoes'].' '.$value['condominio']?></td>
+								<td><?=$value['bairro']?></td>
+								<td><?=$value['tipo']?></td>
+								<td><?=$value['banco']?></td>
 								<td><?=$value['tipologia']?></td>
 								<td><?=number_format($value['area_construida'], 2, "," , ".")?></td>
 								<td><?=number_format($value['area_terreno'], 2 , "," , ".")?></td>
@@ -176,6 +176,7 @@
 								<td><?=date_format(date_create($value['data_receb']), "d/m/Y")?></td>
 								<td><?=$value['status']?></td>
 								<td><?=$value['notas_importantes']?></td>
+								<td><strong><?=number_format($value['valor_avaliacao'], 2, "," , ".")?></strong></td>
 								<td align="center"><a href="/?pagina=historico&cod_os=<?=$value['cod_os']?>&form=valor-de-avaliacao" title="Histórico" target="_blank"><i class="fa fa-history" aria-hidden="true"></a></td>
 							</tr>
 							<script>verificaStatus()</script>

@@ -99,7 +99,7 @@
 
 						<li>
 							<!--<a href="/?pagina=modelos">Modelos</a>-->
-							<a href="#">Modelos (Habilitado apenas on-line)</a>
+							<a href="/?pagina=modelos">Modelos</a>
 						</li>
 
 					</ul>

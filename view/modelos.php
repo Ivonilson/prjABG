@@ -9,6 +9,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="robots" content="noindex, nofollow">
 	<title>Modelos</title>
 	<?php require_once 'includes/bootstrap-css.php'; ?>
 </head>
@@ -78,11 +79,11 @@
 					<table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
 						<thead class="thead-dark">
 							<tr>
+								<th>Empresa</th>
+								<th>Banco</th>
+								<th>Tipologia</th>
 								<th>ID</th>
 								<th>Última O.S</th>
-								<th>Banco</th>
-								<th>Empresa</th>
-								<th>Tipologia</th>
 								<th>Cidade</th>
 								<th>UF</th>
 								<th>Complemento</th>
@@ -96,12 +97,12 @@
 						</thead>
 						<tfoot class="thead-dark">
 							<tr>
+								<th>Empresa</th>
+								<th>Banco</th>
+								<th>Tipologia</th>
 								<th>ID</th>
 								<th>Última O.S</th>
-								<th>Banco</th>
-								<th>Empresa</th>
-								<th>Tipologia</th>
-								<th>Cidade/UF</th>
+								<th>Cidade</th>
 								<th>UF</th>
 								<th>Complemento</th>
 								<th>Observações</th>
@@ -125,11 +126,11 @@
 							?>
 							
 							<tr class="itensTabela">
+								<td><?=$value['empresa']?></td>
+								<td><?=$value['banco']?></td>
+								<td><?=$value['tipologia']?></td>
 								<td><?=$value['id']?></td>
 								<td><?=$value['cod_os']?></td>
-								<td><?=$value['banco']?></td>
-								<td><?=$value['empresa']?></td>
-								<td><?=$value['tipologia']?></td>
 								<td><?=$value['cidade']?></td>
 								<td><?=$value['uf']?></td>
 								<td><?=$value['complemento']?></td>
