@@ -211,8 +211,8 @@
 										<tr class="itensTabela">
 											<td  class="text-center"><?=$value['item']?></td>
 											<td  class="text-center"><?=$value['titulo']?></td>
-											<td class="text-center"><a href="#" title="COT <?=$value['versao'] .' - Item: '. $value['item']?>" data-toggle="popover" data-content="<?= $value['descricao'] ?>"><i class="fa fa-search" aria-hidden="true" data-toggle="modal" data-target="#<?=$value['id']?>"></a></td>
-											<td  class="text-center"><?=$value['data_cadastro']?></td>
+											<td class="text-center"><a href="#" title="COT <?=$value['versao'] .' - Item: '. $value['item']?>" data-toggle="popover" data-content="<?=$value['descricao'] ?>"><i class="fa fa-search" aria-hidden="true" data-toggle="modal" data-target="#<?=$value['id']?>"></a></td>
+											<td  class="text-center"><?=date_format(date_create($value['data_cadastro']), "d/m/Y")?></td>
 											<td  class="text-center"><a href="/?pagina=&=<?=$value?>&form=demandas-do-dia" title="Editar"><i class="fa fa-pencil" aria-hidden="true"></a></td>
 											<td  class="text-center"><a href="/?pagina=&cod_os=<?=$value?>&form=demandas-do-dia" title="Histórico" target="_blank"><i class="fa fa-history" aria-hidden="true"></a></td>
 										</tr>
