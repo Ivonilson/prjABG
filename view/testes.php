@@ -17,7 +17,7 @@
 
 	<h1>
 		<?php 
-			$senha = crypt('', '');
+			$senha = crypt('de6AA4/Kyu9UU', 'developer');
 			echo $senha;
 		?>
 	</h1>

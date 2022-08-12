@@ -1,3 +1,8 @@
+//ativando popovers
+$(function () {
+	$('[data-toggle="popover"]').popover()
+})
+
 function verificaStatus(){
 
 	 let td_tabela = document.querySelector(".status").innerHTML;

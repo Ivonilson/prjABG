@@ -12,8 +12,6 @@ $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : "login";
 
 		case 'demandas-do-dia':
 			require "controller/crtDemandasDoDia.php";
-			$crtl = new crtDemandasdoDia();
-			$crtl->demandasDoDia();
 			break;
 
 		case 'testes':

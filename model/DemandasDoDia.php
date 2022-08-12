@@ -1,6 +1,8 @@
 <?php
 require_once "Conn.php";
 
+$conn = new Conn();
+
 class DemandasDoDia {
 
 	function dadosDoDia()
@@ -16,6 +18,17 @@ class DemandasDoDia {
 
 		return $resultados;
 
+	}
+
+	function dadosCot()
+	{
+		$querySelect = "SELECT id, versao, item, titulo, descricao, observacoes, data_cadastro, usuario  FROM tbl_cot";
+
+		$conn = new Conn();
+		$dadosSelect = $conn->getConn()->query($querySelect);
+		$resultados = $dadosSelect->fetchAll(PDO::FETCH_ASSOC);
+
+		return $resultados;
 	}
 }
 
