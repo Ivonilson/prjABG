@@ -31,7 +31,8 @@
 				</li>
 
 				<div class="col mt-2">
-				<a href="/?pagina=cadastrar-cidade" class="btn btn-info text-light ml-2 float-right font-weight-bold rounded"  data-toggle="modal" data-target="#mdCOT" title="Caderno de Orientações Técnicas"><i class="fa fa-book"></i> COT</a>
+					<a href="#" class="btn btn-info text-light ml-2 float-right font-weight-bold rounded"  data-toggle="modal" data-target="#mdCOT" title="Caderno de Orientações Técnicas"><i class="fa fa-book"></i> COT</a>
+					<a href="/?pagina=cadastrar-item-cot" class="btn btn-danger text-light ml-2 float-right font-weight-bold rounded" title="Incluir Novo Item COT."><i class="fa fa-plus"></i> Item COT</a>
 					<a href="/?pagina=cadastrar-cidade" class="btn btn-danger text-light ml-2 float-right font-weight-bold rounded" title="Incluir Nova Cidade."><i class="fa fa-plus"></i> Cidade</a>
 					<a href="/?pagina=cadastrar-os" class="btn btn-danger text-light  float-right font-weight-bold rounded" title="Incluir Nova O.S."><i class="fa fa-plus"></i> O.S.</a>
 					

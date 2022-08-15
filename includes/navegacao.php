@@ -24,6 +24,10 @@
 						</li>
 
 						<li>
+							<a href="/?pagina=cadastrar-item-cot" >Cadastrar Item COT</a>
+						</li>
+
+						<li>
 							<a href="/?pagina=cadastrar-cidade" >Cadastrar Cidade</a>
 						</li>
 

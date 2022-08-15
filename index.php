@@ -22,6 +22,11 @@ $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : "login";
 			require "controller/crtCadastrarOs.php";
 			include_once "view/cadastrar-os.php";
 			break;
+		
+		case 'cadastrar-item-cot':
+			require "controller/crtCadastrarItemCot.php";
+			include_once "view/cadastrar-item-cot.php";
+			break;
 
 		case 'cadastrar-cidade':
 			require "controller/crtCadastrarCidade.php";

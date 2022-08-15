@@ -6,6 +6,7 @@ create table tbl_cot(
     descricao varchar (3000),
     observacoes varchar(3000),
     data_cadastro timestamp,
+    alteracacoes varchar(5000),
     usuario varchar(60)
 
 ) engine=innoDB;
