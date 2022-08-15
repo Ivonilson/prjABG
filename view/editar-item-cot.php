@@ -10,7 +10,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="robots" content="noindex, nofollow">
-	<title>Nova Item COT</title>
+	<title>Editar Item COT</title>
 	<?php require_once 'includes/bootstrap-css.php'; ?>
 </head>
 <body class="bg-dark fixed-nav sticky-footer" id="page-top">
@@ -27,7 +27,10 @@
 					Registros
 				</li>
 				<li class="breadcrumb-item">
-					<mark class="p-2 rounded">Cadastrar Item COT</mark>
+					Cadastrar Item COT
+				</li>
+				<li class="breadcrumb-item">
+					<mark class="p-2 rounded">Editar Item COT</mark>
 				</li>
 				
 			</ol>
@@ -35,7 +38,7 @@
 					<!--Feedback do Cadastro -->
 					<?php
 
-						if($mensagem_erro == "Item cadastrado com Sucesso!")
+						if($mensagem_erro == "Item editado com Sucesso!")
 						{
 					?>
 
@@ -44,7 +47,7 @@
 					</div>
 
 					<?php 
-						} elseif($mensagem_erro == "ERRO. Verifique se o item do COT que está tentando cadastrar já exista no sistema ou contate o Suporte.") {
+						} elseif($mensagem_erro == "Erro. Contate o Suporte.") {
 					?>
 
 					<div class="alert alert-warning font-weight-bold text-danger alertaCadOsNoOk col-12 text-center" role="alert">

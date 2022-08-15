@@ -24,9 +24,15 @@ $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : "login";
 			break;
 		
 		case 'cadastrar-item-cot':
-			require "controller/crtCadastrarItemCot.php";
+			require "controller/crtCot.php";
 			include_once "view/cadastrar-item-cot.php";
 			break;
+
+		case 'editar-item-cot':
+			require "controller/crtCot.php";
+			include_once "view/editar-item-cot.php";
+			break;
+
 
 		case 'cadastrar-cidade':
 			require "controller/crtCadastrarCidade.php";

@@ -1,7 +1,7 @@
 <?php
 require_once "Conn.php";
 
-class CadastrarItemCot {
+class Cot {
 
 	public function cadItemCot()
 	{

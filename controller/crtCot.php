@@ -1,13 +1,13 @@
 <?php
-require_once "model/CadastrarItemCot.php";
+require_once "model/Cot.php";
 
-	class crtCadastrarItemCot {
+	class crtCot {
 
 		public function cadastrarItemCot(){	
 			$usuario = new Conn();
 			
 			if(filter_input(INPUT_POST, 'ipt-item') != 'INDEFINIDO' && filter_input(INPUT_POST, 'ipt-item') != ''){
-					$cadastrar = new CadastrarItemCot();
+					$cadastrar = new Cot();
 					
 					if($cadastrar->cadItemCot()){
 						return "Item cadastrado com Sucesso!";
@@ -19,6 +19,6 @@ require_once "model/CadastrarItemCot.php";
 			}
 		}
 
-	$crtl = new crtCadastrarItemCot();
+	$crtl = new crtCot();
 	$mensagem_erro = $crtl->cadastrarItemCot();
 ?>
