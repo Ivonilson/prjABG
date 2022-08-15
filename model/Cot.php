@@ -85,7 +85,7 @@ class Cot {
 			.'<u>Data e Horário</u>: <mark>'.date('d/m/Y H:i:s').'</mark><br>'
 			."<u>Item</u>: ".$dados['ipt-item-ed'].'<br>'
 			."<u>Versão</u>: ".$dados['sel-versao-ed'].'<br>'
-			."<u>Título</u>: ".$dados['ipt-titulo-ed'].'<br>'
+			."<u>Título</u>: ".$titulo.'<br>'
 			."<u>Descrição</u>: ".$dados['ta-descricao-cot-ed'].'<br>'
 			."<u>Observações</u>: ".$dados['ta-observacoes-cot-ed'].'<br>'
 			.'<hr>';

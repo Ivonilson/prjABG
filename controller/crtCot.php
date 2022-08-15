@@ -36,11 +36,12 @@ require_once "model/Cot.php";
 
 	$crtl = new crtCot();
 	$mensagem_erro = $crtl->cadastrarItemCot();
-	$mensagem_erro = $crtl->editarItemCot();
+	
 
 	if(filter_input(INPUT_GET, 'item') != '' && filter_input(INPUT_GET, 'item') != NULL) {
 		$itemEdicao = new Cot();
 		$item = $itemEdicao->itemParaEdicao(filter_input(INPUT_GET, 'item'));
+		$mensagem_erro = $crtl->editarItemCot();
 	}
 
 	if(filter_input(INPUT_GET,'item-historico') != '' && filter_input(INPUT_GET, 'item-historico') != NULL){
