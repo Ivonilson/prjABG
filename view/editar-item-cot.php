@@ -35,7 +35,7 @@
 				
 			</ol>
 
-					<!--Feedback do Cadastro -->
+					<!--Feedback da Edição -->
 					<?php
 
 						if($mensagem_erro == "Item editado com Sucesso!")
@@ -46,7 +46,11 @@
  						<img src="../assets/ok.png"><h5><strong><?=$mensagem_erro?></strong></h5>
 					</div>
 
+
 					<?php 
+						
+						echo "<script>setTimeout(()=> window.location.href = '/?pagina=".$_GET['form']."', 3000)</script>";
+
 						} elseif($mensagem_erro == "Erro. Contate o Suporte.") {
 					?>
 
@@ -72,7 +76,8 @@
 
 						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
 							<label class="sr-only" for="inlineFormInputItem">Nº DO ITEM</label>
-							<input type="text" class="form-control mb-2" id="inlineFormInputItem" placeholder="Digite o n° do item" name="ipt-item" required>
+							<input type="text" disabled class="form-control mb-2" id="inlineFormInputItem" value="<?=$item[0]['item']?>" required>
+							<input type="hidden" class="form-control mb-2" id="inlineFormInputItem" value="<?=$item[0]['item']?>"  name="ipt-item-ed" required>
 						</div>
 
 						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
@@ -82,8 +87,8 @@
 										VERSÃO
 									</label>
 								</div>
-								<select class="custom-select" name="sel-versao" id="select-versao">
-									<option value="-">Selecione</option>
+								<select class="custom-select" name="sel-versao-ed" id="select-versao">
+									<option value="<?=$item[0]['versao']?>"><?=$item[0]['versao']?></option>
 									<option value="v47">v47</option>
 									<option value="v48">v48</option>
 									<option value="v49">v49</option>
@@ -101,20 +106,20 @@
 
                         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
 							<label class="sr-only" for="inlineFormInputTitulo">Título</label>
-							<input type="text" class="form-control mb-2" id="inlineFormInputTitulo" placeholder="Título" name="ipt-titulo" required>
+							<input type="text" class="form-control mb-2" id="inlineFormInputTitulo" value="<?=$item[0]['titulo']?>" name="ipt-titulo-ed" required>
 						</div>
 
                         <div class="col-12">
 							<label class="sr-only" for="inlineFormInputDescricao">DESCRIÇÃO</label>
-							<textarea type="text" class="form-control mb-2" id="inlineFormInputDescricao" cols="100" rows="3" placeholder="Descrição conforme COT (copia e cola)" name="ta-descricao-cot"></textarea>
+							<textarea type="text" class="form-control mb-2" id="inlineFormInputDescricao" cols="100" rows="3" name="ta-descricao-cot-ed"><?=$item[0]['descricao']?></textarea>
 						</div>
 
                         <div class="col-12">
 							<label class="sr-only" for="inlineFormInputObservacoes">OBSERVAÇÕES</label>
-							<textarea type="text" class="form-control mb-2" id="inlineFormInputObservacoes" cols="100" rows="3" placeholder="Observações" name="ta-observacoes-cot"></textarea>
+							<textarea type="text" class="form-control mb-2" id="inlineFormInputObservacoes" cols="100" rows="3" name="ta-observacoes-cot-ed"><?=$item[0]['observacoes']?></textarea>
 						</div>
 
-						<input type="submit" name="" id="botoesGravarCad" value="Gravar Item COT" name="btnCadastrar" onmouseover="hoverOverBtnGravarCad()" onmouseout="hoverOutBtnGravarCad()">
+						<input type="submit" id="botoesGravarCad" value="Gravar Alterações"name="btnEditarItemCod" onmouseover="hoverOverBtnGravarCad()" onmouseout="hoverOutBtnGravarCad()">
 
 					</div>
 
