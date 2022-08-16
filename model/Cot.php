@@ -59,7 +59,7 @@ class Cot {
 
 		public function itemParaEdicao($item)
 		{
-			$querySelect = "SELECT id, item, versao, titulo, descricao, observacoes, data_cadastro, usuario  FROM tbl_cot WHERE item  = '$item'";
+			$querySelect = "SELECT id, item, versao, titulo, descricao, observacoes, usuario  FROM tbl_cot WHERE item  = '$item'";
 
 			$conn = new Conn();
 			$dadosSelect = $conn->getConn()->query($querySelect);
