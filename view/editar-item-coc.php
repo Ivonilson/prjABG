@@ -10,7 +10,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="robots" content="noindex, nofollow">
-	<title>Editar Item COT</title>
+	<title>Editar Item COC</title>
 	<?php require_once 'includes/bootstrap-css.php'; ?>
 </head>
 <body class="bg-dark fixed-nav sticky-footer" id="page-top">
@@ -30,7 +30,7 @@
 					Editar Item COT
 				</li>
 				<li class="breadcrumb-item">
-					<mark class="p-2 rounded">Editar Item COT</mark>
+					<mark class="p-2 rounded">Editar Item COC</mark>
 				</li>
 				
 			</ol>
@@ -68,7 +68,7 @@
 
 					<div id="jumbotron_telas_cadastro">
 						<div class="container ">
-							<h4>Cadastrar Item COT</h4>
+							<h4>Editar Item COC</h4>
 						</div>
 					</div>
 
@@ -80,28 +80,9 @@
 							<input type="hidden" class="form-control mb-2" id="inlineFormInputItem" value="<?=$item[0]['item']?>"  name="ipt-item-ed" required>
 						</div>
 
-						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-							<div class="input-group mb-2">
-								<div class="input-group-prepend">
-									<label class="lbl-cadastro" for="select-versao">
-										VERSÃO
-									</label>
-								</div>
-								<select class="custom-select" name="sel-versao-ed" id="select-versao">
-									<option value="<?=$item[0]['versao']?>"><?=$item[0]['versao']?></option>
-									<option value="v47">v47</option>
-									<option value="v48">v48</option>
-									<option value="v49">v49</option>
-									<option value="v50">v50</option>
-									<option value="v51">v51</option>
-									<option value="v52">v52</option
-									<option value="v53">v53</option>
-                                    <option value="v54">v54</option>
-                                    <option value="v55">v55</option>
-                                    <option value="v56">v56</option>
-                                    <option value="v57">v57</option>
-								</select>
-							</div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+							<label class="sr-only" for="inlineFormInputTitulo">Título</label>
+							<input type="text" class="form-control mb-2" id="inlineFormInputTitulo" value="<?=$item[0]['versao']?>" name="ipt-versao-ed" required>
 						</div>
 
                         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
@@ -111,12 +92,12 @@
 
                         <div class="col-12">
 							<label class="sr-only" for="inlineFormInputDescricao">DESCRIÇÃO</label>
-							<textarea type="text" class="form-control mb-2" id="inlineFormInputDescricao" cols="100" rows="3" name="ta-descricao-cot-ed"><?=$item[0]['descricao']?></textarea>
+							<textarea type="text" class="form-control mb-2" id="inlineFormInputDescricao" cols="100" rows="3" name="ta-descricao-coc-ed"><?=$item[0]['descricao']?></textarea>
 						</div>
 
                         <div class="col-12">
 							<label class="sr-only" for="inlineFormInputObservacoes">OBSERVAÇÕES</label>
-							<textarea type="text" class="form-control mb-2" id="inlineFormInputObservacoes" cols="100" rows="3" name="ta-observacoes-cot-ed"><?=$item[0]['observacoes']?></textarea>
+							<textarea type="text" class="form-control mb-2" id="inlineFormInputObservacoes" cols="100" rows="3" name="ta-observacoes-coc-ed"><?=$item[0]['observacoes']?></textarea>
 						</div>
 
 						<input type="submit" id="botoesGravarCad" value="Gravar Alterações"name="btnEditarItemCot" onmouseover="hoverOverBtnGravarCad()" onmouseout="hoverOutBtnGravarCad()">

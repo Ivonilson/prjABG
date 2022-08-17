@@ -30,6 +30,17 @@ class DemandasDoDia {
 
 		return $resultados;
 	}
+
+	function dadosCoc()
+	{
+		$querySelect = "SELECT id, versao, item, titulo, descricao, observacoes, data_cadastro, usuario  FROM tbl_coc";
+
+		$conn = new Conn();
+		$dadosSelect = $conn->getConn()->query($querySelect);
+		$resultados = $dadosSelect->fetchAll(PDO::FETCH_ASSOC);
+
+		return $resultados;
+	}
 }
 
 

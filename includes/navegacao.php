@@ -28,6 +28,10 @@
 						</li>
 
 						<li>
+							<a href="/?pagina=cadastrar-item-coc" >Cadastrar Item COC</a>
+						</li>
+
+						<li>
 							<a href="/?pagina=cadastrar-cidade" >Cadastrar Cidade</a>
 						</li>
 

@@ -40,6 +40,11 @@ tfoot { display:table-footer-group }
 	width: 500px;
 }
 
+.modal-dialog {
+	min-width: 58% !important;
+	/*border: 2px solid red;*/
+}
+
 #navegacao li a:hover {
 	background-color: #8B0000;
 	color:  #FFFAFA !important;
