@@ -79,13 +79,13 @@
 					<table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
 						<thead class="thead-dark">
 							<tr>
-								<th>Empresa</th>
-								<th>Banco</th>
+								<th class="col-1">Cidade</th>
+								<th class="col-1">UF</th>
 								<th>Tipologia</th>
 								<th>ID</th>
 								<th>Última O.S</th>
-								<th>Cidade</th>
-								<th>UF</th>
+								<th>Empresa</th>
+								<th>Banco</th>
 								<th>Complemento</th>
 								<th>Observações</th>
 								<th>Última atualização</th>
@@ -97,13 +97,13 @@
 						</thead>
 						<tfoot class="thead-dark">
 							<tr>
-								<th>Empresa</th>
-								<th>Banco</th>
+								<th class="col-1">Cidade</th>
+								<th class="col-1">UF</th>
 								<th>Tipologia</th>
 								<th>ID</th>
 								<th>Última O.S</th>
-								<th>Cidade</th>
-								<th>UF</th>
+								<th>Empresa</th>
+								<th>Banco</th>
 								<th>Complemento</th>
 								<th>Observações</th>
 								<th>Última atualização</th>
@@ -126,13 +126,13 @@
 							?>
 							
 							<tr class="itensTabela">
-								<td><?=$value['empresa']?></td>
-								<td><?=$value['banco']?></td>
+								<td><?=$value['cidade']?><br><small class='d-lg-none d-sm-nome d-md-none'><?=$value['tipologia']?></small></td>
+								<td><?=$value['uf']?></td>
 								<td><?=$value['tipologia']?></td>
 								<td><?=$value['id']?></td>
 								<td><?=$value['cod_os']?></td>
-								<td><?=$value['cidade']?></td>
-								<td><?=$value['uf']?></td>
+								<td><?=$value['empresa']?></td>
+								<td><?=$value['banco']?></td>
 								<td><?=$value['complemento']?></td>
 								<td class="text-justify"><?=$value['observacoes']?></td>
 								<td><?=date_format(date_create($value['data_atualizacao']), "d/m/Y H:i:s")?></td>

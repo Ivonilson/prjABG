@@ -10,7 +10,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="robots" content="noindex, nofollow">
-	<title>Novo Item COT</title>
+	<title>Novo Item Cards/E-mails</title>
 	<?php require_once 'includes/bootstrap-css.php'; ?>
 </head>
 <body class="bg-dark fixed-nav sticky-footer" id="page-top">
@@ -27,7 +27,7 @@
 					Registros
 				</li>
 				<li class="breadcrumb-item">
-					<mark class="p-2 rounded">Cadastrar Item COT</mark>
+					<mark class="p-2 rounded">Cadastrar Item CARD/E-mail</mark>
 				</li>
 				
 			</ol>
@@ -44,7 +44,7 @@
 					</div>
 
 					<?php 
-						} elseif($mensagem_erro == "ERRO. Verifique se o item do COT que está tentando cadastrar já exista no sistema ou contate o Suporte.") {
+						} elseif($mensagem_erro == "ERRO. Verifique se o item do CARD que está tentando cadastrar já exista no sistema ou contate o Suporte.") {
 					?>
 
 					<div class="alert alert-warning font-weight-bold text-danger alertaCadOsNoOk col-12 text-center" role="alert">
@@ -61,7 +61,7 @@
 
 					<div id="jumbotron_telas_cadastro">
 						<div class="container ">
-							<h4>Cadastrar Item COT</h4>
+							<h4>Cadastrar Item CARD/E-mail</h4>
 						</div>
 					</div>
 
@@ -72,30 +72,6 @@
 							<input type="text" class="form-control mb-2" id="inlineFormInputItem" placeholder="Digite o n° do item" name="ipt-item" required>
 						</div>
 
-						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-							<div class="input-group mb-2">
-								<div class="input-group-prepend">
-									<label class="lbl-cadastro" for="select-versao">
-										VERSÃO
-									</label>
-								</div>
-								<select class="custom-select" name="sel-versao" id="select-versao">
-									<option value="-">Selecione</option>
-									<option value="v47">v47</option>
-									<option value="v48">v48</option>
-									<option value="v49">v49</option>
-									<option value="v50">v50</option>
-									<option value="v51">v51</option>
-									<option value="v52">v52</option
-									<option value="v53">v53</option>
-                                    <option value="v54">v54</option>
-                                    <option value="v55">v55</option>
-                                    <option value="v56">v56</option>
-                                    <option value="v57">v57</option>
-								</select>
-							</div>
-						</div>
-
                         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
 							<label class="sr-only" for="inlineFormInputTitulo">Título</label>
 							<input type="text" class="form-control mb-2" id="inlineFormInputTitulo" placeholder="Título" name="ipt-titulo" required>
@@ -103,7 +79,7 @@
 
                         <div class="col-12">
 							<label class="sr-only" for="inlineFormInputDescricao">DESCRIÇÃO</label>
-							<textarea type="text" class="form-control mb-2" id="inlineFormInputDescricao" cols="100" rows="3" placeholder="Descrição conforme COT (copia e cola)" name="ta-descricao-cot"></textarea>
+							<textarea type="text" class="form-control mb-2" id="inlineFormInputDescricao" cols="100" rows="3" placeholder="Descrição (copia e cola)" name="ta-descricao-cot"></textarea>
 						</div>
 
                         <div class="col-12">
@@ -111,7 +87,7 @@
 							<textarea type="text" class="form-control mb-2" id="inlineFormInputObservacoes" cols="100" rows="3" placeholder="Observações" name="ta-observacoes-cot"></textarea>
 						</div>
 
-						<input type="submit" name="" id="botoesGravarCad" value="Gravar Item COT" name="btnCadastrar" onmouseover="hoverOverBtnGravarCad()" onmouseout="hoverOutBtnGravarCad()">
+						<input type="submit" name="" id="botoesGravarCad" value="Gravar Item CARD" name="btnCadastrar" onmouseover="hoverOverBtnGravarCad()" onmouseout="hoverOutBtnGravarCad()">
 
 					</div>
 

@@ -32,6 +32,10 @@
 						</li>
 
 						<li>
+							<a href="/?pagina=cadastrar-item-card" >Cadastrar Item CARD/E-mail</a>
+						</li>
+
+						<li>
 							<a href="/?pagina=cadastrar-cidade" >Cadastrar Cidade</a>
 						</li>
 

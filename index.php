@@ -33,14 +33,39 @@ $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : "login";
 				include_once "view/cadastrar-item-coc.php";
 				break;
 
+		case 'cadastrar-item-card':
+				require "controller/crtCard.php";
+				include_once "view/cadastrar-item-card.php";
+				break;
+
 		case 'historico-item-cot':
 			require "controller/crtCot.php";
 			include_once "view/historico-item-cot.php";
 			break;
 
+		case 'historico-item-coc':
+			require "controller/crtCoc.php";
+			include_once "view/historico-item-coc.php";
+			break;
+
+		case 'historico-item-card':
+			require "controller/crtCard.php";
+			include_once "view/historico-item-card.php";
+			break;
+
 		case 'editar-item-cot':
 			require "controller/crtCot.php";
 			include_once "view/editar-item-cot.php";
+			break;
+
+		case 'editar-item-coc':
+			require "controller/crtCoc.php";
+			include_once "view/editar-item-coc.php";
+			break;
+
+		case 'editar-item-card':
+			require "controller/crtCard.php";
+			include_once "view/editar-item-card.php";
 			break;
 
 		case 'cadastrar-cidade':

@@ -30,9 +30,12 @@
 					<mark class="p-2 rounded">Vencendo Hoje</mark>
 				</li>
 
-				<div class="col mt-2">
+				<div class="col-12 mt-2">
+					<a href="#" class="btn btn-info text-light ml-2 mt-2 float-right font-weight-bold rounded"  data-toggle="modal" data-target="#mdCARD" title="CARD/E-mail CIHARGO"><i class="fa fa-book"></i> CARD/E-mail CIHARGO</a>
 					<a href="#" class="btn btn-info text-light ml-2 mt-2 float-right font-weight-bold rounded"  data-toggle="modal" data-target="#mdCOC" title="Caderno de Orientações Complementares"><i class="fa fa-book"></i> COC</a>
 					<a href="#" class="btn btn-info text-light ml-2 mt-2 float-right font-weight-bold rounded"  data-toggle="modal" data-target="#mdCOT" title="Caderno de Orientações Técnicas"><i class="fa fa-book"></i> COT</a>
+					<a href="/?pagina=cadastrar-item-card" class="btn btn-danger text-light ml-2 mt-2 float-right font-weight-bold rounded" title="Incluir Novo Item CARD/E-mail."><i class="fa fa-plus"></i> Item CARD/E-mail</a>
+					<a href="/?pagina=cadastrar-item-coc" class="btn btn-danger text-light ml-2 mt-2 float-right font-weight-bold rounded" title="Incluir Novo Item COC."><i class="fa fa-plus"></i> Item COC</a>
 					<a href="/?pagina=cadastrar-item-cot" class="btn btn-danger text-light ml-2 mt-2 float-right font-weight-bold rounded" title="Incluir Novo Item COT."><i class="fa fa-plus"></i> Item COT</a>
 					<a href="/?pagina=cadastrar-cidade" class="btn btn-danger text-light ml-2 mt-2 float-right font-weight-bold rounded" title="Incluir Nova Cidade."><i class="fa fa-plus"></i> Cidade</a>
 					<a href="/?pagina=cadastrar-os" class="btn btn-danger text-light  ml-2 mt-2 float-right font-weight-bold rounded" title="Incluir Nova O.S."><i class="fa fa-plus"></i> O.S.</a>
@@ -186,7 +189,7 @@
 													<th  class="text-center">Item</th>
 													<th  class="text-center">Título</th>
 													<th  class="text-center">Versão</th>
-													<th  class="text-center">Descrição</th>
+													<th  class="text-center col-12">Descrição</th>
 													<th  class="text-center">Editar</th>
 													<th  class="text-center">Histórico</th>
 												</tr>
@@ -196,7 +199,7 @@
 													<th  class="text-center">Item</th>
 													<th  class="text-center">Título</th>
 													<th  class="text-center">Versão</th>
-													<th  class="text-center">Descrição</th>
+													<th  class="text-center col-12">Descrição</th>
 													<th  class="text-center">Editar</th>
 													<th  class="text-center">Histórico</th>
 												</tr>
@@ -262,7 +265,7 @@
 													<th  class="text-center">Item</th>
 													<th  class="text-center">Título</th>
 													<th  class="text-center">Versão</th>
-													<th  class="text-center">Descrição</th>
+													<th  class="text-center col-12">Descrição</th>
 													<th  class="text-center">Editar</th>
 													<th  class="text-center">Histórico</th>
 												</tr>
@@ -272,7 +275,7 @@
 													<th  class="text-center">Item</th>
 													<th  class="text-center">Título</th>
 													<th  class="text-center">Versão</th>
-													<th  class="text-center">Descrição</th>
+													<th  class="text-center col-12">Descrição</th>
 													<th  class="text-center">Editar</th>
 													<th  class="text-center">Histórico</th>
 												</tr>
@@ -316,6 +319,79 @@
 				</div>
 			</div>
 			<!-- fim do modal COC -->
+
+			<!-- MODAL CARD --->
+			<!-- Large modal -->
+			<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="mdCARD">
+				<div class="modal-dialog modal-lg body">
+						<div class="col-12">
+         					<button type="button" class="btn btn-secondary float-right" data-bs-dismiss="modal">Fechar</button>
+      					</div>
+						<div class="modal-content">	
+							<div class="modal-header">
+								<h5 class="col text-center">CARD/E-MAIL Com Orientações CIHARGO</h5>
+							</div>
+							<div class="modal-body">
+
+								<div class="row border-light bg-light m-2">
+									<div class="col-lg-12">
+										<table class="table table-bordered table-hover table-responsive" id="dataTable4" width="100%" cellspacing="0">
+											<thead class="thead-light">
+												<tr>
+													<th  class="text-center">Item</th>
+													<th  class="text-center">Título</th>
+													<th  class="text-center col-12">Descrição</th>
+													<th  class="text-center">Editar</th>
+													<th  class="text-center">Histórico</th>
+												</tr>
+											</thead>
+											<tfoot class="thead-light">
+												<tr>
+													<th  class="text-center">Item</th>
+													<th  class="text-center">Título</th>
+													<th  class="text-center col-12">Descrição</th>
+													<th  class="text-center">Editar</th>
+													<th  class="text-center">Histórico</th>
+												</tr>
+											</tfoot>
+											<tbody>
+
+												
+
+												<?php 
+													if ($_SESSION['user'] == "IVONILSON" || $_SESSION['user'] == "GUSTAVO"){
+
+													//var_dump($resultadoCard);
+												
+													foreach ($resultadoCard as $value) {
+														
+												?>
+												
+												<tr class="itensTabela">
+													<td  class="text-center"><?=$value['item']?></td>
+													<td  class="text-center"><?=$value['titulo']?></td>
+													<td class="text-justify"><?=$value['descricao'].'<hr>'.$value['observacoes']?> </td>
+													<td align="center"><a href="/?pagina=editar-item-card&item=<?=$value['item']?>&form=demandas-do-dia" title="Editar"><i class="fa fa-pencil" aria-hidden="true"></a></td>
+													<td align="center"><a href="/?pagina=historico-item-card&item-historico=<?=$value['item']?>" title="Histórico" target="_blank"><i class="fa fa-history" aria-hidden="true"></a></td>
+												</tr>
+												
+												<?php 
+													$conexao = null;
+													}
+												} else {
+													echo "<span class='text-danger'>USUÁRIO SEM PERMISSÃO PARA VISUALIZAR AS INFORMAÇÕES DESTA PÁGINA.</span><br><br>";
+												} 
+												?>
+											</tbody>
+										</table>
+									</div>
+								</div> 
+      						 </div>
+						</div>				
+					</div>
+				</div>
+			</div>
+			<!-- fim do modal CARD -->
 										
 		</div>
 		<!-- rodapé -->

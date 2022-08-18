@@ -8,6 +8,7 @@ class crtDemandasDoDia {
 			$dados = new DemandasDoDia();
 			$cot = new DemandasDoDia();
 			$coc = new DemandasDoDia();
+			$card = new DemandasDoDia();
 			$quant = 0;
 			$quantLaudoPronto = 0;
 			$contadorMdCot = 0;
@@ -15,6 +16,7 @@ class crtDemandasDoDia {
 			$resultado = $dados->dadosDoDia();
 			$resultadoCot = $cot->dadosCot();
 			$resultadoCoc = $coc->dadosCoc();
+			$resultadoCard = $coc->dadosCard();
 
 			include "view/demandas-do-dia.php";
 						

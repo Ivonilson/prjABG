@@ -41,6 +41,17 @@ class DemandasDoDia {
 
 		return $resultados;
 	}
+
+	function dadosCard()
+	{
+		$querySelect = "SELECT id, item, titulo, descricao, observacoes, data_cadastro, usuario  FROM tbl_card";
+
+		$conn = new Conn();
+		$dadosSelect = $conn->getConn()->query($querySelect);
+		$resultados = $dadosSelect->fetchAll(PDO::FETCH_ASSOC);
+
+		return $resultados;
+	}
 }
 
 

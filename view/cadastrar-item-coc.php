@@ -10,7 +10,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="robots" content="noindex, nofollow">
-	<title>Nova Item COC</title>
+	<title>Novo Item COC</title>
 	<?php require_once 'includes/bootstrap-css.php'; ?>
 </head>
 <body class="bg-dark fixed-nav sticky-footer" id="page-top">
@@ -84,7 +84,7 @@
 
                         <div class="col-12">
 							<label class="sr-only" for="inlineFormInputDescricao">DESCRIÇÃO</label>
-							<textarea type="text" class="form-control mb-2" id="inlineFormInputDescricao" cols="100" rows="3" placeholder="Descrição conforme COT (copia e cola)" name="ta-descricao-cot"></textarea>
+							<textarea type="text" class="form-control mb-2" id="inlineFormInputDescricao" cols="100" rows="3" placeholder="Descrição conforme COC (copia e cola)" name="ta-descricao-cot"></textarea>
 						</div>
 
                         <div class="col-12">
