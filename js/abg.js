@@ -53,7 +53,7 @@ $(document).ready(function(){
 })
 
 function Redirect(){
-    setTimeout("location.reload(true);",600000);   
+    setTimeout("location.reload(true);",10800000);   
  }
 
 function configurarBarra(){
