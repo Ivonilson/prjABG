@@ -10,7 +10,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="robots" content="noindex, nofollow">
-	<title>Demandas do Dia</title>
+	<title>Controle de Demandas</title>
 	<?php require_once 'includes/bootstrap-css.php'; ?>
 </head>
 <body class="bg-dark fixed-nav sticky-footer" id="page-top">
@@ -145,7 +145,7 @@
 								<td><?=date_format(date_create($value['data_receb']), "d/m/Y")?></td>
 								<td><?=date_format(date_create($value['data_entrega']), "d/m/Y")?></td>
 								<td class="status"><?=$value['status']?></td>
-								<td class="text-justify" id="td_notas_importantes"> <?= $value['notas_importantes']?> </td>
+								<td class="text-justify" id="td_notas_importantes">Contato da O.S:  <?= $value['CONTATO']?><br><hr><?= $value['notas_importantes']?> </td>
 								<td align="center"><a href="/?pagina=editar-os&cod_os=<?=$value['cod_os']?>&form=demandas-do-dia" title="Editar"><i class="fa fa-pencil" aria-hidden="true"></a></td>
 								<td align="center"><a href="/?pagina=historico&cod_os=<?=$value['cod_os']?>&form=demandas-do-dia" title="Histórico" target="_blank"><i class="fa fa-history" aria-hidden="true"></a></td>
 							</tr>

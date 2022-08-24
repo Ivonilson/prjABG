@@ -162,7 +162,7 @@
 								<td><?=date_format(date_create($value['data_receb']), "d/m/Y")?></td>
 								<td><?=date_format(date_create($value['data_entrega']), "d/m/Y")?></td>
 								<td class="status"><?=$value['status']?></td>
-								<td><?=$value['notas_importantes']?></td>
+								<td>contato da O.S:  <?= $value['CONTATO']?><br><hr><?=$value['notas_importantes']?></td>
 								<td align="center"><a href="/?pagina=editar-os&cod_os=<?=$value['cod_os']?>&form=pesquisa-por-data-receb" title="Editar" target="_blank"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
 								<td align="center"><a href="/?pagina=historico&cod_os=<?=$value['cod_os']?>&form=pesquisa-por-data-receb" title="Histórico" target="_blank"><i class="fa fa-history" aria-hidden="true"></a></td>
 							</tr>

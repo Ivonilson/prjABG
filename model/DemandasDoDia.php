@@ -8,7 +8,7 @@ class DemandasDoDia {
 	function dadosDoDia()
 	{
 		
-		$querySelect = "SELECT cod_os, tipo, banco, empresa, proponente, cidade, observacoes, condominio, bairro, uf, data_receb, data_entrega, status, notas_importantes, ficha_pesquisa  FROM controle_demandas WHERE DATE(data_entrega) = CURDATE()";
+		$querySelect = "SELECT cod_os, tipo, banco, empresa, proponente, CONTATO, cidade, observacoes, condominio, bairro, uf, data_receb, data_entrega, status, notas_importantes, ficha_pesquisa  FROM controle_demandas WHERE DATE(data_entrega) = CURDATE()";
 
 		//$querySelect = "SELECT cod_os, tipo, banco, empresa, proponente, cidade, bairro, uf, data_receb, data_entrega, status, notas_importantes  FROM controle_demandas LIMIT 50";
 
