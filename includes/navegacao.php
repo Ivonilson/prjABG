@@ -55,7 +55,7 @@
 				<li class="nav-item" id="navegacao">
 					<a href="#" class="nav-link nav-link-collapse" data-toggle="collapse" data-target="#collapsePesquisas">
 						<i  class="fa fa-search" aria-hidden="true"></i>
-						<span class="nav-link-text">Pesquisas</span>
+						<span class="nav-link-text">Consultas</span>
 					</a>
 					<ul style="background-color:#E6E6FA" class="sidenav-second-level collapse" id="collapsePesquisas" data-parent="#linksaccordion">
 						<li>
