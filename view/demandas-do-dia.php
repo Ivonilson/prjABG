@@ -31,6 +31,7 @@
 				</li>
 
 				<div class="col-12 mt-2">
+					<a href="#" class="btn btn-info text-light ml-2 mt-2 float-right font-weight-bold rounded"  data-toggle="modal" data-target="#mdToDoList" title="Lista de Tarefas"><i class="fa fa-book"></i> Lista de Tarefas</a>
 					<a href="#" class="btn btn-info text-light ml-2 mt-2 float-right font-weight-bold rounded"  data-toggle="modal" data-target="#mdCARD" title="CARD/E-mail CIHARGO"><i class="fa fa-book"></i> CARD/E-mail CIHARGO</a>
 					<a href="#" class="btn btn-info text-light ml-2 mt-2 float-right font-weight-bold rounded"  data-toggle="modal" data-target="#mdCOC" title="Caderno de Orientações Complementares"><i class="fa fa-book"></i> COC</a>
 					<a href="#" class="btn btn-info text-light ml-2 mt-2 float-right font-weight-bold rounded"  data-toggle="modal" data-target="#mdCOT" title="Caderno de Orientações Técnicas"><i class="fa fa-book"></i> COT</a>
@@ -392,12 +393,65 @@
 				</div>
 			</div>
 			<!-- fim do modal CARD -->
+
+			<!-- MODAL TO DO LIST --->
+			<!-- Large modal -->
+			<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="mdToDoList">
+				<div class="modal-dialog modal-lg body">
+						<div class="col-12">
+         					<button type="button" class="btn btn-secondary float-right" data-bs-dismiss="modal">Fechar</button>
+      					</div>
+						<div class="modal-content">	
+							<div class="modal-header">
+								<!-- <h5 class="col text-center">Lista de Tarefas</h5>-->
+							</div>
+							<div class="modal-body">
+
+								 <main id="app">
+            						<section class="todo-list">
+                						<h3>Lista de Tarefas</h3>
+                						<div class="all-todos">
+						                   	 <div 
+						                        class="single-todo" v-for="todo in todos"
+						                        :class="{done: todo.done}"
+						                        @click="todo.done = !todo.done"
+						                    >
+						                        <p>{{ todo.text }}</p>
+                    						</div>
+
+                						</div>
+
+                						<button class="clear" @click="todos=[]" v-if="todos.length">Limpar tudo</button>
+
+               							<input type="text" placeholder="Escreva uma nova tarefa..." v-model="newTodo.text">
+                						<button class="add" @click="addTodo()">Adicionar</button>
+
+						                <div class="instructions">
+						                    Instruções:
+						                    <ul>
+						                        <li>Clique no texto da tarefa para alternar entre feita / não feita</li>
+						                        <li>Use o botão limpar tudo para remover todas as tarefas</li>
+						                        <li>Use o input para adicionar novas tarefas</li>
+						                    </ul>
+						                </div>
+           							 </section>
+
+       							</main>
+
+      						 </div>
+						</div>				
+					</div>
+				</div>
+			</div>
+			<!-- fim do modal TO DO LIST -->
 										
 		</div>
 		<!-- rodapé -->
 		<?php require_once 'includes/rodape.php';?>
 	</div>
 	<?php require_once 'includes/bootstrap-js.php'; ?>
+	<script src="https://unpkg.com/vue@next"></script>
+	<script src="js/to-do-list.js"></script>
 
 	<!-- REFRESH AUTOMÁTICO -->
 	<!-- BARRA DE PROGRESSO DOS SERVIÇOS EXECUTADOS -->
