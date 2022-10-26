@@ -81,7 +81,7 @@ main {
     justify-content: center;
     align-items:flex-start;
     flex-wrap: wrap;
-    padding-top: 60px;
+    padding: 60px;
     box-shadow: 2px -2px 8px 2px gray;
 }
 
@@ -179,7 +179,7 @@ main > section.todo-list button.clear {
 }
 
 div.instructions {
-    font-size: 11px;
+    font-size: 14px;
     margin-top: 40px;
     color: grey;
 }
