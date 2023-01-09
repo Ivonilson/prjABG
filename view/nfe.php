@@ -41,9 +41,12 @@
 			<div class="card-body">
 					
 			<?php 
-				$valor = @$_POST['valorNota'];
-				$banco = @$_POST['Selecao'];
-				$empresa = @$_POST['Empresa'];
+				$dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+
+				if($dados != null){
+					$valor = str_replace(',' , '.', $dados['valorNota']);
+					$banco = $dados['Selecao'];
+					$empresa = $dados['Empresa'];
 
 				switch ($banco) {
 					case '1':
@@ -81,6 +84,7 @@
 
 				$calcular = new Nfe();
 				$conteudo1 = $calcular->calculaImpostos();
+			}
 			//var_dump($conteudo1);
 			?>
 

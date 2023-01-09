@@ -7,7 +7,7 @@
 			{
 				@$tomador = $_POST['Selecao'];
 				@$empresa = $_POST['Empresa'];	
-				@$valorNota = (double) $_POST['valorNota'];
+				@$valorNota = str_replace(',' , '.', $_POST['valorNota']);
 				$aliquotaIss = 0.05;
 				$aliquotaPis = 0.0065;
 				$aliquotaCofins = 0.03;
