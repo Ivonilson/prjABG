@@ -3,8 +3,7 @@ session_start();
 require "model/Conn.php";
 include "controller/crtValidarUsuario.php";
 include "controller/crtLogout.php";
-require "model/CadastrarNotificacao.php";
-require "model/EditarNotificacao.php";
+require "model/Notificacao.php";
 
 $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : "login";
 
@@ -74,8 +73,13 @@ $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : "login";
 			break;
 
 		case 'cadastrar-notificacao':
-			require "controller/crtCadastrarNotificacao.php";
+			require "controller/crtNotificacao.php";
 			include_once "view/cadastrar-notificacao.php";
+			break;
+		
+		case 'editar-notificacao':
+			require "controller/crtEditarNotificacao.php";
+			include_once "view/editar-notificacao.php";
 			break;
 
 		case 'cadastrar-evento':
