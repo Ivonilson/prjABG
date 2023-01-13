@@ -94,6 +94,11 @@ $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : "login";
 			require "controller/crtEditarNotificacao.php";
 			break;
 
+		case 'editar-notif':
+			require "controller/crtEditarNotif.php";
+			include_once "view/editar-notif.php";
+			break;
+
 		case 'editar-os':
 			require "controller/crtEditarOs.php";
 			include "view/editar-os.php";

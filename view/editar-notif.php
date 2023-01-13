@@ -68,31 +68,32 @@
 
 					<div class="form-row align-items-center">
 
-						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-							<label class="sr-only" for="inlineFormInputId">Nº DO ITEM</label>
+						<div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+							<label class="lbl-cadastro" for="inlineFormInputId">Nº DO ITEM</label>
 							<input type="text" disabled class="form-control mb-2" id="inlineFormInputId" value="<?= 0 ?>" required>
 							<input type="hidden" class="form-control mb-2" id="inlineFormInputItem" value="<?= 0 ?>"  name="ipt-id-notificacao" required>
 						</div>
 
-                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-							<label class="sr-only" for="inlineFormInputRemetente">Título</label>
+                        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+							<label class="lbl-cadastro" for="inlineFormInputRemetente">Título</label>
 							<input type="text" class="form-control mb-2" id="inlineFormInputRemetente" value="<?=0?>" name="ipt-remetente" required>
 						</div>
 
-                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-							<label class="sr-only" for="inlineFormInputDestinario">Remetente</label>
+                        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+							<label class="lbl-cadastro" for="inlineFormInputDestinario">Remetente</label>
 							<input type="text" class="form-control mb-2" id="inlineFormInputDestinatario" value="<?=0?>" name="ipt-destinatario" required>
 						</div>
 
                         <div class="col-12">
-							<label class="sr-only" for="inlineFormInputDescricao">Descricao</label>
-							<textarea type="text" class="form-control mb-2" id="inlineFormInputDescricao" cols="100" rows="3" name="ta-descricao"><?=0?></textarea>
+							<label class="lbl-cadastro" for="inlineFormInputDescricao">Descricao</label>
+							<input type="text" class="form-control mb-2" id="inlineFormInputDescricao" name="input-descricao" value="<?=0?>">
 						</div>
 
-                        <div class="col-12 input-group mb-2">
+						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                        	<div class="input-group mb-2">
 								<div class="input-group-prepend">
-									<label id="lbl-status" for="select-status">
-										TIPO
+									<label class="lbl-cadastro" for="select-status">
+										Status
 									</label>
 								</div>
 								<select class="custom-select" name="sel-status" id="select-status">
@@ -104,11 +105,65 @@
 							</div>
 						</div>
 
+						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+							<div class="input-group mb-2">
+								<div class="input-group-prepend">
+									<div class="lbl-cadastro">
+										Data alerta
+									</div>
+								</div>
+								<input type="date" class="form-control" name="ipt-dataAlerta" value="<?=0?>">
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+							<div class="input-group mb-2">
+								<div class="input-group-prepend">
+									<div class="lbl-cadastro">
+										Data limite
+									</div>
+								</div>
+								<input type="date" class="form-control" name="ipt-dataLimite" value="<?=0?>">
+							</div>
+						</div>
+
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+							<div class="input-group mb-2">
+								<div class="input-group-prepend">
+									<label class="lbl-cadastro" for="select-prioridade">
+										Prioridade
+									</label>
+								</div>
+								<select class="custom-select" name="sel-prioridade" id="select-prioridade">
+									<option value="<?=0?>"><?=0?></option>
+									<option value="NORMAL">NORMAL</option>
+									<option value="ALTA">ALTA</option>
+									<option value="BAIXA">BAIXA</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+							<div class="input-group mb-2">
+								<div class="input-group-prepend">
+									<label class="lbl-cadastro" for="inlineFormInputMeio">
+										Meio
+									</label>
+								</div>
+								<input type="text" class="form-control" id="inlineFormInputMeio" value="<?=0?>" name="ipt-meio" required>
+							</div>	
+						</div>
+
+						<div class="col-12">
+							<label class="lbl-cadastro" for="inlineFormInputObservacoes">Observações</label>
+							<textarea type="text" class="form-control mb-2" id="inlineFormInputObservacoes" cols="100" rows="3" placeholder="Observações" name="ta-observacoes"><?=0?></textarea>
+						</div>
+
+						
 						<input type="submit" id="botoesGravarCad" value="Gravar Alterações"name="btnEditarItemCot" onmouseover="hoverOverBtnGravarCad()" onmouseout="hoverOutBtnGravarCad()">
-
 					</div>
 
-					</div>
+				</div>
 				</form>
 			</div>
 
