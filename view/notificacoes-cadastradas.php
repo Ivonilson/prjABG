@@ -51,11 +51,13 @@
 			</div>
             -->
 
-			<div class="card mb-1">
+			<div class="card mb-1 background-form-cons">
 				<div class="card-header">
 					<i class="fa fa-table"></i> Pesquisar notificações
 					<br>
 					<br>
+					
+					<!--
 					<form method="post" class="background-form-cons">
 						<div class="p-2">
 							<select name="" id="">
@@ -65,6 +67,7 @@
 							</select>
 						</div>
 					</form>
+					-->
 				</div>
 			</div>
 			<div id="row-tbl-consulta">
@@ -73,7 +76,7 @@
 					<table class="table table-bordered table-sm table-hover border" id="dataTable" width="100%" cellspacing="0">
 						<thead class="thead-light">
 							<tr>
-								<th>Tipo</th>
+								<th>Cód. Notif.</th>
 								<th>Remetente</th>
 								<th>Destinatário</th>
 								<th>Descrição</th>
@@ -82,16 +85,15 @@
 								<th>Data limite</th>
 								<th>Data alerta</th>
 								<th>Prioridade</th>
-								<th>Meio de notificação</th>
 								<th>Observações</th>
 								<th>Cadastrado por</th>
 								<th>Editar</th>
-								<th>Histórico</th>
+								<!-- <th>Histórico</th> -->
 							</tr>
 						</thead>
 						<tfoot class="thead-light">
 							<tr>
-								<th>Tipo</th>
+								<th>Cód. Notif.</th>
 								<th>Remetente</th>
 								<th>Destinatário</th>
 								<th>Descrição</th>
@@ -100,11 +102,10 @@
 								<th>Data limite</th>
 								<th>Data alerta</th>
 								<th>Prioridade</th>
-								<th>Meio de notificação</th>
 								<th>Observações</th>
 								<th>Cadastrado por</th>
 								<th>Editar</th>
-								<th>Histórico</th>
+								<!-- <th>Histórico</th> -->
 							</tr>
 						</tfoot>
 						<tbody>
@@ -124,7 +125,7 @@
 								foreach ($todas_notificacoes as  $value) {	
 							?>
 							<tr>
-                                <td><?= $value['tipo'] ?></td>
+                                <td><?= $value['id_notificacao'] ?></td>
 								<td><?= $value['remetente'] ?></td>
 								<td><?=$value['destinatario']?></td>
 								<td><?=$value['descricao']?></td>
@@ -133,12 +134,11 @@
                                 <td><?=date_format(date_create($value['data_limite']), "d/m/Y")?></td>
                                 <td><?=date_format(date_create($value['data_programada_resolver']), "d/m/Y")?></td>
 								<td><?=$value['prioridade']?></td>
-								<td><?=$value['meio_notificacao']?></td>
 								<td><?=$value['observacoes']?></td>
 								<td><?=$value['usuario']?></td>
 
-								<td align="center"><a href="/?pagina=editar-notif&id_notificacao=<?=$value['id_notificacao']?>&form=editar-notif" title="Editar" target="_blank"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
-								<td align="center"><a href="/?pagina=historico&cod_os=<?=$value['id_notificacao']?>&form=pesquisa-por-data-receb" title="Histórico" target="_blank"><i class="fa fa-history" aria-hidden="true"></a></td>
+								<td align="center"><a href="/?pagina=editar-notif&id_notificacao=<?=$value['id_notificacao']?>&form=editar-notif" title="Editar"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+								<!-- <td align="center"><a href="/?pagina=historico&cod_os=<?=$value['id_notificacao']?>&form=pesquisa-por-data-receb" title="Histórico" target="_blank"><i class="fa fa-history" aria-hidden="true"></a></td>-->
 							</tr>
 
 							<script>verificaStatus()</script>

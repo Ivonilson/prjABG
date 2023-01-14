@@ -66,6 +66,7 @@
 
 					<div class="form-row align-items-center">
 
+					<!--
 						<div class="input-group col-auto">
 							<div class="input-group-prepend">
 								<label class="lbl-cadastro" for="lbl-sel-tipo">
@@ -79,57 +80,21 @@
 								<option value="OUTROS">OUTROS</option>
 							</select>
 						</div>
+					-->
 
-						<div class="input-group col-auto mt-1">
-							<div class="input-group-prepend">
-								<label class="lbl-cadastro" for="lbl-sel-remetente">
-									Remetente
-								</label>
-							</div>
-							<select name="sel-remetente" class="custom-select" id="lbl-sel-remetente" >
-								<option value="-">Selecione</option>
-								<option value="FENIX CONTABILIDADE">FENIX CONTABILIDADE</option>
-								<option value="CREA">CREA</option>
-								<option value="OUTROS">OUTROS</option>
-							</select>
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+							<label class="sr-only" for="inlineFormInputRemetente">Remetente</label>
+							<input type="text" class="form-control mb-2" id="inlineFormInputRemetente" placeholder="Remetente" name="ipt-remetente" required>
 						</div>
 
-						<div class="input-group col-auto mt-1">
-							<div class="input-group-prepend">
-								<label class="lbl-cadastro" for="lbl-sel-destinatario">
-									Destinatário
-								</label>
-							</div>
-							<select name="sel-destinatario" class="custom-select" id="lbl-sel-destinatario" >
-								<option value="-">Selecione</option>
-								<option value="MAMCK">MAMCK</option>
-								<option value="HAVALIA">HAVALIA</option>
-								<option value="MILITÃO JR">MILITÃO JR</option>
-								<option value="MILITÃO ANDRÉ">MILITÃO ANDRÉ</option>
-								<option value="OUTROS">OUTROS</option>
-							</select>
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+							<label class="sr-only" for="inlineFormInputDestinatario">Destinatário</label>
+							<input type="text" class="form-control mb-2" id="inlineFormInputDestinatario" placeholder="Destinatario" name="ipt-destinatario" required>
 						</div>
 
-						<div class="input-group col-auto mt-1">
-							<div class="input-group-prepend">
-								<label class="lbl-cadastro" for="lbl-sel-descricao">
-									Descrição
-								</label>
-							</div>
-							<select name="sel-descricao" class="custom-select" id="lbl-sel-descricao" >
-								<option value="-">Selecione</option>
-								<option value="REGULARIDADE CERTIDÃO GDF">REGULARIDADE CERTIDÃO GDF</option>
-								<option value="REGULARIDADE INSS">REGULARIDADE INSS</option>
-								<option value="REGULARIDADE FGTS">REGULARIDADE FGTS</option>
-								<option value="DARF IMPOSTO ESTADUAL">DARF IMPOSTO ESTADUAL</option>
-								<option value="DARF IMPOSTO FEDERAL">DARF IMPOSTO FEDERAL</option>
-								<option value="BOLETO INSS HAVALIA">BOLETO INSS HAVALIA</option>
-								<option value="BOLETO INSS MAMCK">BOLETO INSS MAMCK</option>
-								<option value="BOLETO FGTS HAVALIA">BOLETO FGTS HAVALIA</option>
-								<option value="BOLETO FGTS MAMCK">BOLETO FGTS MAMCK</option>
-								<option value="BOLETO CREA">BOLETO CREA</option>
-								<option value="OUTROS">OUTROS</option>
-							</select>
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<label class="sr-only" for="inlineFormInputDescricao">Descrição</label>
+							<input type="text" class="form-control mb-2" id="inlineFormInputDescricao" placeholder="Descrição" name="ipt-descricao" required>
 						</div>
 			
 						<div class="input-group col-lg-4 col-md-4 col-xs-12 col-sm-12 mt-1">
@@ -164,22 +129,7 @@
 						</div>
 
 						<div class="input-group col-auto mt-1">
-							<div class="input-group-prepend">
-								<label class="lbl-cadastro" for="lbl-sel-meio-notificacao">
-									Aviso/Cobrança recebido através de:
-								</label>
-							</div>
-							<select name="sel-meio-notificacao" class="custom-select" id="lbl-sel-meio-notificacao" >
-								<option value="<?=$_SESSION['user'].' NÃO INFORMOU'?>">Selecione</option>
-								<option value="VERBAL/TELEFONE">VERBAL/TELEFONE</option>
-								<option value="TEXTO WHATSAPP">TEXTO WHATSAPP</option>
-								<option value="ÁUDIO WHATSAPP">ÁUDIO WHATSAPP</option>
-								<option value="OUTROS">OUTROS</option>
-							</select>
-						</div>
-
-						<div class="input-group col-auto mt-1">
-							<label class="sr-only" for="lbl-observacoes">OBSERVAÇÕES COMPLEMENTARES</label>
+							<label class="sr-only" for="lbl-observacoes">Observações</label>
 							<textarea type="text" class="form-control mb-2" id="lbl-observacoes" cols="100" rows="3" placeholder="Observações Complementares" name="ta-observacoes"></textarea>
 						</div>
 

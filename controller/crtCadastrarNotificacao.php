@@ -5,7 +5,7 @@
 		public function cadastrarNotificacao(){	
 			$usuario = new Conn();
 
-				if(filter_input(INPUT_POST, 'sel-tipo') != '-' && filter_input(INPUT_POST, 'sel-tipo') != '') {
+				if(filter_input(INPUT_POST, 'ipt-remetente') != '-' && filter_input(INPUT_POST, 'ipt-remetente') != '') {
 					$usuario = new CadastrarNotificacao();
 					if($usuario->cadNotificacao()){
 						return "Notificação cadastrada com Sucesso!";

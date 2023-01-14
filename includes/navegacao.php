@@ -275,8 +275,6 @@
 
 							<span class="small text-danger" >Destinatário: </span><p class="text-muted"><?=$dados->destinatario?></p>
 
-							<span class="small text-danger" >Meio da notificação: </span><p class="text-muted"><?=$dados->meio_notificacao?></p>
-
 							<span class="small text-danger">Data de emissão: </span><p class="text-muted"> <?=date_format(date_create($dados->data_emissao), 'd/m/Y')
 							?></p>
 

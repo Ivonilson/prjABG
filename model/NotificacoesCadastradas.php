@@ -10,7 +10,7 @@ class NotificacoesCadastradas {
 		/*$data_inicial = filter_input(INPUT_POST, 'data_inicial');
 		$data_final = filter_input(INPUT_POST, 'data_final');*/
 
-		$querySelect = "SELECT id_notificacao, tipo, remetente, destinatario, descricao, status, data_emissao, data_limite, data_programada_resolver, prioridade, meio_notificacao, observacoes, usuario  FROM tbl_notificacoes WHERE status = 'PENDENTE'";
+		$querySelect = "SELECT id_notificacao, tipo, remetente, destinatario, descricao, status, data_emissao, data_limite, data_programada_resolver, prioridade, meio_notificacao, observacoes, usuario  FROM tbl_notificacoes WHERE status = 'PENDENTE' || status = 'ADIAR'";
         /*$querySelect = "SELECT * FROM tbl_notificacoes;";*/
 
 		$conn = new Conn();

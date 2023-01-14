@@ -32,24 +32,24 @@
 					<!--Feedback da Edição -->
 					<?php
 
-						if($mensagem_erro == "Item editado com Sucesso!")
+						if($mensagem == "Notificação editada com Sucesso!")
 						{
 					?>
 
 					<div class="alert alert-success font-weight-bold alertaCadOsOk col-12 text-center" role="alert">
- 						<img src="../assets/ok.png"><h5><strong><?=$mensagem_erro?></strong></h5>
+ 						<img src="../assets/ok.png"><h5><strong><?=$mensagem?></strong></h5>
 					</div>
 
 
 					<?php 
 						
-						echo "<script>setTimeout(()=> window.location.href = '/?pagina=".$_GET['form']."', 3000)</script>";
+						echo "<script>setTimeout(()=> window.location.href = '/?pagina=editar-notif&id_notificacao=".$_GET['id_notificacao']."', 3000)</script>";
 
-						} elseif($mensagem_erro == "Erro. Contate o Suporte.") {
+						} elseif($mensagem == "Erro: Para gravar, alguma modificação deverá ser realizada ou Contate o Suporte.") {
 					?>
 
 					<div class="alert alert-warning font-weight-bold text-danger alertaCadOsNoOk col-12 text-center" role="alert">
- 						<img src="../assets/error.png"><h5><strong><?=$mensagem_erro?></strong></h5>
+ 						<img src="../assets/error.png"><h5><strong><?=$mensagem?></strong></h5>
 					</div>
 
 					<?php 
@@ -63,7 +63,7 @@
 					<div id="jumbotron_telas_cadastro">
 						<div class="container ">
 							<h4>Editando notificação n° <?=$_GET['id_notificacao']?></h4>
-							<?php var_dump($notificacao)  ?>
+							<?php //var_dump($notificacao)  ?>
 						</div>
 					</div>
 
@@ -82,12 +82,12 @@
 
                         <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
 							<label class="lbl-cadastro" for="inlineFormInputDestinario">Destinatário</label>
-							<input type="text" class="form-control mb-2" id="inlineFormInputDestinatario" value="<?=$notificacao->destinatario?>" name="ipt-destinario" required>
+							<input type="text" class="form-control mb-2" id="inlineFormInputDestinatario" value="<?=$notificacao->destinatario?>" name="ipt-destinatario" required>
 						</div>
 
                         <div class="col-12">
 							<label class="lbl-cadastro" for="inlineFormInputDescricao">Descricao</label>
-							<input type="text" class="form-control mb-2" id="inlineFormInputDescricao" name="input-descricao" value="<?=$notificacao->descricao?>">
+							<input type="text" class="form-control mb-2" id="inlineFormInputDescricao" name="ipt-descricao" value="<?=$notificacao->descricao?>">
 						</div>
 
 						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
@@ -98,7 +98,7 @@
 									</label>
 								</div>
 								<select class="custom-select" name="sel-status" id="select-status">
-									<option value=<?=$notificacao->status?>"><?=$notificacao->status?></option>
+									<option value="<?=$notificacao->status?>"><?=$notificacao->status?></option>
 									<option value="PENDENTE">PENDENTE</option>
 									<option value="RESOLVIDO">RESOLVIDO</option>
 									<option value="ADIAR">ADIAR</option>
@@ -113,7 +113,7 @@
 										Data alerta
 									</div>
 								</div>
-								<input type="date" class="form-control" name="ipt-dataAlerta" value="<?=0?>">
+								<input type="date" class="form-control" name="ipt-dataAlerta" value="<?=$notificacao->data_programada_resolver?>">
 							</div>
 						</div>
 
@@ -136,7 +136,7 @@
 									</label>
 								</div>
 								<select class="custom-select" name="sel-prioridade" id="select-prioridade">
-									<option value="<?=0?>"><?=0?></option>
+									<option value="<?=$notificacao->prioridade?>"><?=$notificacao->prioridade?></option>
 									<option value="NORMAL">NORMAL</option>
 									<option value="ALTA">ALTA</option>
 									<option value="BAIXA">BAIXA</option>
@@ -144,24 +144,13 @@
 							</div>
 						</div>
 
-						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-							<div class="input-group mb-2">
-								<div class="input-group-prepend">
-									<label class="lbl-cadastro" for="inlineFormInputMeio">
-										Meio
-									</label>
-								</div>
-								<input type="text" class="form-control" id="inlineFormInputMeio" value="<?=0?>" name="ipt-meio" required>
-							</div>	
-						</div>
-
 						<div class="col-12">
 							<label class="lbl-cadastro" for="inlineFormInputObservacoes">Observações</label>
-							<textarea type="text" class="form-control mb-2" id="inlineFormInputObservacoes" cols="100" rows="3" placeholder="Observações" name="ta-observacoes"><?=0?></textarea>
+							<textarea type="text" class="form-control mb-2" id="inlineFormInputObservacoes" cols="100" rows="3" placeholder="Observações" name="ta-observacoes"><?=$notificacao->observacoes?></textarea>
 						</div>
 
 						
-						<input type="submit" id="botoesGravarCad" value="Gravar Alterações"name="btnEditarItemCot" onmouseover="hoverOverBtnGravarCad()" onmouseout="hoverOutBtnGravarCad()">
+						<input type="submit" id="botoesGravarCad" value="Gravar Alterações"name="btnGravar" onmouseover="hoverOverBtnGravarCad()" onmouseout="hoverOutBtnGravarCad()">
 					</div>
 
 				</div>

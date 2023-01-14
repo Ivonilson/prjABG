@@ -7,6 +7,9 @@ class CadastrarNotificacao {
 
 	{		
 			$dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+			$remetente = strtoupper($dados['ipt-remetente']);
+			$destinatario = strtoupper($dados['ipt-destinatario']);
+			$descricao = strtoupper($dados['ipt-descricao']);
 
 			if (!empty($dados['btnCadastrar'])) {
 				unset($dados['btnCadastrar']);
@@ -16,27 +19,24 @@ class CadastrarNotificacao {
 
 			$conn = new Conn();
 
-			$statement = "INSERT INTO tbl_notificacoes (tipo, remetente, destinatario, descricao, data_emissao, data_limite, data_programada_resolver, prioridade, meio_notificacao, observacoes, usuario, data_cadastro) VALUES (:tipo, :remetente, :destinatario, :descricao, CURDATE(), :data_limite, :data_programada_resolver, :prioridade, :meio_notificacao, :observacoes, :usuario, CURRENT_TIMESTAMP())";
+			$statement = "INSERT INTO tbl_notificacoes (remetente, destinatario, descricao, data_emissao, data_limite, data_programada_resolver, prioridade, observacoes, usuario, data_cadastro) VALUES (:remetente, :destinatario, :descricao, CURDATE(), :data_limite, :data_programada_resolver, :prioridade, :observacoes, :usuario, CURRENT_TIMESTAMP())";
 
 			$dados_cadastrar = $conn->getConn()->prepare($statement);
 			$usuario = $_SESSION['user'];
 
-			$dados_cadastrar->bindParam(':tipo', $dados['sel-tipo']);
-			$dados_cadastrar->bindParam(':remetente', $dados['sel-remetente']);
-			$dados_cadastrar->bindParam(':destinatario', $dados['sel-destinatario']);
-			$dados_cadastrar->bindParam(':descricao', $dados['sel-descricao']);
-			//$dados_cadastrar->bindParam(':data_emissao', $dados['ipt-data-emissao']);
+			$dados_cadastrar->bindParam(':remetente', $remetente);
+			$dados_cadastrar->bindParam(':destinatario', $destinatario);
+			$dados_cadastrar->bindParam(':descricao', $descricao);
 			$dados_cadastrar->bindParam(':data_limite', $dados['ipt-data-limite']);
 			$dados_cadastrar->bindParam(':data_programada_resolver', $dados['ipt-data-programada']);
 			$dados_cadastrar->bindParam(':prioridade', $dados['sel-prioridade']);
-			$dados_cadastrar->bindParam(':meio_notificacao', $dados['sel-meio-notificacao']);
 			$dados_cadastrar->bindParam(':observacoes', $dados['ta-observacoes']);
 			$dados_cadastrar->bindParam(':usuario', $usuario);
 			
 			$dados_cadastrar->execute();
 
 			} catch (PDOException $erro) {
-				//echo "ERRO: ".$erro->getMessage();
+				echo "ERRO: ".$erro->getMessage();
 			}
 
 			if($dados_cadastrar->rowCount()) {
@@ -45,7 +45,7 @@ class CadastrarNotificacao {
 				return true;
 			} else {
 				//echo "<script>alert('Erro ao Incluir Registro!!!')</script>";
-				//print_r($dados_cadastrar->errorInfo());
+				print_r($dados_cadastrar->errorInfo());
 				return false;
 			}
 

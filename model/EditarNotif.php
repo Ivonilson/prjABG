@@ -11,7 +11,7 @@ class EditarNotif {
         return $resultado;
     }
 
-	/*public function edNotif()
+	public function edNotif()
 	{
 			$dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 			//$form = filter_input(INPUT_GET, 'pagina');
@@ -24,35 +24,41 @@ class EditarNotif {
 
 			$conn = new Conn();
 
-			$queryEditarNotificacao = "UPDATE tbl_notificacoes SET status = :status, data_programada_resolver = :data_programada_resolver WHERE id_notificacao = :id_notificacao";
+			$queryEditarNotificacao = "UPDATE tbl_notificacoes SET remetente = :remetente, destinatario = :destinatario, descricao = :descricao, 
+            status = :status, data_programada_resolver = :data_programada_resolver, data_limite = :data_limite,
+            prioridade = :prioridade, observacoes = :observacoes 
+            WHERE id_notificacao = :id_notificacao";
 
 			$dados_editar = $conn->getConn()->prepare($queryEditarNotificacao);
 
 			$dados_editar->bindParam(':id_notificacao', $dados['ipt-id-notificacao']);
-			$dados_editar->bindParam(':status', $dados['sel-resolver']);
-			$dados_editar->bindParam(':data_programada_resolver', $dados['ipt-data-adiada']);
+			$dados_editar->bindParam(':remetente', $dados['ipt-remetente']);
+			$dados_editar->bindParam(':destinatario', $dados['ipt-destinatario']);
+            $dados_editar->bindParam(':descricao', $dados['ipt-descricao']);
+            $dados_editar->bindParam(':status', $dados['sel-status']);
+            $dados_editar->bindParam(':data_programada_resolver', $dados['ipt-dataAlerta']);
+            $dados_editar->bindParam(':data_limite', $dados['ipt-dataLimite']);
+            $dados_editar->bindParam(':prioridade', $dados['sel-prioridade']);
+            $dados_editar->bindParam(':observacoes', $dados['ta-observacoes']);
 
 			$dados_editar->execute();
 
 			} catch (PDOException $erro) {
-				echo "ERRO: ".$erro->getMessage();
+				//echo "ERRO: ".$erro->getMessage();
 			}	
 
 			if($dados_editar->rowCount()) {
-				echo "<script>alert('Registro ATUALIZADO com SUCESSO.')</script>";
-				unset($dados);
-				
-				echo "<script>window.location.href ='/?pagina=demandas-do-dia'</script>";
-					//echo "<script>window.location.href = '../view/demandas-do-dia.php'</script>";
-				
+				//echo "<script>alert('Registro ATUALIZADO com SUCESSO.')</script>";
+                return true;
 			} else {
-				echo "<script>alert('ERRO ao ATUALIZAR Registro.')</script>";
+				//echo "<script>alert('ERRO ao ATUALIZAR Registro.')</script>";
 				print_r($dados_editar->errorInfo());
+                return false;
 			}
 
 			$conn = NULL;
 
-		}*/
+		}
 
 	}
 
