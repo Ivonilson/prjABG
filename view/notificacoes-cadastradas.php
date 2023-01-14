@@ -53,7 +53,7 @@
 
 			<div class="card mb-1 background-form-cons">
 				<div class="card-header">
-					<i class="fa fa-table"></i> Pesquisar notificações
+					<i class="fa fa-table"></i> Notificações pendentes ou adiadas
 					<br>
 					<br>
 					
