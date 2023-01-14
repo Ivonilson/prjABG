@@ -4,7 +4,7 @@
 
 		public function editarNotif()
 		{	
-            
+           
 			//$usuario = new Conn();
 			/*$usuario = new EditarNotificacao();
 
@@ -16,10 +16,16 @@
 					echo "<script>alert('ERRO AO ADIAR... Verifique se não está passando uma data MENOR ou IGUAL a atual...')</script>";
 					echo "<script>window.location.href ='/?pagina=demandas-do-dia'</script>";
 				}*/
-
 		}
+
+        public function carregarNotif(){
+            require_once "model/EditarNotif.php";
+            $carregarNotif = new EditarNotif();
+            return $carregarNotif->carregarNotifEdicao($_GET['id_notificacao']);
+        }
+
 	}
 
-	//$editarNotificacao = new crtEditarNotificacao();
-	//$editarNotificacao->EditarNotificacao();
+	 $notificacaoAlvo= new crtEditarNotif();
+	 $notificacao = $notificacaoAlvo->carregarNotif();
 ?>

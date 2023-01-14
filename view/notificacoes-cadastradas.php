@@ -137,7 +137,7 @@
 								<td><?=$value['observacoes']?></td>
 								<td><?=$value['usuario']?></td>
 
-								<td align="center"><a href="/?pagina=editar-notif&cod_os=<?=$value['id_notificacao']?>&form=notificacoes-cadastradas" title="Editar" target="_blank"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+								<td align="center"><a href="/?pagina=editar-notif&id_notificacao=<?=$value['id_notificacao']?>&form=editar-notif" title="Editar" target="_blank"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
 								<td align="center"><a href="/?pagina=historico&cod_os=<?=$value['id_notificacao']?>&form=pesquisa-por-data-receb" title="Histórico" target="_blank"><i class="fa fa-history" aria-hidden="true"></a></td>
 							</tr>
 

@@ -62,31 +62,32 @@
 
 					<div id="jumbotron_telas_cadastro">
 						<div class="container ">
-							<h4>Editar Notificação</h4>
+							<h4>Editando notificação n° <?=$_GET['id_notificacao']?></h4>
+							<?php var_dump($notificacao)  ?>
 						</div>
 					</div>
 
 					<div class="form-row align-items-center">
 
 						<div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-							<label class="lbl-cadastro" for="inlineFormInputId">Nº DO ITEM</label>
-							<input type="text" disabled class="form-control mb-2" id="inlineFormInputId" value="<?= 0 ?>" required>
-							<input type="hidden" class="form-control mb-2" id="inlineFormInputItem" value="<?= 0 ?>"  name="ipt-id-notificacao" required>
+							<label class="lbl-cadastro" for="inlineFormInputId">N° Notificação</label>
+							<input type="text" disabled class="form-control mb-2" id="inlineFormInputId" value="<?= $notificacao->id_notificacao ?>" required>
+							<input type="hidden" class="form-control mb-2" id="inlineFormInputItem" value="<?= $notificacao->id_notificacao ?>"  name="ipt-id-notificacao" required>
+						</div>
+
+						<div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+							<label class="lbl-cadastro" for="inlineFormInputRemetente">Remetente</label>
+							<input type="text" class="form-control mb-2" id="inlineFormInputRemetente" value="<?=$notificacao->remetente?>" name="ipt-remetente" required>
 						</div>
 
                         <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
-							<label class="lbl-cadastro" for="inlineFormInputRemetente">Título</label>
-							<input type="text" class="form-control mb-2" id="inlineFormInputRemetente" value="<?=0?>" name="ipt-remetente" required>
-						</div>
-
-                        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
-							<label class="lbl-cadastro" for="inlineFormInputDestinario">Remetente</label>
-							<input type="text" class="form-control mb-2" id="inlineFormInputDestinatario" value="<?=0?>" name="ipt-destinatario" required>
+							<label class="lbl-cadastro" for="inlineFormInputDestinario">Destinatário</label>
+							<input type="text" class="form-control mb-2" id="inlineFormInputDestinatario" value="<?=$notificacao->destinatario?>" name="ipt-destinario" required>
 						</div>
 
                         <div class="col-12">
 							<label class="lbl-cadastro" for="inlineFormInputDescricao">Descricao</label>
-							<input type="text" class="form-control mb-2" id="inlineFormInputDescricao" name="input-descricao" value="<?=0?>">
+							<input type="text" class="form-control mb-2" id="inlineFormInputDescricao" name="input-descricao" value="<?=$notificacao->descricao?>">
 						</div>
 
 						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
@@ -97,7 +98,7 @@
 									</label>
 								</div>
 								<select class="custom-select" name="sel-status" id="select-status">
-									<option value="<?=0?>"><?=0?></option>
+									<option value=<?=$notificacao->status?>"><?=$notificacao->status?></option>
 									<option value="PENDENTE">PENDENTE</option>
 									<option value="RESOLVIDO">RESOLVIDO</option>
 									<option value="ADIAR">ADIAR</option>
@@ -123,7 +124,7 @@
 										Data limite
 									</div>
 								</div>
-								<input type="date" class="form-control" name="ipt-dataLimite" value="<?=0?>">
+								<input type="date" class="form-control" name="ipt-dataLimite" value="<?=$notificacao->data_limite?>">
 							</div>
 						</div>
 
