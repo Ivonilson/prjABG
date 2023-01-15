@@ -125,9 +125,15 @@
 							<input type="text" class="form-control mb-2" id="inlineFormInputCidadeUf" placeholder="Cidade/UF" name="ipt-cidadeUf" required>
 						</div>
 
-                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-							<label class="sr-only" for="inlineFormInputDataDespesa">Data despesa</label>
-							<input type="date" class="form-control mb-2" id="inlineFormInputDataDespesa" placeholder="Data da despesa" name="ipt-dataDespesa" required>
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+							<div class="input-group mb-2">
+								<div class="input-group-prepend">
+									<div class="lbl-cadastro">
+										Data despesa
+									</div>
+								</div>
+								<input type="date" class="form-control" name="ipt-dataDespesa">
+							</div>
 						</div>
 
                         <div class="input-group col-auto mt-1">
