@@ -3,12 +3,13 @@ create table tbl_gastos_viagem (
     descricao varchar(100),
     valor decimal(10, 2),
     forma_pagamento varchar(100),
-    pessoa varchar(100),
+    pagador varchar(100),
     estabelecimento varchar(100),
-    cidade_uf,
+    cidade_uf varchar(100),
     data_despesa date,
     data_cadastro datetime,
-    observacoes varchar(1000)
+    observacoes varchar(1000),
+    usuario varchar(100)
 ) engine=innoDB;
 
 create table tbl_cot(

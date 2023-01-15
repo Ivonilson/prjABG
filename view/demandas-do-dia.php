@@ -31,7 +31,7 @@
 				</li>
 
 				<div class="col-12 mt-2">
-					<a href="/?pagina=notificacoes-cadastradas" class="btn btn-info text-light ml-2 mt-2 float-right font-weight-bold rounded" title="Notificações cadastradas"><i class="fa fa-book"></i> Notificações</a>
+					<a href="/?pagina=notificacoes-cadastradas" class="btn btn-info text-light ml-2 mt-2 float-right font-weight-bold rounded" title="Notificações cadastradas"><i class="fa fa-bell fa-blink"></i> Notificações</a>
 					<a href="#" class="btn btn-info text-light ml-2 mt-2 float-right font-weight-bold rounded"  data-toggle="modal" data-target="#mdToDoList" title="Lista de Tarefas"><i class="fa fa-book"></i> Lista de Tarefas</a>
 					<a href="#" class="btn btn-info text-light ml-2 mt-2 float-right font-weight-bold rounded"  data-toggle="modal" data-target="#mdCARD" title="CARD/E-mail CIHARGO"><i class="fa fa-book"></i> CARD/E-mail CIHARGO</a>
 					<a href="#" class="btn btn-info text-light ml-2 mt-2 float-right font-weight-bold rounded"  data-toggle="modal" data-target="#mdCOC" title="Caderno de Orientações Complementares"><i class="fa fa-book"></i> COC</a>
