@@ -42,7 +42,16 @@
 						<li>
 							<a href="/?pagina=cadastrar-notificacao">Cadastrar Notificação</a>
 						</li>
-
+						
+						<?php 
+							if($_SESSION['user'] == 'IVONILSON') {
+						?>
+						<li>
+							<a href="/?pagina=cadastrar-gastos-viagem" >Gastos Viagem</a>
+						</li>
+						<?php 
+							}
+						?>
 						<!-- Funcionalidade sendo desenvolvida...
 						<li>
 							<a href="/?pagina=cadastrar-evento" target="opcoes-menu">Cadastrar Evento</a>

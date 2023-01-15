@@ -176,6 +176,21 @@ $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : "login";
 			$crtl->incluirModelo();
 			break;
 
+		case 'cadastrar-gastos-viagem':
+			require "controller/crtCadastrarGastosViagem.php";
+			include_once "view/cadastrar-gastos-viagem.php";
+			break;
+
+		case 'gastos-viagem':
+			require "controller/crtGastosViagem.php";
+			include_once "view/gastos-viagem.php";
+			break;
+
+			case 'editar-gastos-viagem':
+				require "controller/crtEditarGastosViagem.php";
+				include_once "view/editar-gastos-viagem.php";
+				break;
+
 		case 'login':
 			include "view/login.php";
 			break;
