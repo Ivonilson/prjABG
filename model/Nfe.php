@@ -10,6 +10,7 @@
 				@$valorNota = str_replace(',' , '.', $_POST['valorNota']);
 				$aliquotaIss = 0.05;
 				$aliquotaIssDif = 0.0217;
+				$aliquotaIssDif2 = 0.02;
 				$aliquotaPis = 0.0065;
 				$aliquotaCofins = 0.03;
 				$aliquotaIrNormal = 0.048;
@@ -149,7 +150,24 @@
 				//$conteudo1 = " ";
 				//$conteudo2 = " ";
 						
-			} 
+			} else if ($tomador == "8" && $empresa == "Havalia") {
+				$valorIss = number_format($valorNota * $aliquotaIssDif2,2,',','.');
+				$valorPis = number_format($valorNota * $aliquotaPis,2,',','.');
+				$valorCofins = number_format($valorNota * $aliquotaCofins,2,',','.');
+				$valorCsll = number_format($valorNota * $aliquotaCsll,2,',','.');
+				$valorIr = number_format($valorNota * $aliquotaIrDif,2,',','.');
+				return  $conteudo1 = "Retenções: ISS(2%)=R$$valorIss; PIS/PASEP(0,65%)=R$$valorPis; COFINS(3%)=R$$valorCofins; CSLL(1%)=R$$valorCsll e IR(1,5%)=R$$valorIr.";
+				//$conteudo2 = "";
+
+			} else if ($tomador == "8" && $empresa == "Mamck") {
+				$valorIss = number_format($valorNota * $aliquotaIssDif2,2,',','.');
+				$valorPis = number_format($valorNota * $aliquotaPis,2,',','.');
+				$valorCofins = number_format($valorNota * $aliquotaCofins,2,',','.');
+				$valorCsll = number_format($valorNota * $aliquotaCsll,2,',','.');
+				$valorIr = number_format($valorNota * $aliquotaIrDif,2,',','.');
+				return $conteudo1 = "Retenções: ISS(2%)=R$$valorIss; PIS/PASEP(0,65%)=R$$valorPis; COFINS(3%)=R$$valorCofins; CSLL(1%)=R$$valorCsll e IR(1,5%)=R$$valorIr.";
+				//$conteudo2 = "";
+			}
 
 		}		
 

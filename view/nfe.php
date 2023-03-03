@@ -77,6 +77,10 @@
 						$banco = 'BANCO INTER';
 						break;
 
+					case '8':
+						$banco = 'BRB (MEDIÇÕES)';
+						break;
+
 					default:
 						$banco = 'INDEFINIDO';
 						break;
@@ -116,6 +120,7 @@
 						<option value="5">POUPEX</option>
 						<option value="6">FHE</option>
 						<option value="7">BANCO INTER</option>
+						<option value="8">BRB (MEDIÇÕES)</option>
 					</select>
 				</div>
 			</div>
