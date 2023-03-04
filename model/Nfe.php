@@ -57,12 +57,12 @@
 				//$conteudo2 = "";
 
 			} else if ($tomador == "5" && $empresa == "Havalia") {
-				$valorIssDif = number_format($valorNota * $aliquotaIssDif,2,',','.');
+				$valorIssDif = number_format($valorNota * $aliquotaIss,2,',','.');
 				$valorPis = number_format($valorNota * $aliquotaPis,2,',','.');
 				$valorCofins = number_format($valorNota * $aliquotaCofins,2,',','.');
 				$valorCsll = number_format($valorNota * $aliquotaCsll,2,',','.');
 				$valorIr = number_format($valorNota * $aliquotaIrDif,2,',','.');
-				return $conteudo1 = "Retenções: ISS(2,17%)=R$$valorIssDif; PIS/PASEP(0,65%)=R$$valorPis; COFINS(3%)=R$$valorCofins; CSLL(1%)=R$$valorCsll e IR(1,5%)=R$$valorIr. - Dados p/ crédito: Ag. 0002, Conta 301-3, Caixa Econômica Federal.";
+				return $conteudo1 = "Retenções: ISS(5%)=R$$valorIssDif; PIS/PASEP(0,65%)=R$$valorPis; COFINS(3%)=R$$valorCofins; CSLL(1%)=R$$valorCsll e IR(1,5%)=R$$valorIr. - Dados p/ crédito: Ag. 0002, Conta 301-3, Caixa Econômica Federal.";
 				//$conteudo2 = "";
 
 			} else if ($tomador == "6" && $empresa == "Havalia") {
@@ -113,12 +113,12 @@
 				//$conteudo2 = "";
 
 			} else if ($tomador == "5" && $empresa == "Mamck") {
-				$valorIssDif = number_format($valorNota * $aliquotaIssDif,2,',','.');
+				$valorIssDif = number_format($valorNota * $aliquotaIss,2,',','.');
 				$valorPis = number_format($valorNota * $aliquotaPis,2,',','.');
 				$valorCofins = number_format($valorNota * $aliquotaCofins,2,',','.');
 				$valorCsll = number_format($valorNota * $aliquotaCsll,2,',','.');
 				$valorIr = number_format($valorNota * $aliquotaIrDif,2,',','.');
-				return $conteudo1 = "Retenções: ISS(2,17%)=R$$valorIssDif; PIS/PASEP(0,65%)=R$$valorPis; COFINS(3%)=R$$valorCofins; CSLL(1%)=R$$valorCsll e IR(1,5%)=R$$valorIr. - Dados p/ crédito: Ag. 4460, Conta 53-9, Caixa Econômica Federal.";
+				return $conteudo1 = "Retenções: ISS(5%)=R$$valorIssDif; PIS/PASEP(0,65%)=R$$valorPis; COFINS(3%)=R$$valorCofins; CSLL(1%)=R$$valorCsll e IR(1,5%)=R$$valorIr. - Dados p/ crédito: Ag. 4460, Conta 53-9, Caixa Econômica Federal.";
 				//$conteudo2 = "";
 
 			} else if ($tomador == "6" && $empresa == "Mamck") {
@@ -165,7 +165,43 @@
 				$valorCofins = number_format($valorNota * $aliquotaCofins,2,',','.');
 				$valorCsll = number_format($valorNota * $aliquotaCsll,2,',','.');
 				$valorIr = number_format($valorNota * $aliquotaIrDif,2,',','.');
-				return $conteudo1 = "Retenções: ISS(2%)=R$$valorIss; PIS/PASEP(0,65%)=R$$valorPis; COFINS(3%)=R$$valorCofins; CSLL(1%)=R$$valorCsll e IR(1,5%)=R$$valorIr.";
+				return $conteudo1 = "Retenções: ISS(2%)=R$$valorIssDif2; PIS/PASEP(0,65%)=R$$valorPis; COFINS(3%)=R$$valorCofins; CSLL(1%)=R$$valorCsll e IR(1,5%)=R$$valorIr.";
+				//$conteudo2 = "";
+
+			} else if ($tomador == "9" && $empresa == "Mamck") {
+				$valorIssDif = number_format($valorNota * $aliquotaIssDif2,2,',','.');
+				$valorPis = number_format($valorNota * $aliquotaPis,2,',','.');
+				$valorCofins = number_format($valorNota * $aliquotaCofins,2,',','.');
+				$valorCsll = number_format($valorNota * $aliquotaCsll,2,',','.');
+				$valorIr = number_format($valorNota * $aliquotaIrDif,2,',','.');
+				return $conteudo1 = "Retenções: ISS(2%)=R$$valorIssDif; PIS/PASEP(0,65%)=R$$valorPis; COFINS(3%)=R$$valorCofins; CSLL(1%)=R$$valorCsll e IR(1,5%)=R$$valorIr. - Dados p/ crédito: Ag. 4460, Conta 53-9, Caixa Econômica Federal.";
+				//$conteudo2 = "";
+
+			} else if ($tomador == "9" && $empresa == "Havalia") {
+				$valorIssDif = number_format($valorNota * $aliquotaIssDif2,2,',','.');
+				$valorPis = number_format($valorNota * $aliquotaPis,2,',','.');
+				$valorCofins = number_format($valorNota * $aliquotaCofins,2,',','.');
+				$valorCsll = number_format($valorNota * $aliquotaCsll,2,',','.');
+				$valorIr = number_format($valorNota * $aliquotaIrDif,2,',','.');
+				return $conteudo1 = "Retenções: ISS(2%)=R$$valorIssDif; PIS/PASEP(0,65%)=R$$valorPis; COFINS(3%)=R$$valorCofins; CSLL(1%)=R$$valorCsll e IR(1,5%)=R$$valorIr. - Dados p/ crédito: Ag. 0002, Conta 301-3, Caixa Econômica Federal.";
+				//$conteudo2 = "";
+
+			} else if ($tomador == "10" && $empresa == "Mamck") {
+				$valorIss = number_format($valorNota * $aliquotaIssDif2,2,',','.');
+				$valorPis = number_format($valorNota * $aliquotaPis,2,',','.');
+				$valorCofins = number_format($valorNota * $aliquotaCofins,2,',','.');
+				$valorCsll = number_format($valorNota * $aliquotaCsll,2,',','.');
+				$valorIr = number_format($valorNota * $aliquotaIrNormal,2,',','.');
+				return $conteudo1 = "Retenções: ISS(2%)=R$$valorIss; PIS/PASEP(0,65%)=R$$valorPis; COFINS(3%)=R$$valorCofins; CSLL(1%)=R$$valorCsll e IR(4,8%)=R$$valorIr. - Dados p/ crédito: Ag. 4460, Conta 53-9, Caixa Econômica Federal.";
+				//$conteudo2 = "";
+			
+			} else if ($tomador == "10" && $empresa == "Havalia") {
+				$valorIss = number_format($valorNota * $aliquotaIssDif2,2,',','.');
+				$valorPis = number_format($valorNota * $aliquotaPis,2,',','.');
+				$valorCofins = number_format($valorNota * $aliquotaCofins,2,',','.');
+				$valorCsll = number_format($valorNota * $aliquotaCsll,2,',','.');
+				$valorIr = number_format($valorNota * $aliquotaIrNormal,2,',','.');
+				return $conteudo1 = "Retenções: ISS(2%)=R$$valorIss; PIS/PASEP(0,65%)=R$$valorPis; COFINS(3%)=R$$valorCofins; CSLL(1%)=R$$valorCsll e IR(4,8%)=R$$valorIr. - Dados p/ crédito: Ag. 0002, Conta 301-3, Caixa Econômica Federal.";
 				//$conteudo2 = "";
 			}
 
