@@ -165,7 +165,7 @@
 				$valorCofins = number_format($valorNota * $aliquotaCofins,2,',','.');
 				$valorCsll = number_format($valorNota * $aliquotaCsll,2,',','.');
 				$valorIr = number_format($valorNota * $aliquotaIrDif,2,',','.');
-				return $conteudo1 = "Retenções: ISS(2%)=R$$valorIssDif2; PIS/PASEP(0,65%)=R$$valorPis; COFINS(3%)=R$$valorCofins; CSLL(1%)=R$$valorCsll e IR(1,5%)=R$$valorIr.";
+				return $conteudo1 = "Retenções: ISS(2%)=R$$valorIss; PIS/PASEP(0,65%)=R$$valorPis; COFINS(3%)=R$$valorCofins; CSLL(1%)=R$$valorCsll e IR(1,5%)=R$$valorIr.";
 				//$conteudo2 = "";
 
 			} else if ($tomador == "9" && $empresa == "Mamck") {
